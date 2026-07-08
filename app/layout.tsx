@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://picsum.photos/seed/band-hero/1200/630",
+        url: "https://highlifeshowband.ro/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Highlife Showband — Muzică Live pentru Evenimente",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "Highlife Showband — Muzică Live pentru Nunți & Evenimente",
     description:
       "Trupa profesionistă pentru nunți, corporate și petreceri private în România.",
-    images: ["https://picsum.photos/seed/band-hero/1200/630"],
+    images: ["https://highlifeshowband.ro/images/og-image.jpg"],
   },
   robots: {
     index: true,

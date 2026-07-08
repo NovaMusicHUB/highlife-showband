@@ -157,7 +157,7 @@ export default function Footer() {
               {/* Instagram */}
               <li>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/highlifeshowband"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 py-1.5 group"
@@ -198,7 +198,7 @@ export default function Footer() {
               {/* Facebook */}
               <li>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/highlifeshowband"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 py-1.5 group"
@@ -264,7 +264,7 @@ export default function Footer() {
               {/* TikTok */}
               <li>
                 <a
-                  href="#"
+                  href="https://www.tiktok.com/@highlifeshowband"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 py-1.5 group"
@@ -306,11 +306,11 @@ export default function Footer() {
                 Rezervări &amp; info:
               </p>
               <a
-                href="tel:+40721234567"
+                href="tel:+40754636633"
                 className="font-body text-xs transition-colors duration-200 hover:text-gold"
                 style={{ color: "rgba(201,168,76,0.70)" }}
               >
-                +40 721 234 567
+                0754 636 633
               </a>
             </div>
           </div>
@@ -324,7 +324,8 @@ export default function Footer() {
             className="font-body text-xs"
             style={{ color: "rgba(245,240,232,0.30)" }}
           >
-            &copy; 2024 Highlife Showband. Toate drepturile rezervate.
+            &copy; {new Date().getFullYear()} Highlife Showband. Toate
+            drepturile rezervate.
           </p>
           <p
             className="font-body text-xs"
