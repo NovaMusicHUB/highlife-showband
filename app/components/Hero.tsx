@@ -116,7 +116,7 @@ export default function Hero() {
           }}
         />
         <img
-          src="/images/cover.png"
+          src="/images/cover.jpg"
           alt="Highlife Showband — membrii trupei"
           style={{
             width: "100%",
@@ -132,7 +132,7 @@ export default function Hero() {
       <div
         className="lg:hidden absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: "url('/images/cover.png')",
+          backgroundImage: "url('/images/cover.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center 15%",
           opacity: 0.18,

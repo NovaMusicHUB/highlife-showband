@@ -190,7 +190,7 @@ const EVENT_CARDS: EventCard[] = [
   },
   {
     title: "Botezuri",
-    image: "/images/botez-grup.png",
+    image: "/images/botez-grup.jpg",
     bgPosition: "center 25%",
     description:
       "Momente sfinte cu muzica potrivită. Creăm o atmosferă căldă și emoționantă.",
