@@ -264,7 +264,7 @@ export default function Footer() {
               {/* TikTok */}
               <li>
                 <a
-                  href="https://www.tiktok.com/@highlifeshowband"
+                  https://www.tiktok.com/@highlife.show.band
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 py-1.5 group"

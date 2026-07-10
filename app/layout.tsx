@@ -73,6 +73,53 @@ export const metadata: Metadata = {
   },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Cum rezerv Highlife Showband pentru evenimentul meu?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Procesul este simplu: ne contactezi prin formularul de pe site sau pe WhatsApp, stabilim detaliile evenimentului (dată, locație, tip, număr invitați), primești o ofertă personalizată în maxim 24 de ore, semnăm contractul și plătești avansul de 30% pentru confirmarea datei.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Care este avansul necesar pentru confirmarea rezervării?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Pentru confirmarea rezervării solicităm un avans de 30% din valoarea totală a pachetului ales. Restul sumei se achită cu 7 zile înainte de eveniment sau la fața locului, conform condițiilor din contract.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Includeți echipament audio și de lumini în pachet?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Da! Toate pachetele noastre includ sistem PA profesional și echipament de lumini adaptat spațiului evenimentului. Nu trebuie să vă faceți griji pentru logistică — echipa noastră aduce și montează totul înainte de eveniment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Pot personaliza repertoriul muzical?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolut! Personalizarea repertoriului este unul dintre avantajele noastre principale. Puteți trimite o listă cu melodiile preferate, iar noi facem tot posibilul să le includem. Avem un repertoriu de 500+ piese din toate genurile — pop, rock, jazz, folclor, hituri internaționale și mai mult.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Activați și în afara orașului / județului?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Da, activăm în toată România și, ocazional, peste granița țării. Taxele de deplasare sunt calculate în funcție de distanță și sunt incluse transparent în oferta finală, fără surprize.",
+      },
+    },
+  ],
+};
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "MusicGroup",
@@ -91,7 +138,7 @@ const jsonLd = {
     "https://www.facebook.com/highlifeshowband",
     "https://www.instagram.com/highlifeshowband",
     "https://www.youtube.com/@Highlifeshowband",
-    "https://www.tiktok.com/@highlifeshowband",
+    https://www.tiktok.com/@highlife.show.band
   ],
   contactPoint: {
     "@type": "ContactPoint",
@@ -121,6 +168,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
         {/* Theme initializer — runs before paint to prevent flash */}
         <script
