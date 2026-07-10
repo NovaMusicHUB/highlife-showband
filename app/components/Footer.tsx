@@ -198,7 +198,7 @@ export default function Footer() {
               {/* Facebook */}
               <li>
                 <a
-                  href="https://www.facebook.com/highlifeshowband"
+                  https://www.facebook.com/profile.php?id=61590603836328
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 py-1.5 group"

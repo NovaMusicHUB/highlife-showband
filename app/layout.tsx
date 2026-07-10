@@ -135,7 +135,7 @@ const jsonLd = {
   },
   genre: ["Pop", "Rock", "Jazz", "Folclor", "Dance"],
   sameAs: [
-    "https://www.facebook.com/highlifeshowband",
+    "https://www.facebook.com/profile.php?id=61590603836328"
     "https://www.instagram.com/highlifeshowband",
     "https://www.youtube.com/@Highlifeshowband",
     https://www.tiktok.com/@highlife.show.band
