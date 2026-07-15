@@ -259,7 +259,7 @@ export default function Reels() {
 
           {/* TikTok */}
           <a
-            https://www.tiktok.com/@highlife.show.band
+            href="https://www.tiktok.com/@highlife.show.band"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-ghost flex items-center gap-2"

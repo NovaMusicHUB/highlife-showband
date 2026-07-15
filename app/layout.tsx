@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Cormorant_Garamond, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -135,10 +136,10 @@ const jsonLd = {
   },
   genre: ["Pop", "Rock", "Jazz", "Folclor", "Dance"],
   sameAs: [
-    "https://www.facebook.com/profile.php?id=61590603836328"
+    "https://www.facebook.com/profile.php?id=61590603836328",
     "https://www.instagram.com/highlifeshowband",
     "https://www.youtube.com/@Highlifeshowband",
-    https://www.tiktok.com/@highlife.show.band
+    "https://www.tiktok.com/@highlife.show.band",
   ],
   contactPoint: {
     "@type": "ContactPoint",
@@ -180,7 +181,35 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+
+        {/* Meta Pixel */}
+        <Script id="facebook-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window,document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '887781143876762');
+            fbq('track', 'PageView');
+          `}
+        </Script>
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=887781143876762&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
+      </body>
     </html>
   );
 }
