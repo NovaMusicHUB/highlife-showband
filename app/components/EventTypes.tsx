@@ -321,7 +321,7 @@ export default function EventTypes() {
 
                 {/* Description — slides in on hover */}
                 <p
-                  className="font-body text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 overflow-hidden max-h-0 group-hover:max-h-20"
+                  className="font-body text-sm opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 overflow-hidden max-h-20 lg:max-h-0 lg:group-hover:max-h-20"
                   style={{ color: "rgba(245, 240, 232, 0.72)" }}
                 >
                   {card.description}
@@ -329,7 +329,7 @@ export default function EventTypes() {
 
                 {/* CTA arrow */}
                 <div
-                  className="flex items-center gap-1.5 text-xs tracking-widest uppercase mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="flex items-center gap-1.5 text-xs tracking-widest uppercase mt-2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300"
                   style={{ color: "#c9a84c" }}
                 >
                   <span className="font-body font-semibold">Află mai mult</span>

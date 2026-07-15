@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-screen min-h-dvh flex items-center overflow-hidden"
       style={{ background: "#0d0d0d" }}
     >
       {/* ── Logo watermark — decorative background element ─────────────── */}
@@ -227,7 +227,7 @@ export default function Hero() {
             <a href="#contact" className="btn-gold">
               <span>Solicită o Ofertă</span>
             </a>
-            <a href="#showreel" className="btn-ghost">
+            <a href="#reels" className="btn-ghost">
               <span>▶ Video</span>
             </a>
           </div>

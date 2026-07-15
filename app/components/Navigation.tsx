@@ -217,7 +217,7 @@ export default function Navigation() {
                     ? "Activează modul luminos"
                     : "Activează modul întunecat"
                 }
-                className="flex items-center justify-center w-8 h-8"
+                className="flex items-center justify-center w-11 h-11"
                 style={{ color: "rgba(245, 240, 232, 0.5)" }}
               >
                 {isDark ? (
@@ -262,7 +262,7 @@ export default function Navigation() {
                 onClick={() => setIsMobileOpen(true)}
                 aria-label="Deschide meniu"
                 aria-expanded={isMobileOpen}
-                className="flex flex-col justify-center items-center w-10 h-10 gap-[6px]"
+                className="flex flex-col justify-center items-center w-11 h-11 gap-[6px]"
               >
                 <span
                   className="block w-6 h-[1.5px] transition-all duration-300"
@@ -317,7 +317,7 @@ export default function Navigation() {
           <button
             onClick={closeMobile}
             aria-label="Închide meniu"
-            className="flex items-center justify-center w-9 h-9 rounded-full transition-colors duration-200"
+            className="flex items-center justify-center w-11 h-11 rounded-full transition-colors duration-200"
             style={{
               color: "rgba(245, 240, 232, 0.5)",
               border: "1px solid rgba(201,168,76,0.15)",
@@ -349,7 +349,7 @@ export default function Navigation() {
               key={link.href}
               href={link.href}
               onClick={closeMobile}
-              className="font-body uppercase py-4 transition-colors duration-200 border-b"
+              className="font-body uppercase py-4 transition-colors duration-200 border-b hover:text-gold"
               style={{
                 fontSize: "0.75rem",
                 letterSpacing: "0.2em",
@@ -357,10 +357,6 @@ export default function Navigation() {
                 borderColor: "rgba(201, 168, 76, 0.07)",
                 transitionDelay: isMobileOpen ? `${i * 50}ms` : "0ms",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#c9a84c")}
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.color = "rgba(245, 240, 232, 0.65)")
-              }
             >
               {link.label}
             </a>
@@ -369,8 +365,8 @@ export default function Navigation() {
 
         {/* Drawer CTA */}
         <div
-          className="px-8 pb-10 pt-4 flex-shrink-0"
-          style={{ borderTop: "1px solid rgba(201, 168, 76, 0.08)" }}
+          className="px-8 pt-4 flex-shrink-0"
+          style={{ borderTop: "1px solid rgba(201, 168, 76, 0.08)", paddingBottom: "max(2.5rem, env(safe-area-inset-bottom))" }}
         >
           <a
             href="#contact"

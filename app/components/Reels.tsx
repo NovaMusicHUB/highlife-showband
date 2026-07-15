@@ -112,6 +112,7 @@ export default function Reels() {
                   videoRefs.current[i] = el;
                 }}
                 src={reel.src}
+                autoPlay
                 muted
                 loop
                 playsInline

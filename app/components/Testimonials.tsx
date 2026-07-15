@@ -125,7 +125,7 @@ export default function Testimonials() {
               style={{
                 background: "#111111",
                 borderLeft: "4px solid #c9a84c",
-                padding: "2.5rem 3rem",
+                padding: "clamp(1.25rem, 5vw, 2.5rem) clamp(1.25rem, 6vw, 3rem)",
                 position: "relative",
               }}
             >
@@ -137,7 +137,7 @@ export default function Testimonials() {
                   top: "1rem",
                   right: "2rem",
                   fontFamily: "var(--font-cormorant)",
-                  fontSize: "8rem",
+                  fontSize: "clamp(4rem, 15vw, 8rem)",
                   lineHeight: 1,
                   color: "rgba(201,168,76,0.08)",
                   pointerEvents: "none",
@@ -198,8 +198,9 @@ export default function Testimonials() {
           <div className="flex items-center justify-between mt-6">
             <button
               onClick={prev}
-              className="btn-ghost px-4 py-2 text-xs"
+              className="btn-ghost px-4 py-3 text-xs"
               aria-label="Testimonial anterior"
+              style={{ minHeight: "44px" }}
             >
               ← Anterior
             </button>
@@ -226,7 +227,8 @@ export default function Testimonials() {
                     border: "none",
                     cursor: "pointer",
                     transition: "all 0.3s ease",
-                    padding: 0,
+                    padding: "12px 8px",
+                    boxSizing: "content-box",
                   }}
                 />
               ))}
@@ -234,8 +236,9 @@ export default function Testimonials() {
 
             <button
               onClick={next}
-              className="btn-ghost px-4 py-2 text-xs"
+              className="btn-ghost px-4 py-3 text-xs"
               aria-label="Testimonial următor"
+              style={{ minHeight: "44px" }}
             >
               Următor →
             </button>

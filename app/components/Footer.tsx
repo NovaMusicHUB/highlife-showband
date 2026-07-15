@@ -121,7 +121,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <a
                       href={link.href}
-                      className="font-body text-xs block py-1 transition-colors duration-200 hover:text-gold"
+                      className="font-body text-xs block py-2 transition-colors duration-200 hover:text-gold"
                       style={{ color: "rgba(245,240,232,0.40)" }}
                     >
                       {link.label}
@@ -140,7 +140,7 @@ export default function Footer() {
                 <li key={type}>
                   <a
                     href="#evenimente"
-                    className="font-body text-xs block py-1 transition-colors duration-200 hover:text-gold"
+                    className="font-body text-xs block py-2 transition-colors duration-200 hover:text-gold"
                     style={{ color: "rgba(245,240,232,0.40)" }}
                   >
                     {type}
@@ -160,7 +160,7 @@ export default function Footer() {
                   href="https://www.instagram.com/highlifeshowband"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 py-1.5 group"
+                  className="flex items-center gap-2 py-3 group"
                   aria-label="Instagram"
                 >
                   <span
@@ -201,7 +201,7 @@ export default function Footer() {
                   href="https://www.facebook.com/profile.php?id=61590603836328"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 py-1.5 group"
+                  className="flex items-center gap-2 py-3 group"
                   aria-label="Facebook"
                 >
                   <span
@@ -232,7 +232,7 @@ export default function Footer() {
                   href="https://www.youtube.com/@Highlifeshowband"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 py-1.5 group"
+                  className="flex items-center gap-2 py-3 group"
                   aria-label="YouTube"
                 >
                   <span
@@ -267,7 +267,7 @@ export default function Footer() {
                   href="https://www.tiktok.com/@highlife.show.band"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 py-1.5 group"
+                  className="flex items-center gap-2 py-3 group"
                   aria-label="TikTok"
                 >
                   <span

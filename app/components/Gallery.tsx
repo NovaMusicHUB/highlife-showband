@@ -322,7 +322,7 @@ export default function Gallery() {
           {/* Close button */}
           <button
             className="absolute top-6 right-6 z-10 transition-colors"
-            style={{ color: "rgba(245,240,232,0.7)" }}
+            style={{ color: "rgba(245,240,232,0.7)", minWidth: '44px', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '6px' }}
             onClick={() => setLightboxIndex(null)}
             aria-label="Închide galeria"
           >
