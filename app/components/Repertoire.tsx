@@ -10,6 +10,8 @@ const CATEGORIES = [
   "Românesc",
   "Folclor",
   "Balkan",
+  "Latino",
+  "Macedoneaca",
   "Petrecere",
 ] as const;
 
@@ -29,13 +31,15 @@ const SONGS = [
   { title: "Trandafir la Firidă", artist: "Tradițional / Lupii lui Calangea", category: "Folclor" },
   { title: "Cântă Cucu-n Bucovina", artist: "Tradițional / Grigore Leșe", category: "Folclor" },
   { title: "Pui de Moroșan", artist: "Tradițional / Frații Petreuș", category: "Folclor" },
-  { title: "Colaj Gipsy Kings", artist: "Gipsy Kings", category: "Balkan" },
+  { title: "Colaj Gipsy Kings", artist: "Gipsy Kings", category: "Latino" },
   { title: "Ederlezi", artist: "Goran Bregović / Tradițional", category: "Balkan" },
   { title: "Bella Ciao", artist: "Tradițional / Goran Bregović", category: "Balkan" },
   { title: "Kalashnikov", artist: "Goran Bregović", category: "Balkan" },
   { title: "Perspektiva", artist: "S.A.R.S.", category: "Balkan" },
   { title: "Striga cu Mine, Te Iubesc", artist: "Muzică de petrecere", category: "Petrecere" },
   { title: "Bea Fino și cu Nănașu", artist: "Puiu Codreanu", category: "Petrecere" },
+  { title: "Tamango", artist: "Muro Shavo", category: "Balkan" },
+  { title: "Luna alba", artist: "Elena", category: "Macedoneaca" },
 ] as const;
 
 // ── Component ─────────────────────────────────────────────────────────────────
