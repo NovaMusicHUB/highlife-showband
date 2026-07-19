@@ -38,7 +38,7 @@ const SONGS = [
   { title: "Perspektiva", artist: "S.A.R.S.", category: "Balkan" },
   { title: "Striga cu Mine, Te Iubesc", artist: "Muzică de petrecere", category: "Petrecere" },
   { title: "Bea Fino și cu Nănașu", artist: "Puiu Codreanu", category: "Petrecere" },
-  { title: "Tamango", artist: "Muro Shavo", category: "Balkan" },
+  { title: "Muro Shavo", artist: "Tamango", category: "Balkan" },
   { title: "Luna alba", artist: "Elena", category: "Macedoneaca" },
 ] as const;
 
