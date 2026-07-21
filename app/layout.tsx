@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { Viewport } from "next";
 import { Playfair_Display, Cormorant_Garamond, Inter } from "next/font/google";
 import Script from "next/script";
+import WhatsAppButton from "./components/WhatsAppButton";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -190,6 +191,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         {children}
+        <WhatsAppButton />
 
         {/* Meta Pixel */}
         <Script id="facebook-pixel" strategy="afterInteractive">
