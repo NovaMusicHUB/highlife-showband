@@ -33,7 +33,7 @@ export default function RepertoireModal({ isOpen, onClose }: RepertoireModalProp
       {/* Modal */}
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
         <div
-          className="relative w-full max-w-4xl max-h-[90vh] bg-dark rounded-lg overflow-hidden shadow-2xl flex flex-col"
+          className="relative w-full max-w-6xl h-[95vh] bg-dark rounded-lg overflow-hidden shadow-2xl flex flex-col"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header */}
@@ -77,15 +77,9 @@ export default function RepertoireModal({ isOpen, onClose }: RepertoireModalProp
 
           {/* Footer with Download Button */}
           <div
-            className="flex items-center justify-between p-4 sm:p-6 border-t"
+            className="flex items-center justify-end p-4 sm:p-6 border-t"
             style={{ borderColor: "rgba(201,168,76,0.2)" }}
           >
-            <p
-              className="font-body text-xs sm:text-sm"
-              style={{ color: "rgba(245,240,232,0.5)" }}
-            >
-              Repertoriu cu 500+ piese
-            </p>
             <a
               href="/Repertoriu_HIGHLIFE_SHOWBAND.pdf"
               download="Repertoriu_HIGHLIFE_SHOWBAND.pdf"
