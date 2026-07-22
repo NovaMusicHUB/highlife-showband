@@ -35,7 +35,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Highlife Showband — Muzică Live pentru Nunți & Evenimente | România",
   description:
-    "Highlife Showband — trupa profesionistă pentru nuntă, corporate și petreceri private în toată România. Muzicieni live + DJ, sistem PA & lumini complet, setlisturi personalizate. 500+ evenimente, 12 ani experiență.",
+    "Highlife Showband — trupa profesionistă pentru nuntă, corporate și petreceri private în toată România. Muzicieni live + DJ, sistem PA & lumini complet, setlisturi personalizate. Sute de evenimente, 12 ani experiență.",
   keywords:
     "trupa nunta Romania, muzica live nunta, formatie nunta, highlife showband, trupa corporate, muzica evenimente, formatie botez, trupa petrecere privata",
   authors: [{ name: "Highlife Showband" }],
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Highlife Showband — Sunetul Momentului Tău Perfect",
     description:
-      "Trupa profesionistă pentru nunți, corporate și petreceri private în România. 500+ evenimente, 12 ani de experiență, muzicieni live + DJ.",
+      "Trupa profesionistă pentru nunți, corporate și petreceri private în România. Sute de evenimente, 12 ani de experiență, muzicieni live + DJ.",
     url: "https://highlifeshowband.ro",
     siteName: "Highlife Showband",
     locale: "ro_RO",
