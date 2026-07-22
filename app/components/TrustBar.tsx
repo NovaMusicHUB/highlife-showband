@@ -9,7 +9,7 @@ interface Stat {
 }
 
 const STATS: Stat[] = [
-  { number: 500, suffix: '+', label: 'Evenimente' },
+  { number: 270, suffix: '+', label: 'Evenimente' },
   { number: 12,  suffix: '',  label: 'Ani Experiență' },
   { number: 50,  suffix: '+', label: 'Ore Repertoriu' },
   { number: 100, suffix: '%', label: 'Recenzii 5 Stele' },
