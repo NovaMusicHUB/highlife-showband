@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import RepertoireModal from "./RepertoireModal";
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 
@@ -46,6 +47,7 @@ const SONGS = [
 
 export default function Repertoire() {
   const [activeCategory, setActiveCategory] = useState<string>("Toate");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -142,7 +144,11 @@ export default function Repertoire() {
 
         {/* ── Download CTA ── */}
         <div className="flex justify-center mt-10 reveal stagger-3">
-          <a href="#" className="btn-gold" download>
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="btn-gold"
+            aria-label="Deschide repertoriul complet"
+          >
             <svg
               width="16"
               height="16"
@@ -159,7 +165,7 @@ export default function Repertoire() {
               />
             </svg>
             <span>Descarcă Repertoriul Complet PDF</span>
-          </a>
+          </button>
         </div>
 
         {/* ── Note ── */}
@@ -171,6 +177,9 @@ export default function Repertoire() {
           piese.
         </p>
       </div>
+
+      {/* ── Repertoire Modal ── */}
+      <RepertoireModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }
