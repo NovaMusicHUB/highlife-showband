@@ -115,7 +115,7 @@ const faqJsonLd = {
       name: "Pot personaliza repertoriul muzical?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolut! Personalizarea repertoriului este unul dintre avantajele noastre principale. Puteți trimite o listă cu melodiile preferate, iar noi facem tot posibilul să le includem. Avem un repertoriu de 500+ piese din toate genurile — pop, rock, jazz, folclor, hituri internaționale și mai mult.",
+        text: "Absolut! Personalizarea repertoriului este unul dintre avantajele noastre principale. Puteți trimite o listă cu melodiile preferate, iar noi facem tot posibilul să le includem. Avem un repertoriu de 300+ piese din toate genurile — pop, rock, jazz, folclor, hituri internaționale și mai mult.",
       },
     },
     {
