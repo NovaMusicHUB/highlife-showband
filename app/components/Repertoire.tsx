@@ -173,8 +173,7 @@ export default function Repertoire() {
           className="font-body text-xs text-center mt-4"
           style={{ color: "rgba(245,240,232,0.3)" }}
         >
-          Lista de mai sus reprezintă o selecție din repertoriul nostru de 500+
-          piese.
+          Lista de mai sus reprezintă doar o selecție din repertoriul nostru.
         </p>
       </div>
 
