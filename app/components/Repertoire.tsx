@@ -12,7 +12,7 @@ const CATEGORIES = [
   "Folclor",
   "Balkan",
   "Latino",
-  "Macedoneaca",
+  "Machedoneasca",
   "Petrecere",
 ] as const;
 
@@ -40,7 +40,10 @@ const SONGS = [
   { title: "Striga cu Mine, Te Iubesc", artist: "Muzică de petrecere", category: "Petrecere" },
   { title: "Bea Fino și cu Nănașu", artist: "Puiu Codreanu", category: "Petrecere" },
   { title: "Muro Shavo", artist: "Tamango", category: "Balkan" },
-  { title: "Luna alba", artist: "Elena", category: "Macedoneaca" },
+  { title: "Luna alba", artist: "Elena", category: "Machedoneasca" },
+  { title: "Ela Ela", artist: "Tradițional Machedon", category: "Machedoneasca" },
+  { title: "Pamporea", artist: "Tradițional Machedon", category: "Machedoneasca" },
+  { title: "Un Trandafir Crește la Firidă", artist: "Tradițional Machedon", category: "Machedoneasca" },
 ] as const;
 
 // ── Component ─────────────────────────────────────────────────────────────────
