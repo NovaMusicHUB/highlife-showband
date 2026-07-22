@@ -23,8 +23,12 @@ const SONGS = [
   { title: "We Found Love", artist: "Rihanna ft. Calvin Harris", category: "Internațional" },
   { title: "Good Feeling", artist: "Flo Rida", category: "Internațional" },
   { title: "Danza Kuduro", artist: "Don Omar ft. Lucenzo", category: "Internațional" },
+  { title: "Nostalgia Engleză", artist: "Colaj / Diverse piese retro", category: "Internațional" },
+  { title: "Valerie", artist: "Amy Winehouse / Mark Ronson", category: "Internațional" },
+  { title: "Rhythm Is a Dancer", artist: "Snap!", category: "Internațional" },
+  { title: "Sarà Perché Ti Amo", artist: "Ricchi e Poveri", category: "Internațional" },
   { title: "A Venit Poliția", artist: "Theo Rose", category: "Românesc" },
-  { title: "Marea Mea Iubire", artist: "Adrian Daminescu", category: "Românesc" },
+  { title: "Nostalgia Românească", artist: "Colaj / Diverse piese retro", category: "Românesc" },
   { title: "Căsuța Noastră", artist: "Gică Petrescu", category: "Românesc" },
   { title: "Hora din Moldova", artist: "Nelly Ciobanu", category: "Folclor" },
   { title: "Trandafir la Firidă", artist: "Tradițional / Lupii lui Calangea", category: "Folclor" },
@@ -38,9 +42,6 @@ const SONGS = [
   { title: "Bea Fino și cu Nănașu", artist: "Puiu Codreanu", category: "Petrecere" },
   { title: "Muro Shavo", artist: "Tamango", category: "Balkan" },
   { title: "Luna alba", artist: "Elena", category: "Machedoneasca" },
-  { title: "Ela Ela", artist: "Tradițional Machedon", category: "Machedoneasca" },
-  { title: "Pamporea", artist: "Tradițional Machedon", category: "Machedoneasca" },
-  { title: "Un Trandafir Crește la Firidă", artist: "Tradițional Machedon", category: "Machedoneasca" },
 ] as const;
 
 // ── Component ─────────────────────────────────────────────────────────────────
