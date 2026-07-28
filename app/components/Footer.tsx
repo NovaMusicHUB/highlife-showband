@@ -327,12 +327,21 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Highlife Showband. Toate
             drepturile rezervate.
           </p>
-          <p
-            className="font-body text-xs"
-            style={{ color: "rgba(245,240,232,0.30)" }}
-          >
-            Site realizat cu ❤️ pentru muzică
-          </p>
+          <div className="flex items-center gap-4">
+            <a
+              href="/politica-de-confidentialitate"
+              className="font-body text-xs transition-colors duration-200 hover:text-gold"
+              style={{ color: "rgba(245,240,232,0.30)" }}
+            >
+              Politică de Confidențialitate
+            </a>
+            <p
+              className="font-body text-xs"
+              style={{ color: "rgba(245,240,232,0.30)" }}
+            >
+              Site realizat cu ❤️ pentru muzică
+            </p>
+          </div>
         </div>
       </div>
     </footer>

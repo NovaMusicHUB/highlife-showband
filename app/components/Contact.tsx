@@ -675,7 +675,14 @@ export default function Contact() {
               className="font-body text-xs mt-4 text-center"
               style={{ color: "rgba(245,240,232,0.30)" }}
             >
-              🔒 Datele tale sunt protejate și nu vor fi partajate cu terți.
+              🔒 Datele tale sunt protejate și nu vor fi partajate cu terți.{" "}
+              <a
+                href="/politica-de-confidentialitate"
+                className="transition-colors duration-200 hover:text-gold"
+                style={{ color: "rgba(245,240,232,0.45)", textDecoration: "underline" }}
+              >
+                Politica de Confidențialitate
+              </a>
             </p>
           </div>
         </div>
