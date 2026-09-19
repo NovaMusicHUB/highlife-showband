@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const REELS = [
   {
@@ -17,17 +17,28 @@ const REELS = [
 
 export default function Reels() {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const [isPlaying, setIsPlaying] = useState<boolean[]>(() =>
+    REELS.map(() => false),
+  );
 
-  // Autoplay only when visible — saves bandwidth until user scrolls here
+  // Mobile: autoplay only while the reel is in view (saves bandwidth otherwise).
+  // Desktop: never autoplay — playback starts only on click.
+  // On any device, playback pauses once the reel scrolls out of view.
   useEffect(() => {
+    const isTouchDevice =
+      typeof window !== "undefined" &&
+      window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const video = entry.target as HTMLVideoElement;
           if (entry.isIntersecting) {
-            video.play().catch(() => {
-              // ignore autoplay policy errors (e.g. some mobile browsers)
-            });
+            if (isTouchDevice) {
+              video.play().catch(() => {
+                // ignore autoplay policy errors (e.g. some mobile browsers)
+              });
+            }
           } else {
             video.pause();
           }
@@ -42,6 +53,16 @@ export default function Reels() {
 
     return () => observer.disconnect();
   }, []);
+
+  function toggleVideo(index: number) {
+    const video = videoRefs.current[index];
+    if (!video) return;
+    if (video.paused) {
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+    }
+  }
 
   return (
     <section
@@ -104,6 +125,19 @@ export default function Reels() {
                 aspectRatio: "9 / 16",
                 border: "1px solid rgba(201,168,76,0.2)",
                 transitionDelay: `${i * 0.15}s`,
+                cursor: "pointer",
+              }}
+              onClick={() => toggleVideo(i)}
+              role="button"
+              tabIndex={0}
+              aria-label={
+                isPlaying[i] ? `Pauzează ${reel.label}` : `Redă ${reel.label}`
+              }
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  toggleVideo(i);
+                }
               }}
             >
               {/* ── Video ── */}
@@ -112,13 +146,23 @@ export default function Reels() {
                   videoRefs.current[i] = el;
                 }}
                 src={reel.src}
-                autoPlay
                 muted
                 loop
                 playsInline
                 preload="metadata"
+                onPlay={() =>
+                  setIsPlaying((prev) =>
+                    prev.map((v, idx) => (idx === i ? true : v)),
+                  )
+                }
+                onPause={() =>
+                  setIsPlaying((prev) =>
+                    prev.map((v, idx) => (idx === i ? false : v)),
+                  )
+                }
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                aria-label={reel.label}
+                aria-hidden="true"
+                tabIndex={-1}
               />
 
               {/* ── Permanent dark gradient at bottom ── */}
@@ -146,6 +190,50 @@ export default function Reels() {
                 }}
                 aria-hidden="true"
               />
+
+              {/* ── Play / pause button ── */}
+              <div
+                className="absolute inset-0 flex items-center justify-center pointer-events-none"
+                aria-hidden="true"
+              >
+                <span
+                  className={`flex items-center justify-center transition-opacity duration-300 ${
+                    isPlaying[i]
+                      ? "opacity-0 group-hover:opacity-100"
+                      : "opacity-100"
+                  }`}
+                  style={{
+                    width: "56px",
+                    height: "56px",
+                    borderRadius: "50%",
+                    background: "rgba(13,13,13,0.55)",
+                    border: "1px solid rgba(201,168,76,0.6)",
+                    backdropFilter: "blur(4px)",
+                  }}
+                >
+                  {isPlaying[i] ? (
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="#f5f0e8"
+                    >
+                      <rect x="6" y="5" width="4" height="14" rx="1" />
+                      <rect x="14" y="5" width="4" height="14" rx="1" />
+                    </svg>
+                  ) : (
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="#f5f0e8"
+                      style={{ marginLeft: "3px" }}
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  )}
+                </span>
+              </div>
 
               {/* ── Top badge ── */}
               <div className="absolute top-4 left-4 flex items-center gap-2">
