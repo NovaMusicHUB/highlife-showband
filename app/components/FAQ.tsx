@@ -30,6 +30,12 @@ const faqs = [
     answer:
       "Da, activăm în toată România și, ocazional, peste granița țării. Taxele de deplasare sunt calculate în funcție de distanță și sunt incluse transparent în oferta finală, fără surprize.",
   },
+  {
+    question:
+      "A cântat Highlife Showband și pe scene mari, în fața publicului larg?",
+    answer:
+      "Da. Highlife Showband a fost selectată pentru KIMARO Open Stage 2026, inițiativa Kiss FM, Magic FM și Rock FM prin care trupe sunt alese să cânte pe scena din Piața Constituției, în fața a mii de oameni, alături de artiști precum Smiley, Ștefan Bănică și Theo Rose.",
+  },
 ];
 
 // ── Component ─────────────────────────────────────────────────────────────────

@@ -126,6 +126,14 @@ const faqJsonLd = {
         text: "Da, activăm în toată România și, ocazional, peste granița țării. Taxele de deplasare sunt calculate în funcție de distanță și sunt incluse transparent în oferta finală, fără surprize.",
       },
     },
+    {
+      "@type": "Question",
+      name: "A cântat Highlife Showband și pe scene mari, în fața publicului larg?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Da. Highlife Showband a fost selectată pentru KIMARO Open Stage 2026, inițiativa Kiss FM, Magic FM și Rock FM prin care trupe sunt alese să cânte pe scena din Piața Constituției, în fața a mii de oameni, alături de artiști precum Smiley, Ștefan Bănică și Theo Rose.",
+      },
+    },
   ],
 };
 
@@ -138,11 +146,20 @@ const jsonLd = {
   url: "https://highlifeshowband.ro",
   logo: "https://highlifeshowband.ro/logo.svg",
   foundingDate: "2013",
+  telephone: "+40754636633",
+  email: "contact@highlifeshowband.ro",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "București",
+    addressCountry: "RO",
+  },
   areaServed: {
     "@type": "Country",
     name: "Romania",
   },
   genre: ["Pop", "Rock", "Jazz", "Folclor", "Dance"],
+  award:
+    "Selectați pentru KIMARO Open Stage 2026, alături de Kiss FM, Magic FM și Rock FM, Piața Constituției, București",
   sameAs: [
     "https://www.facebook.com/profile.php?id=61590603836328",
     "https://www.instagram.com/highlifeshowband",
@@ -152,6 +169,8 @@ const jsonLd = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
+    telephone: "+40754636633",
+    email: "contact@highlifeshowband.ro",
     availableLanguage: "Romanian",
   },
   offers: {

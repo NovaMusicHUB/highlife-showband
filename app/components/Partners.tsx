@@ -9,6 +9,7 @@ const partners = [
   "Catrina Events",
   "La Dolce Vita",
   "Crown Plaza",
+  "KIMARO · Kiss FM",
 ];
 
 // Duplicate for seamless infinite loop

@@ -9,6 +9,7 @@ const FEATURES = [
   "Sistem PA & lumini complet la cel mai înalt nivel",
   "Setlisturi personalizate pentru evenimentul tău",
   "Coordonator dedicat pentru planificarea evenimentului",
+  "Selectați pentru KIMARO Open Stage 2026 — Kiss FM, Magic FM, Rock FM",
 ];
 
 // ── Checkmark SVG ────────────────────────────────────────────────────────────

@@ -1,6 +1,7 @@
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import EventTypes from "./components/EventTypes";
+import Partners from "./components/Partners";
 import Experience from "./components/Experience";
 import Reels from "./components/Reels";
 import Packages from "./components/Packages";
@@ -20,6 +21,7 @@ export default function Home() {
       <main>
         <Hero />
         <EventTypes />
+        <Partners />
         <Experience />
         <Reels />
         <Packages />
