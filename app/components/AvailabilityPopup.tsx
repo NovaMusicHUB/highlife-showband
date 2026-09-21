@@ -142,7 +142,7 @@ export default function AvailabilityPopup() {
           >
             Ar fi păcat să ratezi{' '}
             <em className="text-gold-gradient not-italic">cel mai tare show</em>{' '}
-            al vieții tale
+            pentru evenimentul tău
           </h2>
 
           {/* Body text */}

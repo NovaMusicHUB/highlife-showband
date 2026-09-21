@@ -128,21 +128,6 @@ const TrophyIcon = (
   </svg>
 );
 
-const ZapIcon = (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    aria-hidden="true"
-  >
-    <path
-      d="M11.5 2.5L4.5 11H10.5L9 17.5L16.5 9H10.5L11.5 2.5Z"
-      fill="#c9a84c"
-    />
-  </svg>
-);
-
 // ── Card data ────────────────────────────────────────────────────────────────
 
 type EventCard = {
@@ -205,18 +190,8 @@ const EVENT_CARDS: EventCard[] = [
     description:
       "Eleganță și spectacol pentru serile de gală și ceremoniile de premiere.",
     icon: TrophyIcon,
-    colClass: "lg:col-span-2",
+    colClass: "sm:col-span-2 lg:col-span-2",
     heightClass: "h-[260px]",
-  },
-  {
-    title: "Evenimente Publice",
-    image: "/images/kimaro/kimaro-04.jpg",
-    bgPosition: "center 35%",
-    description:
-      "Concerte, festivaluri și evenimente publice de amploare. Highlife Showband pe scenele mari ale României.",
-    icon: ZapIcon,
-    colClass: "sm:col-span-2 lg:col-span-6",
-    heightClass: "h-[220px] lg:h-[240px]",
   },
 ];
 
@@ -248,7 +223,6 @@ export default function EventTypes() {
           Desktop (lg): 6-column bento
             Row 1: Nunți (3) | Corporate (3) — two equal-height feature cards
             Row 2: Petreceri (2) | Botezuri (2) | Gale (2) — three equal cards
-            Row 3: Evenimente Publice (6) — full-width banner
           Mobile: 1 column; SM: 2 columns
         */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3">
