@@ -166,8 +166,8 @@ const EVENT_CARDS: EventCard[] = [
     description:
       "Transformăm nunta ta în povestea de dragoste pe care ai visat-o. De la primul dans până la ultima piesă.",
     icon: HeartIcon,
-    colClass: "sm:col-span-2 lg:col-span-2",
-    heightClass: "h-[320px] lg:h-[360px]",
+    colClass: "sm:col-span-2 lg:col-span-3",
+    heightClass: "h-[320px] lg:h-[380px]",
   },
   {
     title: "Evenimente Corporate",
@@ -176,8 +176,8 @@ const EVENT_CARDS: EventCard[] = [
     description:
       "Profesionalism și energie pentru echipa ta. Creăm atmosfera perfectă pentru team building-uri și gale.",
     icon: BriefcaseIcon,
-    colClass: "lg:col-span-2",
-    heightClass: "h-[260px]",
+    colClass: "sm:col-span-2 lg:col-span-3",
+    heightClass: "h-[320px] lg:h-[380px]",
   },
   {
     title: "Petreceri Private",
@@ -195,7 +195,7 @@ const EVENT_CARDS: EventCard[] = [
     description:
       "Momente sfinte cu muzica potrivită. Creăm o atmosferă căldă și emoționantă.",
     icon: FlowerIcon,
-    colClass: "sm:col-span-2 lg:col-span-3",
+    colClass: "lg:col-span-2",
     heightClass: "h-[260px]",
   },
   {
@@ -205,7 +205,7 @@ const EVENT_CARDS: EventCard[] = [
     description:
       "Eleganță și spectacol pentru serile de gală și ceremoniile de premiere.",
     icon: TrophyIcon,
-    colClass: "lg:col-span-1",
+    colClass: "lg:col-span-2",
     heightClass: "h-[260px]",
   },
   {
@@ -215,8 +215,8 @@ const EVENT_CARDS: EventCard[] = [
     description:
       "Concerte, festivaluri și evenimente publice de amploare. Highlife Showband pe scenele mari ale României.",
     icon: ZapIcon,
-    colClass: "sm:col-span-2 lg:col-span-2",
-    heightClass: "h-[260px]",
+    colClass: "sm:col-span-2 lg:col-span-6",
+    heightClass: "h-[220px] lg:h-[240px]",
   },
 ];
 
@@ -246,8 +246,9 @@ export default function EventTypes() {
         {/* ── Bento grid ── */}
         {/*
           Desktop (lg): 6-column bento
-            Row 1: Nunți (2) | Corporate (2) | Petreceri (2) — equal width, varied height
-            Row 2: Botezuri (3) | Gale (1) | Lansări (2) — asymmetric
+            Row 1: Nunți (3) | Corporate (3) — two equal-height feature cards
+            Row 2: Petreceri (2) | Botezuri (2) | Gale (2) — three equal cards
+            Row 3: Evenimente Publice (6) — full-width banner
           Mobile: 1 column; SM: 2 columns
         */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3">
