@@ -227,7 +227,7 @@ export default function Gallery() {
     <section
       id="galerie"
       className="py-20 lg:py-28"
-      style={{ background: "#111111" }}
+      style={{ background: "#f7f4ee" }}
     >
       <div className="section-container">
         {/* ── Section header ── */}
@@ -274,7 +274,7 @@ export default function Gallery() {
                 className="w-full h-auto block transition-transform duration-500 group-hover:scale-105"
               />
               {/* Hover overlay with zoom icon */}
-              <div className="absolute inset-0 bg-dark/0 group-hover:bg-dark/50 transition-colors duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center">
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <svg
                     width="32"
@@ -322,7 +322,7 @@ export default function Gallery() {
           {/* Close button */}
           <button
             className="absolute top-6 right-6 z-10 transition-colors"
-            style={{ color: "rgba(245,240,232,0.7)", minWidth: '44px', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '6px' }}
+            style={{ color: "rgba(255,255,255,0.85)", minWidth: '44px', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '6px' }}
             onClick={() => setLightboxIndex(null)}
             aria-label="Închide galeria"
           >
@@ -345,7 +345,7 @@ export default function Gallery() {
           {/* Prev button */}
           <button
             className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 transition-colors"
-            style={{ color: "rgba(245,240,232,0.7)" }}
+            style={{ color: "rgba(255,255,255,0.85)" }}
             onClick={(e) => {
               e.stopPropagation();
               setLightboxIndex((prev) =>
@@ -384,7 +384,7 @@ export default function Gallery() {
           {/* Next button */}
           <button
             className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 transition-colors"
-            style={{ color: "rgba(245,240,232,0.7)" }}
+            style={{ color: "rgba(255,255,255,0.85)" }}
             onClick={(e) => {
               e.stopPropagation();
               setLightboxIndex((prev) =>
@@ -413,7 +413,7 @@ export default function Gallery() {
           {/* Counter */}
           <div
             className="absolute bottom-6 left-1/2 -translate-x-1/2 font-body text-sm"
-            style={{ color: "rgba(245,240,232,0.5)" }}
+            style={{ color: "rgba(255,255,255,0.6)" }}
           >
             {lightboxIndex + 1} / {filteredImages.length}
           </div>

@@ -51,7 +51,7 @@ export default function FAQ() {
     <section
       id="faq"
       className="py-20 lg:py-28"
-      style={{ background: "#111111" }}
+      style={{ background: "#f7f4ee" }}
     >
       <div className="section-container">
         {/* ── Header ─────────────────────────────────────────────────────── */}
@@ -82,7 +82,7 @@ export default function FAQ() {
                 <span
                   className="font-body font-semibold pr-4 text-sm lg:text-base transition-colors duration-200"
                   style={{
-                    color: openIndex === i ? "#c9a84c" : "#f5f0e8",
+                    color: openIndex === i ? "#c9a84c" : "#1a1a1a",
                   }}
                 >
                   {faq.question}
@@ -118,7 +118,7 @@ export default function FAQ() {
               >
                 <p
                   className="font-body text-sm leading-relaxed pb-5"
-                  style={{ color: "rgba(245,240,232,0.60)" }}
+                  style={{ color: "rgba(26, 26, 26,0.60)" }}
                 >
                   {faq.answer}
                 </p>
@@ -131,7 +131,7 @@ export default function FAQ() {
         <div className="text-center mt-14 reveal">
           <p
             className="font-body text-sm mb-5"
-            style={{ color: "rgba(245,240,232,0.45)" }}
+            style={{ color: "rgba(26, 26, 26,0.45)" }}
           >
             Nu ai găsit răspunsul la întrebarea ta?
           </p>

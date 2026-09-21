@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const NAV_LINKS = [
   { label: "Acasă", href: "#" },
@@ -15,22 +15,6 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const drawerRef = useRef<HTMLDivElement>(null);
-
-  // Sync theme state from the <html data-theme> attribute via useSyncExternalStore
-  const isDark = useSyncExternalStore(
-    (callback) => {
-      const observer = new MutationObserver(callback);
-      observer.observe(document.documentElement, {
-        attributes: true,
-        attributeFilter: ["data-theme"],
-      });
-      return () => observer.disconnect();
-    },
-    // client snapshot
-    () => document.documentElement.getAttribute("data-theme") !== "light",
-    // server snapshot — default to dark
-    () => true,
-  );
 
   // Scroll listener
   useEffect(() => {
@@ -59,20 +43,6 @@ export default function Navigation() {
     };
   }, [isMobileOpen]);
 
-  function toggleTheme() {
-    const next = isDark ? "light" : "dark";
-    document.documentElement.setAttribute(
-      "data-theme",
-      next === "dark" ? "" : "light",
-    );
-    if (next === "dark") {
-      document.documentElement.removeAttribute("data-theme");
-    }
-    try {
-      localStorage.setItem("theme", next === "dark" ? "" : "light");
-    } catch {}
-  }
-
   function closeMobile() {
     setIsMobileOpen(false);
   }
@@ -82,11 +52,11 @@ export default function Navigation() {
       <header
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={{
-          background: isScrolled ? "rgba(13, 13, 13, 0.97)" : "transparent",
+          background: isScrolled ? "rgba(255, 255, 255, 0.92)" : "transparent",
           backdropFilter: isScrolled ? "blur(16px)" : "none",
           WebkitBackdropFilter: isScrolled ? "blur(16px)" : "none",
           borderBottom: isScrolled
-            ? "1px solid rgba(201, 168, 76, 0.1)"
+            ? "1px solid rgba(201, 168, 76, 0.15)"
             : "1px solid transparent",
         }}
       >
@@ -106,8 +76,7 @@ export default function Navigation() {
                   height: "68px",
                   width: "auto",
                   display: "block",
-                  filter:
-                    "brightness(0) invert(1) drop-shadow(0 0 18px rgba(255,255,255,0.45))",
+                  filter: "brightness(0)",
                 }}
               />
             </a>
@@ -122,13 +91,13 @@ export default function Navigation() {
                     style={{
                       fontSize: "0.7rem",
                       letterSpacing: "0.15em",
-                      color: "rgba(245, 240, 232, 0.7)",
+                      color: "rgba(26, 26, 26, 0.7)",
                     }}
                     onMouseEnter={(e) =>
                       (e.currentTarget.style.color = "#c9a84c")
                     }
                     onMouseLeave={(e) =>
-                      (e.currentTarget.style.color = "rgba(245, 240, 232, 0.7)")
+                      (e.currentTarget.style.color = "rgba(26, 26, 26, 0.7)")
                     }
                   >
                     {link.label}
@@ -139,60 +108,6 @@ export default function Navigation() {
 
             {/* ── Desktop Right Controls ── */}
             <div className="hidden lg:flex items-center gap-4">
-              {/* Theme toggle */}
-              <button
-                onClick={toggleTheme}
-                aria-label={
-                  isDark
-                    ? "Activează modul luminos"
-                    : "Activează modul întunecat"
-                }
-                className="flex items-center justify-center w-8 h-8 rounded-full transition-colors duration-200"
-                style={{ color: "rgba(245, 240, 232, 0.5)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#c9a84c")}
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.color = "rgba(245, 240, 232, 0.5)")
-                }
-              >
-                {isDark ? (
-                  /* Sun icon */
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="5" />
-                    <line x1="12" y1="1" x2="12" y2="3" />
-                    <line x1="12" y1="21" x2="12" y2="23" />
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                    <line x1="1" y1="12" x2="3" y2="12" />
-                    <line x1="21" y1="12" x2="23" y2="12" />
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-                  </svg>
-                ) : (
-                  /* Moon icon */
-                  <svg
-                    width="17"
-                    height="17"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                  </svg>
-                )}
-              </button>
-
               {/* CTA */}
               <a
                 href="#contact"
@@ -209,54 +124,6 @@ export default function Navigation() {
 
             {/* ── Mobile Controls ── */}
             <div className="flex lg:hidden items-center gap-3">
-              {/* Theme toggle mobile */}
-              <button
-                onClick={toggleTheme}
-                aria-label={
-                  isDark
-                    ? "Activează modul luminos"
-                    : "Activează modul întunecat"
-                }
-                className="flex items-center justify-center w-11 h-11"
-                style={{ color: "rgba(245, 240, 232, 0.5)" }}
-              >
-                {isDark ? (
-                  <svg
-                    width="17"
-                    height="17"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="5" />
-                    <line x1="12" y1="1" x2="12" y2="3" />
-                    <line x1="12" y1="21" x2="12" y2="23" />
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                    <line x1="1" y1="12" x2="3" y2="12" />
-                    <line x1="21" y1="12" x2="23" y2="12" />
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-                  </svg>
-                ) : (
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                  </svg>
-                )}
-              </button>
-
               {/* Hamburger */}
               <button
                 onClick={() => setIsMobileOpen(true)}
@@ -270,7 +137,7 @@ export default function Navigation() {
                 />
                 <span
                   className="block w-4 h-[1.5px] transition-all duration-300"
-                  style={{ background: "rgba(245, 240, 232, 0.5)" }}
+                  style={{ background: "rgba(26, 26, 26, 0.5)" }}
                 />
                 <span
                   className="block w-6 h-[1.5px] transition-all duration-300"
@@ -303,9 +170,10 @@ export default function Navigation() {
         aria-modal="true"
         className="fixed top-0 right-0 bottom-0 z-50 w-[300px] flex flex-col lg:hidden transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
         style={{
-          background: "#0d0d0d",
-          borderLeft: "1px solid rgba(201, 168, 76, 0.12)",
+          background: "#ffffff",
+          borderLeft: "1px solid rgba(201, 168, 76, 0.2)",
           transform: isMobileOpen ? "translateX(0)" : "translateX(100%)",
+          boxShadow: "-10px 0 40px rgba(0,0,0,0.08)",
         }}
       >
         {/* Drawer header */}
@@ -319,12 +187,12 @@ export default function Navigation() {
             aria-label="Închide meniu"
             className="flex items-center justify-center w-11 h-11 rounded-full transition-colors duration-200"
             style={{
-              color: "rgba(245, 240, 232, 0.5)",
+              color: "rgba(26, 26, 26, 0.5)",
               border: "1px solid rgba(201,168,76,0.15)",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#c9a84c")}
             onMouseLeave={(e) =>
-              (e.currentTarget.style.color = "rgba(245, 240, 232, 0.5)")
+              (e.currentTarget.style.color = "rgba(26, 26, 26, 0.5)")
             }
           >
             <svg
@@ -353,7 +221,7 @@ export default function Navigation() {
               style={{
                 fontSize: "0.75rem",
                 letterSpacing: "0.2em",
-                color: "rgba(245, 240, 232, 0.65)",
+                color: "rgba(26, 26, 26, 0.65)",
                 borderColor: "rgba(201, 168, 76, 0.07)",
                 transitionDelay: isMobileOpen ? `${i * 50}ms` : "0ms",
               }}

@@ -73,7 +73,7 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "#0d0d0d",
+        background: "#ffffff",
         borderTop: "1px solid rgba(201,168,76,0.12)",
       }}
     >
@@ -95,15 +95,14 @@ export default function Footer() {
                   height: "64px",
                   width: "auto",
                   display: "block",
-                  filter:
-                    "brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.2))",
+                  filter: "brightness(0)",
                 }}
               />
             </a>
 
             <p
               className="font-body text-xs mt-2 leading-relaxed"
-              style={{ color: "rgba(245,240,232,0.35)" }}
+              style={{ color: "rgba(26, 26, 26,0.35)" }}
             >
               Muzică live pentru cel mai important eveniment din viața ta.
               Profesionalism, pasiune și energie pe fiecare scenă.
@@ -122,7 +121,7 @@ export default function Footer() {
                     <a
                       href={link.href}
                       className="font-body text-xs block py-2 transition-colors duration-200 hover:text-gold"
-                      style={{ color: "rgba(245,240,232,0.40)" }}
+                      style={{ color: "rgba(26, 26, 26,0.40)" }}
                     >
                       {link.label}
                     </a>
@@ -141,7 +140,7 @@ export default function Footer() {
                   <a
                     href="#evenimente"
                     className="font-body text-xs block py-2 transition-colors duration-200 hover:text-gold"
-                    style={{ color: "rgba(245,240,232,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.40)" }}
                   >
                     {type}
                   </a>
@@ -165,7 +164,7 @@ export default function Footer() {
                 >
                   <span
                     className="transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(245,240,232,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.40)" }}
                   >
                     <svg
                       width="16"
@@ -189,7 +188,7 @@ export default function Footer() {
                   </span>
                   <span
                     className="font-body text-xs transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(245,240,232,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.40)" }}
                   >
                     Instagram
                   </span>
@@ -206,7 +205,7 @@ export default function Footer() {
                 >
                   <span
                     className="transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(245,240,232,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.40)" }}
                   >
                     <svg
                       width="16"
@@ -220,7 +219,7 @@ export default function Footer() {
                   </span>
                   <span
                     className="font-body text-xs transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(245,240,232,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.40)" }}
                   >
                     Facebook
                   </span>
@@ -237,7 +236,7 @@ export default function Footer() {
                 >
                   <span
                     className="transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(245,240,232,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.40)" }}
                   >
                     <svg
                       width="16"
@@ -249,13 +248,13 @@ export default function Footer() {
                       <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
                       <polygon
                         points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"
-                        fill="#0d0d0d"
+                        fill="#ffffff"
                       />
                     </svg>
                   </span>
                   <span
                     className="font-body text-xs transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(245,240,232,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.40)" }}
                   >
                     YouTube
                   </span>
@@ -272,7 +271,7 @@ export default function Footer() {
                 >
                   <span
                     className="transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(245,240,232,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.40)" }}
                   >
                     <svg
                       width="16"
@@ -286,7 +285,7 @@ export default function Footer() {
                   </span>
                   <span
                     className="font-body text-xs transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(245,240,232,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.40)" }}
                   >
                     TikTok
                   </span>
@@ -301,7 +300,7 @@ export default function Footer() {
             >
               <p
                 className="font-body text-xs mb-1"
-                style={{ color: "rgba(245,240,232,0.30)" }}
+                style={{ color: "rgba(26, 26, 26,0.30)" }}
               >
                 Rezervări &amp; info:
               </p>
@@ -322,7 +321,7 @@ export default function Footer() {
         <div className="section-container py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p
             className="font-body text-xs"
-            style={{ color: "rgba(245,240,232,0.30)" }}
+            style={{ color: "rgba(26, 26, 26,0.30)" }}
           >
             &copy; {new Date().getFullYear()} Highlife Showband. Toate
             drepturile rezervate.
@@ -331,13 +330,13 @@ export default function Footer() {
             <a
               href="/politica-de-confidentialitate"
               className="font-body text-xs transition-colors duration-200 hover:text-gold"
-              style={{ color: "rgba(245,240,232,0.30)" }}
+              style={{ color: "rgba(26, 26, 26,0.30)" }}
             >
               Politică de Confidențialitate
             </a>
             <p
               className="font-body text-xs"
-              style={{ color: "rgba(245,240,232,0.30)" }}
+              style={{ color: "rgba(26, 26, 26,0.30)" }}
             >
               Site realizat cu ❤️ pentru muzică
             </p>

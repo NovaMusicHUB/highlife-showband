@@ -67,7 +67,7 @@ export default function Reels() {
   return (
     <section
       id="reels"
-      style={{ background: "#141414", position: "relative" }}
+      style={{ background: "#faf8f4", position: "relative" }}
       className="py-20 lg:py-28 overflow-hidden"
     >
       {/* Logo watermark */}
@@ -83,7 +83,7 @@ export default function Reels() {
           opacity: 0.04,
           pointerEvents: "none",
           zIndex: 0,
-          filter: "brightness(0) invert(1)",
+          filter: "brightness(0)",
         }}
       >
         <img
@@ -108,7 +108,7 @@ export default function Reels() {
           </h2>
           <p
             className="font-serif italic text-lg mt-4 max-w-xl mx-auto"
-            style={{ color: "rgba(245,240,232,0.50)" }}
+            style={{ color: "rgba(26, 26, 26,0.50)" }}
           >
             Energia și atmosfera Highlife Showband, în câteva secunde
           </p>
@@ -216,7 +216,7 @@ export default function Reels() {
                       width="18"
                       height="18"
                       viewBox="0 0 24 24"
-                      fill="#f5f0e8"
+                      fill="#ffffff"
                     >
                       <rect x="6" y="5" width="4" height="14" rx="1" />
                       <rect x="14" y="5" width="4" height="14" rx="1" />
@@ -226,7 +226,7 @@ export default function Reels() {
                       width="18"
                       height="18"
                       viewBox="0 0 24 24"
-                      fill="#f5f0e8"
+                      fill="#ffffff"
                       style={{ marginLeft: "3px" }}
                     >
                       <path d="M8 5v14l11-7z" />
@@ -256,7 +256,8 @@ export default function Reels() {
                   style={{
                     fontSize: "0.6rem",
                     letterSpacing: "0.2em",
-                    color: "rgba(245,240,232,0.7)",
+                    color: "rgba(255, 255, 255, 0.9)",
+                    textShadow: "0 1px 4px rgba(0,0,0,0.5)",
                   }}
                 >
                   Live
@@ -266,8 +267,8 @@ export default function Reels() {
               {/* ── Bottom label ── */}
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <p
-                  className="font-display font-bold text-champagne"
-                  style={{ fontSize: "1.05rem", lineHeight: 1.2 }}
+                  className="font-display font-bold"
+                  style={{ fontSize: "1.05rem", lineHeight: 1.2, color: "#ffffff" }}
                 >
                   {reel.label}
                 </p>
@@ -277,7 +278,7 @@ export default function Reels() {
                     fontSize: "0.7rem",
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
-                    color: "rgba(201,168,76,0.75)",
+                    color: "rgba(223,192,106,0.9)",
                   }}
                 >
                   {reel.sublabel}

@@ -66,7 +66,7 @@ export default function TrustBar() {
       id="trust"
       className="py-12 lg:py-16"
       style={{
-        background: '#1a1a1a',
+        background: "#f7f4ee",
         borderBottom: '1px solid rgba(201, 168, 76, 0.08)',
       }}
       aria-label="Statistici Highlife Showband"
@@ -92,7 +92,7 @@ export default function TrustBar() {
                 style={{
                   fontSize: '0.65rem',
                   letterSpacing: '0.2em',
-                  color: 'rgba(245, 240, 232, 0.5)',
+                  color: 'rgba(26, 26, 26, 0.5)',
                 }}
               >
                 {stat.label}
@@ -143,7 +143,7 @@ export default function TrustBar() {
               style={{
                 fontSize: '0.6rem',
                 letterSpacing: '0.18em',
-                color: 'rgba(245, 240, 232, 0.5)',
+                color: 'rgba(26, 26, 26, 0.5)',
               }}
             >
               {stat.label}

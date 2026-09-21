@@ -22,7 +22,7 @@ export default function Partners() {
     <section
       className="py-14 lg:py-16"
       style={{
-        background: "#0d0d0d",
+        background: "#ffffff",
         borderTop: "1px solid rgba(201,168,76,0.06)",
         borderBottom: "1px solid rgba(201,168,76,0.06)",
       }}
@@ -61,7 +61,7 @@ export default function Partners() {
                   fontSize: "0.9rem",
                   fontWeight: 600,
                   letterSpacing: "0.1em",
-                  color: "#f5f0e8",
+                  color: "#1a1a1a",
                   whiteSpace: "nowrap",
                   padding: "0 8px",
                   borderBottom: "1px solid #c9a84c",

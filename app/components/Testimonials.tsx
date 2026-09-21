@@ -77,7 +77,7 @@ export default function Testimonials() {
       id="testimoniale"
       className="py-20 lg:py-28"
       style={{
-        background: "#1a1a1a",
+        background: "#f7f4ee",
         position: "relative",
         overflow: "hidden",
       }}
@@ -95,7 +95,7 @@ export default function Testimonials() {
           opacity: 0.04,
           pointerEvents: "none",
           zIndex: 0,
-          filter: "brightness(0) invert(1)",
+          filter: "brightness(0)",
         }}
       >
         <img
@@ -123,10 +123,11 @@ export default function Testimonials() {
           >
             <div
               style={{
-                background: "#111111",
+                background: "#ffffff",
                 borderLeft: "4px solid #c9a84c",
                 padding: "clamp(1.25rem, 5vw, 2.5rem) clamp(1.25rem, 6vw, 3rem)",
                 position: "relative",
+                boxShadow: "0 4px 24px rgba(0,0,0,0.05)",
               }}
             >
               {/* Decorative giant quote mark */}
@@ -166,7 +167,7 @@ export default function Testimonials() {
               {/* Quote text */}
               <blockquote
                 className="font-serif italic text-xl lg:text-2xl leading-relaxed mb-6"
-                style={{ color: "rgba(245,240,232,0.80)" }}
+                style={{ color: "rgba(26, 26, 26,0.80)" }}
               >
                 &ldquo;{current.quote}&rdquo;
               </blockquote>
@@ -223,7 +224,7 @@ export default function Testimonials() {
                     height: "6px",
                     borderRadius: "3px",
                     background:
-                      i === activeIndex ? "#c9a84c" : "rgba(245,240,232,0.2)",
+                      i === activeIndex ? "#c9a84c" : "rgba(26, 26, 26,0.2)",
                     border: "none",
                     cursor: "pointer",
                     transition: "all 0.3s ease",

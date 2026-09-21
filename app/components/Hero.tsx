@@ -5,7 +5,7 @@ export default function Hero() {
     <section
       id="hero"
       className="relative min-h-screen min-h-dvh flex items-center overflow-hidden"
-      style={{ background: "#0d0d0d" }}
+      style={{ background: "#ffffff" }}
     >
       {/* ── Logo watermark — decorative background element ─────────────── */}
       <div
@@ -104,7 +104,7 @@ export default function Hero() {
           style={{
             width: "55%",
             background:
-              "linear-gradient(to right, #0d0d0d 0%, rgba(13,13,13,0.8) 40%, transparent 100%)",
+              "linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.85) 40%, transparent 100%)",
           }}
         />
         {/* Bottom blend */}
@@ -112,7 +112,7 @@ export default function Hero() {
           className="absolute bottom-0 left-0 right-0 z-10"
           style={{
             height: "30%",
-            background: "linear-gradient(to top, #0d0d0d 0%, transparent 100%)",
+            background: "linear-gradient(to top, #ffffff 0%, transparent 100%)",
           }}
         />
         <img
@@ -145,7 +145,7 @@ export default function Hero() {
         className="lg:hidden absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(160deg, rgba(13,13,13,0.85) 0%, rgba(13,13,13,0.7) 60%, rgba(13,13,13,0.9) 100%)",
+            "linear-gradient(160deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.82) 60%, rgba(255,255,255,0.94) 100%)",
           zIndex: 1,
         }}
         aria-hidden="true"
@@ -207,7 +207,7 @@ export default function Hero() {
               animationDelay: "0.6s",
               opacity: 0,
               animationFillMode: "forwards",
-              color: "rgba(245, 240, 232, 0.65)",
+              color: "rgba(26, 26, 26, 0.65)",
               lineHeight: 1.6,
             }}
           >

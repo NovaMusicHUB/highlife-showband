@@ -315,14 +315,17 @@ export default function EventTypes() {
                 <div className="mb-2">{card.icon}</div>
 
                 {/* Title */}
-                <h3 className="font-display text-xl lg:text-2xl font-bold text-champagne mb-1">
+                <h3
+                  className="font-display text-xl lg:text-2xl font-bold mb-1"
+                  style={{ color: "#ffffff" }}
+                >
                   {card.title}
                 </h3>
 
                 {/* Description — slides in on hover */}
                 <p
                   className="font-body text-sm opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 overflow-hidden max-h-20 lg:max-h-0 lg:group-hover:max-h-20"
-                  style={{ color: "rgba(245, 240, 232, 0.72)" }}
+                  style={{ color: "rgba(255, 255, 255, 0.78)" }}
                 >
                   {card.description}
                 </p>
@@ -344,7 +347,7 @@ export default function EventTypes() {
         <div className="mt-14 text-center">
           <p
             className="font-serif italic text-lg md:text-xl max-w-2xl mx-auto mb-8"
-            style={{ color: "rgba(245,240,232,0.55)", lineHeight: 1.8 }}
+            style={{ color: "rgba(26, 26, 26,0.55)", lineHeight: 1.8 }}
           >
             Alege Highlife Showband pentru un eveniment cu adevărat reuşit
             &mdash; muzică live, energie şi interacțiune care ridică atmosfera

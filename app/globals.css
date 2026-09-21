@@ -4,18 +4,18 @@
    HIGHLIFE SHOWBAND — Design System
    ============================================================ */
 
-/* Brand Color Tokens */
+/* Brand Color Tokens — light theme (white/cream with gold accents) */
 @theme {
     --color-gold: #c9a84c;
     --color-gold-light: #dfc06a;
     --color-gold-dark: #a8882e;
-    --color-charcoal: #1a1a1a;
-    --color-champagne: #f5f0e8;
-    --color-dark: #0d0d0d;
-    --color-surface: #111111;
-    --color-surface-2: #181818;
-    --color-surface-3: #222222;
-    --color-muted: #888888;
+    --color-charcoal: #f5f0e8;
+    --color-champagne: #1a1a1a;
+    --color-dark: #ffffff;
+    --color-surface: #f7f4ee;
+    --color-surface-2: #f2ede3;
+    --color-surface-3: #eee7da;
+    --color-muted: #666666;
 }
 
 /* Font Token Mapping (references Next.js font CSS vars) */
@@ -171,8 +171,8 @@ html {
 }
 
 body {
-    background-color: #0d0d0d;
-    color: #f5f0e8;
+    background-color: #ffffff;
+    color: #1a1a1a;
     font-family:
         var(--font-inter),
         system-ui,
@@ -189,7 +189,7 @@ body {
     width: 5px;
 }
 ::-webkit-scrollbar-track {
-    background: #0d0d0d;
+    background: #f7f4ee;
 }
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, #c9a84c, #a8882e);
@@ -198,8 +198,8 @@ body {
 
 /* Text selection */
 ::selection {
-    background: rgba(201, 168, 76, 0.25);
-    color: #f5f0e8;
+    background: rgba(201, 168, 76, 0.3);
+    color: #1a1a1a;
 }
 
 /* Focus rings */
@@ -480,38 +480,38 @@ body {
         gap: 0.5rem;
         padding: 0.875rem 2rem;
         background: transparent;
-        color: #f5f0e8;
+        color: #1a1a1a;
         font-family: var(--font-inter), sans-serif;
         font-size: 0.8rem;
         font-weight: 600;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         text-decoration: none;
-        border: 1px solid rgba(245, 240, 232, 0.35);
+        border: 1px solid rgba(26, 26, 26, 0.25);
         cursor: pointer;
         transition: all 0.3s ease;
     }
 
     .btn-ghost:hover {
         border-color: #c9a84c;
-        color: #c9a84c;
+        color: #a8882e;
         transform: translateY(-2px);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 8px 30px rgba(201, 168, 76, 0.18);
     }
 
     /* Card surface */
     .card-dark {
-        background: #111111;
-        border: 1px solid rgba(201, 168, 76, 0.1);
+        background: #ffffff;
+        border: 1px solid rgba(201, 168, 76, 0.2);
         transition: all 0.35s ease;
     }
 
     .card-dark:hover {
-        border-color: rgba(201, 168, 76, 0.35);
+        border-color: rgba(201, 168, 76, 0.5);
         transform: translateY(-4px);
         box-shadow:
-            0 20px 50px rgba(0, 0, 0, 0.4),
-            0 0 0 1px rgba(201, 168, 76, 0.1);
+            0 20px 50px rgba(201, 168, 76, 0.12),
+            0 0 0 1px rgba(201, 168, 76, 0.15);
     }
 
     /* Star rating */
@@ -538,8 +538,8 @@ body {
     .pill-filter {
         min-height: 44px;
         padding: 0.5rem 1.25rem;
-        border: 1px solid rgba(201, 168, 76, 0.3);
-        color: rgba(245, 240, 232, 0.6);
+        border: 1px solid rgba(201, 168, 76, 0.4);
+        color: rgba(26, 26, 26, 0.65);
         font-family: var(--font-inter), sans-serif;
         font-size: 0.75rem;
         font-weight: 500;
@@ -554,7 +554,7 @@ body {
     .pill-filter.active {
         background: #c9a84c;
         border-color: #c9a84c;
-        color: #0d0d0d;
+        color: #1a1a1a;
         font-weight: 700;
     }
 
@@ -570,29 +570,4 @@ body {
     }
 }
 
-/* ============================================================
-   LIGHT MODE OVERRIDES
-   ============================================================ */
 
-[data-theme="light"] {
-    --color-dark: #f5f0e8;
-    --color-surface: #ffffff;
-    --color-surface-2: #f8f4ed;
-    --color-charcoal: #f5f0e8;
-    --color-champagne: #1a1a1a;
-    --color-muted: #666666;
-}
-
-[data-theme="light"] body {
-    background-color: #f0ebe1;
-    color: #1a1a1a;
-}
-
-[data-theme="light"] ::-webkit-scrollbar-track {
-    background: #f0ebe1;
-}
-
-[data-theme="light"] .card-dark {
-    background: #ffffff;
-    border-color: rgba(201, 168, 76, 0.2);
-}

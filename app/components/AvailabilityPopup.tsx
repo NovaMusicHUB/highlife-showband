@@ -78,7 +78,7 @@ export default function AvailabilityPopup() {
           className="hl-popup-card relative w-full"
           style={{
             maxWidth: '500px',
-            background: '#111111',
+            background: "#f7f4ee",
             border: '1px solid rgba(201,168,76,0.25)',
             borderRadius: '3px',
             padding: 'clamp(1.75rem, 5vw, 2.75rem)',
@@ -118,7 +118,7 @@ export default function AvailabilityPopup() {
               border: '1px solid rgba(201,168,76,0.18)',
               borderRadius: '50%',
               cursor: 'pointer',
-              color: 'rgba(245,240,232,0.4)',
+              color: 'rgba(26, 26, 26,0.4)',
               transition: 'color 0.2s, border-color 0.2s',
             }}
           >
@@ -151,7 +151,7 @@ export default function AvailabilityPopup() {
             style={{
               fontSize: '0.92rem',
               lineHeight: 1.75,
-              color: 'rgba(245,240,232,0.65)',
+              color: 'rgba(26, 26, 26,0.65)',
             }}
           >
             Mai avem doar câteva date libere pentru{' '}
@@ -166,7 +166,7 @@ export default function AvailabilityPopup() {
             style={{
               fontSize: '0.95rem',
               lineHeight: 1.65,
-              color: 'rgba(245,240,232,0.38)',
+              color: 'rgba(26, 26, 26,0.38)',
             }}
           >
             Nu vrei să realizezi abia după nuntă că ringul de dans putea arăta
@@ -200,7 +200,7 @@ export default function AvailabilityPopup() {
             className="font-body mt-5 text-center"
             style={{
               fontSize: '0.65rem',
-              color: 'rgba(245,240,232,0.18)',
+              color: 'rgba(26, 26, 26,0.18)',
               letterSpacing: '0.05em',
             }}
           >

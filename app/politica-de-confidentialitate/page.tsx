@@ -33,7 +33,7 @@ export default function PrivacyPolicyPage() {
 
           <div
             className="font-body text-base space-y-6"
-            style={{ color: "rgba(245,240,232,0.75)", lineHeight: 1.9 }}
+            style={{ color: "rgba(26,26,26,0.75)", lineHeight: 1.9 }}
           >
             <p>
               Highlife Show Band respectă confidențialitatea datelor
@@ -78,7 +78,7 @@ export default function PrivacyPolicyPage() {
               (UE) 2016/679 (GDPR).
             </p>
 
-            <p style={{ color: "rgba(245,240,232,0.5)" }} className="text-sm pt-6">
+            <p style={{ color: "rgba(26,26,26,0.5)" }} className="text-sm pt-6">
               Pentru orice întrebare legată de prelucrarea datelor dumneavoastră
               personale, ne puteți contacta la{" "}
               <a

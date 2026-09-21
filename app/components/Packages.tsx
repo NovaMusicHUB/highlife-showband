@@ -8,7 +8,7 @@ function Feature({ text }: { text: string }) {
   return (
     <li
       className="flex items-start gap-3 font-body text-sm"
-      style={{ color: "rgba(245,240,232,0.8)" }}
+      style={{ color: "rgba(26, 26, 26,0.8)" }}
     >
       <span
         className="text-gold shrink-0 mt-0.5 select-none"
@@ -47,7 +47,7 @@ export default function Packages() {
       id="pachete"
       className="py-20 lg:py-32"
       style={{
-        background: "#181818",
+        background: "#f2ede3",
         backgroundImage:
           "radial-gradient(rgba(201,168,76,0.06) 1px, transparent 1px)",
         backgroundSize: "32px 32px",
@@ -100,7 +100,7 @@ export default function Packages() {
           <div
             className="p-8 lg:p-12"
             style={{
-              background: "#111111",
+              background: "#f7f4ee",
               border: "1px solid rgba(201,168,76,0.2)",
             }}
           >
@@ -128,9 +128,9 @@ export default function Packages() {
         <div
           className="reveal stagger-2 max-w-3xl mx-auto text-center px-8 lg:px-16 py-16"
           style={{
-            background: "#0d0d0d",
+            background: "#faf3e0",
             border: "2px solid #c9a84c",
-            boxShadow: "0 0 60px rgba(201,168,76,0.15)",
+            boxShadow: "0 0 60px rgba(201,168,76,0.2)",
           }}
         >
           <p className="eyebrow mb-4">Ofertă personalizată</p>
@@ -146,7 +146,7 @@ export default function Packages() {
 
           <p
             className="font-body text-base leading-relaxed mb-10 max-w-xl mx-auto"
-            style={{ color: "rgba(245,240,232,0.65)" }}
+            style={{ color: "rgba(26, 26, 26,0.65)" }}
           >
             Fiecare eveniment este unic, așa că fiecare ofertă este
             personalizată. Nu lucrăm cu prețuri fixe afișate — lucrăm cu oameni

@@ -73,7 +73,7 @@ export default function Experience() {
       id="experienta"
       className="py-20 lg:py-32"
       style={{
-        background: "#111111",
+        background: "#f7f4ee",
         position: "relative",
         overflow: "hidden",
       }}
@@ -91,7 +91,7 @@ export default function Experience() {
           opacity: 0.055,
           pointerEvents: "none",
           zIndex: 0,
-          filter: "brightness(0) invert(1)",
+          filter: "brightness(0)",
         }}
       >
         <img
@@ -205,14 +205,14 @@ export default function Experience() {
             {/* Body text — paragrafele 1+2 din textul de brand */}
             <p
               className="font-body text-base leading-relaxed max-w-lg mb-5"
-              style={{ color: "rgba(245, 240, 232, 0.70)" }}
+              style={{ color: "rgba(26, 26, 26, 0.70)" }}
             >
               Cu Highlife Showband, transformăm orice petrecere íntr-un show
               memorabil, plin de energie și interacțiune cu invitații.
             </p>
             <p
               className="font-body text-base leading-relaxed max-w-lg mb-8"
-              style={{ color: "rgba(245, 240, 232, 0.58)" }}
+              style={{ color: "rgba(26, 26, 26, 0.58)" }}
             >
               Oferim soluții muzicale personalizate, adaptate complet stilului
               evenimentului tău și preferințelor muzicale ale invitaților. De la
@@ -230,7 +230,7 @@ export default function Experience() {
                   <CheckCircle />
                   <span
                     className="font-body text-sm leading-relaxed"
-                    style={{ color: "rgba(245, 240, 232, 0.78)" }}
+                    style={{ color: "rgba(26, 26, 26, 0.78)" }}
                   >
                     {feature}
                   </span>
