@@ -85,7 +85,7 @@ export default function Repertoire() {
           </h2>
           <p
             className="font-body text-base max-w-2xl mx-auto"
-            style={{ color: "rgba(26, 26, 26,0.55)", lineHeight: 1.8 }}
+            style={{ color: "rgba(26, 26, 26,0.77)", lineHeight: 1.8 }}
           >
             Repertoriul nostru este variat și actual, acoperind hituri
             internaționale, muzică românească și piese pentru toate vârstele,
@@ -127,13 +127,13 @@ export default function Repertoire() {
               </div>
               <div
                 className="font-body text-xs mt-0.5 tracking-wide"
-                style={{ color: "rgba(26, 26, 26,0.4)" }}
+                style={{ color: "rgba(26, 26, 26,0.71)" }}
               >
                 {song.artist}
               </div>
               <div
-                className="font-body text-[0.6rem] tracking-widest uppercase mt-1"
-                style={{ color: "rgba(201,168,76,0.5)" }}
+                className="font-body text-[0.6rem] tracking-widest uppercase mt-1 gold-text-outline"
+                style={{ color: "#a8882e" }}
               >
                 {song.category}
               </div>
@@ -170,7 +170,7 @@ export default function Repertoire() {
         {/* ── Note ── */}
         <p
           className="font-body text-xs text-center mt-4"
-          style={{ color: "rgba(26, 26, 26,0.3)" }}
+          style={{ color: "rgba(26, 26, 26,0.67)" }}
         >
           Lista de mai sus reprezintă doar o selecție din repertoriul nostru.
         </p>

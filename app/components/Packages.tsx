@@ -8,7 +8,7 @@ function Feature({ text }: { text: string }) {
   return (
     <li
       className="flex items-start gap-3 font-body text-sm"
-      style={{ color: "rgba(26, 26, 26,0.8)" }}
+      style={{ color: "rgba(26, 26, 26,0.87)" }}
     >
       <span
         className="text-gold shrink-0 mt-0.5 select-none"
@@ -146,7 +146,7 @@ export default function Packages() {
 
           <p
             className="font-body text-base leading-relaxed mb-10 max-w-xl mx-auto"
-            style={{ color: "rgba(26, 26, 26,0.65)" }}
+            style={{ color: "rgba(26, 26, 26,0.81)" }}
           >
             Fiecare eveniment este unic, așa că fiecare ofertă este
             personalizată. Nu lucrăm cu prețuri fixe afișate — lucrăm cu oameni

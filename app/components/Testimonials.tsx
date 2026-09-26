@@ -167,7 +167,7 @@ export default function Testimonials() {
               {/* Quote text */}
               <blockquote
                 className="font-serif italic text-xl lg:text-2xl leading-relaxed mb-6"
-                style={{ color: "rgba(26, 26, 26,0.80)" }}
+                style={{ color: "rgba(26, 26, 26,0.87)" }}
               >
                 &ldquo;{current.quote}&rdquo;
               </blockquote>
@@ -184,8 +184,8 @@ export default function Testimonials() {
                     {current.name}
                   </div>
                   <div
-                    className="font-body text-xs tracking-wider mt-0.5"
-                    style={{ color: "rgba(201,168,76,0.70)" }}
+                    className="font-body text-xs tracking-wider mt-0.5 gold-text-outline"
+                    style={{ color: "#a8882e" }}
                   >
                     {current.event} &middot;{" "}
                     {current.date}

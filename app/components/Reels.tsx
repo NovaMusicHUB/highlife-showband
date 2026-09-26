@@ -108,7 +108,7 @@ export default function Reels() {
           </h2>
           <p
             className="font-serif italic text-lg mt-4 max-w-xl mx-auto"
-            style={{ color: "rgba(26, 26, 26,0.50)" }}
+            style={{ color: "rgba(26, 26, 26,0.75)" }}
           >
             Energia și atmosfera Highlife Showband, în câteva secunde
           </p>

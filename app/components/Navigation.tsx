@@ -91,13 +91,13 @@ export default function Navigation() {
                     style={{
                       fontSize: "0.7rem",
                       letterSpacing: "0.15em",
-                      color: "rgba(26, 26, 26, 0.7)",
+                      color: "rgba(26, 26, 26,0.83)",
                     }}
                     onMouseEnter={(e) =>
                       (e.currentTarget.style.color = "#c9a84c")
                     }
                     onMouseLeave={(e) =>
-                      (e.currentTarget.style.color = "rgba(26, 26, 26, 0.7)")
+                      (e.currentTarget.style.color = "rgba(26, 26, 26,0.83)")
                     }
                   >
                     {link.label}
@@ -187,12 +187,12 @@ export default function Navigation() {
             aria-label="Închide meniu"
             className="flex items-center justify-center w-11 h-11 rounded-full transition-colors duration-200"
             style={{
-              color: "rgba(26, 26, 26, 0.5)",
+              color: "rgba(26, 26, 26,0.75)",
               border: "1px solid rgba(201,168,76,0.15)",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#c9a84c")}
             onMouseLeave={(e) =>
-              (e.currentTarget.style.color = "rgba(26, 26, 26, 0.5)")
+              (e.currentTarget.style.color = "rgba(26, 26, 26,0.75)")
             }
           >
             <svg
@@ -221,7 +221,7 @@ export default function Navigation() {
               style={{
                 fontSize: "0.75rem",
                 letterSpacing: "0.2em",
-                color: "rgba(26, 26, 26, 0.65)",
+                color: "rgba(26, 26, 26,0.81)",
                 borderColor: "rgba(201, 168, 76, 0.07)",
                 transitionDelay: isMobileOpen ? `${i * 50}ms` : "0ms",
               }}

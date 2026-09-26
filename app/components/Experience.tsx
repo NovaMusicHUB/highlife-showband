@@ -205,14 +205,14 @@ export default function Experience() {
             {/* Body text — paragrafele 1+2 din textul de brand */}
             <p
               className="font-body text-base leading-relaxed max-w-lg mb-5"
-              style={{ color: "rgba(26, 26, 26, 0.70)" }}
+              style={{ color: "rgba(26, 26, 26,0.83)" }}
             >
               Cu Highlife Showband, transformăm orice petrecere íntr-un show
               memorabil, plin de energie și interacțiune cu invitații.
             </p>
             <p
               className="font-body text-base leading-relaxed max-w-lg mb-8"
-              style={{ color: "rgba(26, 26, 26, 0.58)" }}
+              style={{ color: "rgba(26, 26, 26,0.78)" }}
             >
               Oferim soluții muzicale personalizate, adaptate complet stilului
               evenimentului tău și preferințelor muzicale ale invitaților. De la
@@ -230,7 +230,7 @@ export default function Experience() {
                   <CheckCircle />
                   <span
                     className="font-body text-sm leading-relaxed"
-                    style={{ color: "rgba(26, 26, 26, 0.78)" }}
+                    style={{ color: "rgba(26, 26, 26,0.86)" }}
                   >
                     {feature}
                   </span>

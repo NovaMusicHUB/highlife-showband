@@ -233,7 +233,7 @@ body {
         text-wrap: balance;
     }
 
-    /* Gold gradient text */
+    /* Gold gradient text — dark contour keeps it legible on white */
     .text-gold-gradient {
         background: linear-gradient(
             135deg,
@@ -247,16 +247,28 @@ body {
         -webkit-text-fill-color: transparent;
         background-clip: text;
         animation: shimmer 4s linear infinite;
+        -webkit-text-stroke: 0.6px rgba(20, 20, 20, 0.55);
+        text-shadow:
+            0 0 1px rgba(20, 20, 20, 0.5),
+            0 0 3px rgba(20, 20, 20, 0.2);
     }
 
-    /* Section label / eyebrow text */
+    /* Section label / eyebrow text — darker gold + contour for contrast on white */
     .eyebrow {
         font-family: var(--font-inter), sans-serif;
         font-size: 0.7rem;
-        font-weight: 600;
+        font-weight: 700;
         letter-spacing: 0.2em;
         text-transform: uppercase;
-        color: #c9a84c;
+        color: #a8882e;
+        text-shadow: 0 0 1px rgba(20, 20, 20, 0.25);
+    }
+
+    /* Utility for standalone gold text (outside the gradient/eyebrow classes)
+       that needs the same dark contour treatment for legibility on white. */
+    .gold-text-outline {
+        -webkit-text-stroke: 0.5px rgba(20, 20, 20, 0.5);
+        text-shadow: 0 0 1px rgba(20, 20, 20, 0.45);
     }
 
     /* Gold underline decoration */

@@ -109,7 +109,7 @@ export default function Guarantee() {
                   style={{
                     fontSize: "0.65rem",
                     letterSpacing: "0.25em",
-                    color: "rgba(26, 26, 26, 0.4)",
+                    color: "rgba(26, 26, 26,0.71)",
                   }}
                 >
                   Satisfacție Garantată
@@ -136,7 +136,7 @@ export default function Guarantee() {
                   style={{
                     fontSize: "clamp(1.1rem, 2.2vw, 1.35rem)",
                     lineHeight: 1.7,
-                    color: "rgba(26, 26, 26, 0.80)",
+                    color: "rgba(26, 26, 26,0.87)",
                   }}
                 >
                   Ne asumăm fiecare set cu o promisiune clară:{" "}
@@ -161,7 +161,7 @@ export default function Guarantee() {
                     style={{
                       fontSize: "0.72rem",
                       lineHeight: 1.6,
-                      color: "rgba(26, 26, 26, 0.35)",
+                      color: "rgba(26, 26, 26,0.69)",
                       fontStyle: "italic",
                     }}
                   >
@@ -224,7 +224,7 @@ export default function Guarantee() {
                       className="font-body font-semibold"
                       style={{
                         fontSize: "0.78rem",
-                        color: "rgba(26, 26, 26,0.75)",
+                        color: "rgba(26, 26, 26,0.85)",
                       }}
                     >
                       {label}
@@ -233,7 +233,7 @@ export default function Guarantee() {
                       className="font-body"
                       style={{
                         fontSize: "0.68rem",
-                        color: "rgba(26, 26, 26,0.35)",
+                        color: "rgba(26, 26, 26,0.69)",
                         letterSpacing: "0.04em",
                       }}
                     >

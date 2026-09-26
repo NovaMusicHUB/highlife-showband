@@ -90,7 +90,7 @@ export default function NewRelease() {
 
           <p
             className="font-serif italic text-lg mt-2 max-w-xl mx-auto"
-            style={{ color: "rgba(26, 26, 26,0.55)" }}
+            style={{ color: "rgba(26, 26, 26,0.77)" }}
           >
             Cea mai nouă piesă Highlife Showband este live pe YouTube —
             ascult-o și spune-ne ce părere ai!

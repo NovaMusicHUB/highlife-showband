@@ -118,7 +118,7 @@ export default function FAQ() {
               >
                 <p
                   className="font-body text-sm leading-relaxed pb-5"
-                  style={{ color: "rgba(26, 26, 26,0.60)" }}
+                  style={{ color: "rgba(26, 26, 26,0.79)" }}
                 >
                   {faq.answer}
                 </p>
@@ -131,7 +131,7 @@ export default function FAQ() {
         <div className="text-center mt-14 reveal">
           <p
             className="font-body text-sm mb-5"
-            style={{ color: "rgba(26, 26, 26,0.45)" }}
+            style={{ color: "rgba(26, 26, 26,0.73)" }}
           >
             Nu ai găsit răspunsul la întrebarea ta?
           </p>

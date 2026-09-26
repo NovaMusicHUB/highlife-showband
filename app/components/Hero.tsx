@@ -207,7 +207,7 @@ export default function Hero() {
               animationDelay: "0.6s",
               opacity: 0,
               animationFillMode: "forwards",
-              color: "rgba(26, 26, 26, 0.65)",
+              color: "rgba(26, 26, 26,0.81)",
               lineHeight: 1.6,
             }}
           >

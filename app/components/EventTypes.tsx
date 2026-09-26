@@ -322,7 +322,7 @@ export default function EventTypes() {
         <div className="mt-14 text-center">
           <p
             className="font-serif italic text-lg md:text-xl max-w-2xl mx-auto mb-8"
-            style={{ color: "rgba(26, 26, 26,0.55)", lineHeight: 1.8 }}
+            style={{ color: "rgba(26, 26, 26,0.77)", lineHeight: 1.8 }}
           >
             Alege Highlife Showband pentru un eveniment cu adevărat reuşit
             &mdash; muzică live, energie şi interacțiune care ridică atmosfera

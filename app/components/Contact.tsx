@@ -55,7 +55,7 @@ function InfoItem({
       </div>
       <div
         className="font-body text-sm leading-relaxed"
-        style={{ color: "rgba(26, 26, 26,0.70)", paddingTop: "0.45rem" }}
+        style={{ color: "rgba(26, 26, 26,0.83)", paddingTop: "0.45rem" }}
       >
         {children}
       </div>
@@ -202,7 +202,7 @@ export default function Contact() {
           <p className="eyebrow mb-4">Să Vorbim</p>
           <p
             className="font-body text-base max-w-lg"
-            style={{ color: "rgba(26, 26, 26,0.55)", lineHeight: 1.8 }}
+            style={{ color: "rgba(26, 26, 26,0.77)", lineHeight: 1.8 }}
           >
             Cu Highlife Showband, transformăm orice petrecere într-un show
             memorabil, plin de energie și interacțiune cu invitații. Spune-ne
@@ -236,14 +236,14 @@ export default function Contact() {
                 <a
                   href="tel:+40754636633"
                   style={{
-                    color: "rgba(26, 26, 26,0.70)",
+                    color: "rgba(26, 26, 26,0.83)",
                     textDecoration: "none",
                   }}
                   onMouseEnter={(e) =>
                     (e.currentTarget.style.color = "#c9a84c")
                   }
                   onMouseLeave={(e) =>
-                    (e.currentTarget.style.color = "rgba(26, 26, 26,0.70)")
+                    (e.currentTarget.style.color = "rgba(26, 26, 26,0.83)")
                   }
                 >
                   0754 636 633
@@ -272,14 +272,14 @@ export default function Contact() {
                 <a
                   href="mailto:contact@highlifeshowband.ro"
                   style={{
-                    color: "rgba(26, 26, 26,0.70)",
+                    color: "rgba(26, 26, 26,0.83)",
                     textDecoration: "none",
                   }}
                   onMouseEnter={(e) =>
                     (e.currentTarget.style.color = "#c9a84c")
                   }
                   onMouseLeave={(e) =>
-                    (e.currentTarget.style.color = "rgba(26, 26, 26,0.70)")
+                    (e.currentTarget.style.color = "rgba(26, 26, 26,0.83)")
                   }
                 >
                   contact@highlifeshowband.ro
@@ -366,8 +366,8 @@ export default function Contact() {
                 }}
               >
                 <div
-                  className="font-display text-4xl mb-3"
-                  style={{ color: "#c9a84c" }}
+                  className="font-display text-4xl mb-3 gold-text-outline"
+                  style={{ color: "#a8882e" }}
                   aria-label="Succes"
                 >
                   ✓
@@ -377,7 +377,7 @@ export default function Contact() {
                 </h3>
                 <p
                   className="font-body text-sm"
-                  style={{ color: "rgba(26, 26, 26,0.60)" }}
+                  style={{ color: "rgba(26, 26, 26,0.79)" }}
                 >
                   Te contactăm în maxim 24 de ore cu o ofertă personalizată.
                 </p>
@@ -602,13 +602,13 @@ export default function Contact() {
             {/* Privacy note */}
             <p
               className="font-body text-xs mt-4 text-center"
-              style={{ color: "rgba(26, 26, 26,0.30)" }}
+              style={{ color: "rgba(26, 26, 26,0.67)" }}
             >
               🔒 Datele tale sunt protejate și nu vor fi partajate cu terți.{" "}
               <a
                 href="/politica-de-confidentialitate"
                 className="transition-colors duration-200 hover:text-gold"
-                style={{ color: "rgba(26, 26, 26,0.45)", textDecoration: "underline" }}
+                style={{ color: "rgba(26, 26, 26,0.73)", textDecoration: "underline" }}
               >
                 Politica de Confidențialitate
               </a>

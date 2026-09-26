@@ -92,7 +92,7 @@ export default function TrustBar() {
                 style={{
                   fontSize: '0.65rem',
                   letterSpacing: '0.2em',
-                  color: 'rgba(26, 26, 26, 0.5)',
+                  color: 'rgba(26, 26, 26,0.75)',
                 }}
               >
                 {stat.label}
@@ -143,7 +143,7 @@ export default function TrustBar() {
               style={{
                 fontSize: '0.6rem',
                 letterSpacing: '0.18em',
-                color: 'rgba(26, 26, 26, 0.5)',
+                color: 'rgba(26, 26, 26,0.75)',
               }}
             >
               {stat.label}

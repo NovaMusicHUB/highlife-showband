@@ -118,7 +118,7 @@ export default function AvailabilityPopup() {
               border: '1px solid rgba(201,168,76,0.18)',
               borderRadius: '50%',
               cursor: 'pointer',
-              color: 'rgba(26, 26, 26,0.4)',
+              color: 'rgba(26, 26, 26,0.71)',
               transition: 'color 0.2s, border-color 0.2s',
             }}
           >
@@ -151,11 +151,11 @@ export default function AvailabilityPopup() {
             style={{
               fontSize: '0.92rem',
               lineHeight: 1.75,
-              color: 'rgba(26, 26, 26,0.65)',
+              color: 'rgba(26, 26, 26,0.81)',
             }}
           >
             Mai avem doar câteva date libere pentru{' '}
-            <strong style={{ color: '#c9a84c' }}>septembrie și octombrie</strong>,
+            <strong className="gold-text-outline" style={{ color: '#a8882e' }}>septembrie și octombrie</strong>,
             iar rezervările pentru aceste luni vin cu câteva surprize plăcute
             incluse în pachet.
           </p>
@@ -166,7 +166,7 @@ export default function AvailabilityPopup() {
             style={{
               fontSize: '0.95rem',
               lineHeight: 1.65,
-              color: 'rgba(26, 26, 26,0.38)',
+              color: 'rgba(26, 26, 26,0.7)',
             }}
           >
             Nu vrei să realizezi abia după nuntă că ringul de dans putea arăta
@@ -200,7 +200,7 @@ export default function AvailabilityPopup() {
             className="font-body mt-5 text-center"
             style={{
               fontSize: '0.65rem',
-              color: 'rgba(26, 26, 26,0.18)',
+              color: 'rgba(26, 26, 26,0.62)',
               letterSpacing: '0.05em',
             }}
           >

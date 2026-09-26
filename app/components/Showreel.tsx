@@ -31,7 +31,7 @@ export default function Showreel() {
 
           <p
             className="font-serif italic text-xl text-center max-w-xl mx-auto"
-            style={{ color: "rgba(26, 26, 26, 0.6)" }}
+            style={{ color: "rgba(26, 26, 26,0.79)" }}
           >
             Descoperă energia Highlife Showband prin videoclipurile noastre
           </p>
@@ -178,7 +178,7 @@ export default function Showreel() {
                   style={{
                     fontSize: "0.62rem",
                     letterSpacing: "0.18em",
-                    color: "rgba(26, 26, 26, 0.45)",
+                    color: "rgba(26, 26, 26,0.73)",
                   }}
                 >
                   {stat.label}

@@ -102,7 +102,7 @@ export default function Footer() {
 
             <p
               className="font-body text-xs mt-2 leading-relaxed"
-              style={{ color: "rgba(26, 26, 26,0.35)" }}
+              style={{ color: "rgba(26, 26, 26,0.69)" }}
             >
               Muzică live pentru cel mai important eveniment din viața ta.
               Profesionalism, pasiune și energie pe fiecare scenă.
@@ -121,7 +121,7 @@ export default function Footer() {
                     <a
                       href={link.href}
                       className="font-body text-xs block py-2 transition-colors duration-200 hover:text-gold"
-                      style={{ color: "rgba(26, 26, 26,0.40)" }}
+                      style={{ color: "rgba(26, 26, 26,0.71)" }}
                     >
                       {link.label}
                     </a>
@@ -140,7 +140,7 @@ export default function Footer() {
                   <a
                     href="#evenimente"
                     className="font-body text-xs block py-2 transition-colors duration-200 hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.71)" }}
                   >
                     {type}
                   </a>
@@ -164,7 +164,7 @@ export default function Footer() {
                 >
                   <span
                     className="transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.71)" }}
                   >
                     <svg
                       width="16"
@@ -188,7 +188,7 @@ export default function Footer() {
                   </span>
                   <span
                     className="font-body text-xs transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.71)" }}
                   >
                     Instagram
                   </span>
@@ -205,7 +205,7 @@ export default function Footer() {
                 >
                   <span
                     className="transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.71)" }}
                   >
                     <svg
                       width="16"
@@ -219,7 +219,7 @@ export default function Footer() {
                   </span>
                   <span
                     className="font-body text-xs transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.71)" }}
                   >
                     Facebook
                   </span>
@@ -236,7 +236,7 @@ export default function Footer() {
                 >
                   <span
                     className="transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.71)" }}
                   >
                     <svg
                       width="16"
@@ -254,7 +254,7 @@ export default function Footer() {
                   </span>
                   <span
                     className="font-body text-xs transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.71)" }}
                   >
                     YouTube
                   </span>
@@ -271,7 +271,7 @@ export default function Footer() {
                 >
                   <span
                     className="transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.71)" }}
                   >
                     <svg
                       width="16"
@@ -285,7 +285,7 @@ export default function Footer() {
                   </span>
                   <span
                     className="font-body text-xs transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.40)" }}
+                    style={{ color: "rgba(26, 26, 26,0.71)" }}
                   >
                     TikTok
                   </span>
@@ -300,14 +300,14 @@ export default function Footer() {
             >
               <p
                 className="font-body text-xs mb-1"
-                style={{ color: "rgba(26, 26, 26,0.30)" }}
+                style={{ color: "rgba(26, 26, 26,0.67)" }}
               >
                 Rezervări &amp; info:
               </p>
               <a
                 href="tel:+40754636633"
-                className="font-body text-xs transition-colors duration-200 hover:text-gold"
-                style={{ color: "rgba(201,168,76,0.70)" }}
+                className="font-body text-xs transition-colors duration-200 hover:text-gold gold-text-outline"
+                style={{ color: "#a8882e" }}
               >
                 0754 636 633
               </a>
@@ -321,7 +321,7 @@ export default function Footer() {
         <div className="section-container py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p
             className="font-body text-xs"
-            style={{ color: "rgba(26, 26, 26,0.30)" }}
+            style={{ color: "rgba(26, 26, 26,0.67)" }}
           >
             &copy; {new Date().getFullYear()} Highlife Showband. Toate
             drepturile rezervate.
@@ -330,13 +330,13 @@ export default function Footer() {
             <a
               href="/politica-de-confidentialitate"
               className="font-body text-xs transition-colors duration-200 hover:text-gold"
-              style={{ color: "rgba(26, 26, 26,0.30)" }}
+              style={{ color: "rgba(26, 26, 26,0.67)" }}
             >
               Politică de Confidențialitate
             </a>
             <p
               className="font-body text-xs"
-              style={{ color: "rgba(26, 26, 26,0.30)" }}
+              style={{ color: "rgba(26, 26, 26,0.67)" }}
             >
               Site realizat cu ❤️ pentru muzică
             </p>
