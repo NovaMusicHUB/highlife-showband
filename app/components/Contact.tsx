@@ -80,6 +80,7 @@ export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   function handleChange(
     e: React.ChangeEvent<
@@ -114,6 +115,7 @@ export default function Contact() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setSubmitError(null);
     const newErrors: Record<string, string> = {};
     if (!form.name) newErrors.name = "Câmp obligatoriu";
     if (!form.email) newErrors.email = "Câmp obligatoriu";
@@ -125,9 +127,26 @@ export default function Contact() {
       return;
     }
     setIsLoading(true);
-    await new Promise<void>((resolve) => setTimeout(resolve, 2000));
-    setIsLoading(false);
-    setSubmitted(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => null);
+        throw new Error(data?.error || "Nu am putut trimite mesajul.");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setSubmitError(
+        err instanceof Error
+          ? err.message
+          : "Nu am putut trimite mesajul. Te rugăm să ne contactezi direct pe WhatsApp sau telefon.",
+      );
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (
@@ -465,6 +484,30 @@ export default function Contact() {
                       </p>
                     )}
                   </div>
+
+                  {/* Submit error */}
+                  {submitError && (
+                    <p
+                      className="font-body text-sm"
+                      style={{ color: "rgba(190,50,50,0.9)" }}
+                      role="alert"
+                    >
+                      {submitError} Poți și suna la{" "}
+                      <a href="tel:+40754636633" className="link-underline">
+                        0754 636 633
+                      </a>{" "}
+                      sau scrie pe{" "}
+                      <a
+                        href="https://wa.me/40754636633"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link-underline"
+                      >
+                        WhatsApp
+                      </a>
+                      .
+                    </p>
+                  )}
 
                   {/* Submit button */}
                   <button
