@@ -58,14 +58,6 @@
     }
 }
 
-@keyframes infiniteScroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
 
 /* ============================================================
    GLOBAL BASE STYLES
@@ -178,9 +170,6 @@ body {
         animation: scrollBounce 1.8s ease-in-out infinite;
     }
 
-    .animate-infinite-scroll {
-        animation: infiniteScroll 40s linear infinite;
-    }
 
     /* Intersection-observer controlled visibility — subtle, no slide */
     .reveal {
