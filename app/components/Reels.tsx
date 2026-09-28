@@ -68,7 +68,7 @@ export default function Reels() {
     <section id="reels" style={{ background: "#ffffff" }} className="py-24 lg:py-32">
       <div className="section-container">
         {/* ── Header ── */}
-        <div className="max-w-2xl mb-16 reveal">
+        <div className="max-w-2xl mx-auto mb-16 text-center reveal">
           <p className="eyebrow mb-5">Ne urmărește live</p>
           <h2
             className="font-display"
@@ -84,7 +84,7 @@ export default function Reels() {
         </div>
 
         {/* ── Reel cards — portrait format like social media ── */}
-        <div className="flex flex-col sm:flex-row items-start gap-10 lg:gap-14">
+        <div className="flex flex-col sm:flex-row items-start justify-center gap-10 lg:gap-14">
           {REELS.map((reel, i) => (
             <div
               key={reel.src}
@@ -204,7 +204,7 @@ export default function Reels() {
         </div>
 
         {/* ── Social follow links ── */}
-        <div className="flex flex-wrap gap-x-8 gap-y-3 mt-14 reveal stagger-2">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mt-14 reveal stagger-2">
           <a
             href="https://www.instagram.com/highlifeshowband"
             target="_blank"
