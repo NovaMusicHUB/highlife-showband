@@ -12,6 +12,7 @@ interface FormState {
   date: string;
   guests: string;
   message: string;
+  gdprConsent: boolean;
 }
 
 // ── Shared input style ────────────────────────────────────────────────────────
@@ -74,6 +75,7 @@ export default function Contact() {
     date: "",
     guests: "",
     message: "",
+    gdprConsent: false,
   });
   const [isLoading, setIsLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -87,6 +89,11 @@ export default function Contact() {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }));
+  }
+
+  function handleConsentChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setForm((prev) => ({ ...prev, gdprConsent: e.target.checked }));
+    if (errors.gdprConsent) setErrors((prev) => ({ ...prev, gdprConsent: "" }));
   }
 
   function applyFocus(
@@ -111,6 +118,8 @@ export default function Contact() {
     if (!form.name) newErrors.name = "Câmp obligatoriu";
     if (!form.email) newErrors.email = "Câmp obligatoriu";
     if (!form.phone) newErrors.phone = "Câmp obligatoriu";
+    if (!form.gdprConsent)
+      newErrors.gdprConsent = "Trebuie să fii de acord pentru a continua";
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
@@ -414,6 +423,49 @@ export default function Contact() {
                     aria-label="Mesaj"
                   />
 
+                  {/* GDPR consent */}
+                  <div>
+                    <label className="flex items-start gap-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="gdprConsent"
+                        checked={form.gdprConsent}
+                        onChange={handleConsentChange}
+                        aria-required="true"
+                        aria-describedby={errors.gdprConsent ? "err-gdpr" : undefined}
+                        style={{
+                          marginTop: "0.2rem",
+                          width: "16px",
+                          height: "16px",
+                          flexShrink: 0,
+                          accentColor: "#191919",
+                        }}
+                      />
+                      <span
+                        className="font-body text-xs"
+                        style={{ color: "rgba(25, 25, 25,0.65)", lineHeight: 1.6 }}
+                      >
+                        Am citit și sunt de acord cu prelucrarea datelor mele
+                        conform{" "}
+                        <a
+                          href="/politica-de-confidentialitate"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="link-underline"
+                          style={{ color: "#8a7454" }}
+                        >
+                          Politicii de Confidențialitate
+                        </a>{" "}
+                        *
+                      </span>
+                    </label>
+                    {errors.gdprConsent && (
+                      <p id="err-gdpr" className="font-body text-xs mt-1" style={{ color: "rgba(190,50,50,0.9)" }}>
+                        {errors.gdprConsent}
+                      </p>
+                    )}
+                  </div>
+
                   {/* Submit button */}
                   <button
                     type="submit"
@@ -442,14 +494,7 @@ export default function Contact() {
 
             {/* Privacy note */}
             <p className="font-body text-xs mt-4 text-center" style={{ color: "rgba(25, 25, 25,0.5)" }}>
-              🔒 Datele tale sunt protejate și nu vor fi partajate cu terți.{" "}
-              <a
-                href="/politica-de-confidentialitate"
-                className="link-underline"
-                style={{ color: "rgba(25, 25, 25,0.6)" }}
-              >
-                Politica de Confidențialitate
-              </a>
+              🔒 Datele tale sunt protejate și nu vor fi partajate cu terți.
             </p>
           </div>
         </div>

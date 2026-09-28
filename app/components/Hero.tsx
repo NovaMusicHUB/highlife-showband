@@ -75,6 +75,8 @@ export default function Hero() {
                 src="/images/cover.jpg"
                 alt="Highlife Showband — membrii trupei pe scenă"
                 className="w-full h-full"
+                loading="eager"
+                fetchPriority="high"
                 style={{
                   objectFit: "cover",
                   objectPosition: "center 15%",

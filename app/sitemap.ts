@@ -7,9 +7,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: "https://highlifeshowband.ro",
-      lastModified: new Date("2026-07-22"),
+      lastModified: new Date("2026-09-28"),
       changeFrequency: "weekly",
       priority: 1.0,
+    },
+    {
+      url: "https://highlifeshowband.ro/politica-de-confidentialitate",
+      lastModified: new Date("2026-09-28"),
+      changeFrequency: "yearly",
+      priority: 0.3,
     },
   ];
 }

@@ -47,6 +47,35 @@ const testimonials = [
   },
 ];
 
+// ── Structured data — real reviews shown on this page, for rich snippets ──────
+
+const averageRating = (
+  testimonials.reduce((sum, t) => sum + t.rating, 0) / testimonials.length
+).toFixed(1);
+
+const reviewJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  name: "Highlife Showband",
+  url: "https://highlifeshowband.ro",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: averageRating,
+    reviewCount: testimonials.length,
+  },
+  review: testimonials.map((t) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: t.name },
+    datePublished: t.date,
+    reviewBody: t.quote,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: t.rating,
+      bestRating: 5,
+    },
+  })),
+};
+
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export default function Testimonials() {
@@ -74,6 +103,10 @@ export default function Testimonials() {
 
   return (
     <section id="testimoniale" className="py-24 lg:py-32" style={{ background: "#ffffff" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
+      />
       <div className="section-container">
         {/* ── Header ─────────────────────────────────────────────────────── */}
         <div className="text-center mb-16 reveal">
