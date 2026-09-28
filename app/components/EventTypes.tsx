@@ -45,8 +45,8 @@ const EVENT_CARDS: EventCard[] = [
   },
   {
     title: "Evenimente Publice",
-    image: "/images/kimaro/kimaro-04.jpg",
-    bgPosition: "center 35%",
+    image: "/images/kimaro/kimaro-03.jpg",
+    bgPosition: "center 12%",
     description:
       "Concerte și festivaluri de amploare — Highlife Showband pe scenele mari ale României.",
   },
