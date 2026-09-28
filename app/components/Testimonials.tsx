@@ -56,7 +56,7 @@ export default function Testimonials() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
@@ -73,133 +73,56 @@ export default function Testimonials() {
   const current = testimonials[activeIndex] ?? testimonials[0];
 
   return (
-    <section
-      id="testimoniale"
-      className="py-20 lg:py-28"
-      style={{
-        background: "#f7f4ee",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      {/* Logo watermark */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          top: "50%",
-          right: "0",
-          transform: "translateY(-50%)",
-          width: "380px",
-          height: "380px",
-          opacity: 0.04,
-          pointerEvents: "none",
-          zIndex: 0,
-          filter: "brightness(0)",
-        }}
-      >
-        <img
-          src="/images/logo.svg"
-          alt=""
-          style={{ width: "100%", height: "100%", objectFit: "contain" }}
-        />
-      </div>
+    <section id="testimoniale" className="py-24 lg:py-32" style={{ background: "#ffffff" }}>
       <div className="section-container">
         {/* ── Header ─────────────────────────────────────────────────────── */}
-        <div className="text-center mb-14 reveal">
-          <p className="eyebrow mb-4">Cuvintele Clienților Noștri</p>
-          <h2 className="font-display text-4xl md:text-5xl text-champagne font-bold">
+        <div className="text-center mb-16 reveal">
+          <p className="eyebrow mb-5">Cuvintele Clienților Noștri</p>
+          <h2
+            className="font-display"
+            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, color: "#191919" }}
+          >
             Ce spun despre noi
           </h2>
         </div>
 
         {/* ── Carousel ───────────────────────────────────────────────────── */}
-        <div className="relative max-w-3xl mx-auto">
-          {/* Quote card */}
-          <div
-            key={activeIndex}
-            className="animate-fade-in"
-            style={{ animationDuration: "0.4s" }}
-          >
-            <div
-              style={{
-                background: "#ffffff",
-                borderLeft: "4px solid #c9a84c",
-                padding: "clamp(1.25rem, 5vw, 2.5rem) clamp(1.25rem, 6vw, 3rem)",
-                position: "relative",
-                boxShadow: "0 4px 24px rgba(0,0,0,0.05)",
-              }}
+        <div className="relative max-w-2xl mx-auto text-center">
+          <div key={activeIndex} className="animate-fade-in" style={{ animationDuration: "0.4s" }}>
+            {/* Stars */}
+            <div className="stars mb-6 justify-center" aria-label="5 din 5 stele">
+              {[...Array(current.rating)].map((_, i) => (
+                <svg key={i} width="14" height="14" viewBox="0 0 16 16" fill="#8a7454" aria-hidden="true">
+                  <path d="M8 1 L9.8 6H15L10.6 9L12.4 14L8 11L3.6 14L5.4 9L1 6H6.2Z" />
+                </svg>
+              ))}
+            </div>
+
+            {/* Quote text */}
+            <blockquote
+              className="font-display italic leading-relaxed mb-8"
+              style={{ fontSize: "clamp(1.35rem, 2.6vw, 1.8rem)", fontWeight: 500, color: "#191919" }}
             >
-              {/* Decorative giant quote mark */}
-              <div
-                aria-hidden="true"
-                style={{
-                  position: "absolute",
-                  top: "1rem",
-                  right: "2rem",
-                  fontFamily: "var(--font-cormorant)",
-                  fontSize: "clamp(4rem, 15vw, 8rem)",
-                  lineHeight: 1,
-                  color: "rgba(201,168,76,0.08)",
-                  pointerEvents: "none",
-                  userSelect: "none",
-                }}
-              >
-                &ldquo;
-              </div>
+              &ldquo;{current.quote}&rdquo;
+            </blockquote>
 
-              {/* Stars */}
-              <div className="stars mb-4" aria-label="5 din 5 stele">
-                {[...Array(current.rating)].map((_, i) => (
-                  <svg
-                    key={i}
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="#c9a84c"
-                    aria-hidden="true"
-                  >
-                    <path d="M8 1 L9.8 6H15L10.6 9L12.4 14L8 11L3.6 14L5.4 9L1 6H6.2Z" />
-                  </svg>
-                ))}
-              </div>
-
-              {/* Quote text */}
-              <blockquote
-                className="font-serif italic text-xl lg:text-2xl leading-relaxed mb-6"
-                style={{ color: "rgba(26, 26, 26,0.87)" }}
-              >
-                &ldquo;{current.quote}&rdquo;
-              </blockquote>
-
-              {/* Author */}
-              <div className="flex items-center gap-4">
-                <span
-                  className="gold-separator"
-                  style={{ height: "40px" }}
-                  aria-hidden="true"
-                />
-                <div>
-                  <div className="font-body font-bold text-champagne text-sm">
-                    {current.name}
-                  </div>
-                  <div
-                    className="font-body text-xs tracking-wider mt-0.5 gold-text-outline"
-                    style={{ color: "#a8882e" }}
-                  >
-                    {current.event} &middot;{" "}
-                    {current.date}
-                  </div>
-                </div>
-              </div>
+            {/* Author */}
+            <div className="font-body font-semibold text-sm" style={{ color: "#191919" }}>
+              {current.name}
+            </div>
+            <div
+              className="font-body text-xs tracking-wide mt-1"
+              style={{ color: "#8a7454" }}
+            >
+              {current.event} &middot; {current.date}
             </div>
           </div>
 
           {/* ── Navigation ─────────────────────────────────────────────── */}
-          <div className="flex items-center justify-between mt-6">
+          <div className="flex items-center justify-between mt-12">
             <button
               onClick={prev}
-              className="btn-ghost px-4 py-3 text-xs"
+              className="font-body text-xs link-underline"
               aria-label="Testimonial anterior"
               style={{ minHeight: "44px" }}
             >
@@ -207,11 +130,7 @@ export default function Testimonials() {
             </button>
 
             {/* Dot indicators */}
-            <div
-              className="flex gap-2"
-              role="tablist"
-              aria-label="Selectează testimonialul"
-            >
+            <div className="flex gap-2" role="tablist" aria-label="Selectează testimonialul">
               {testimonials.map((_, i) => (
                 <button
                   key={i}
@@ -220,11 +139,10 @@ export default function Testimonials() {
                   onClick={() => setActiveIndex(i)}
                   aria-label={`Testimonial ${i + 1}`}
                   style={{
-                    width: i === activeIndex ? "24px" : "6px",
+                    width: i === activeIndex ? "22px" : "6px",
                     height: "6px",
                     borderRadius: "3px",
-                    background:
-                      i === activeIndex ? "#c9a84c" : "rgba(26, 26, 26,0.2)",
+                    background: i === activeIndex ? "#191919" : "rgba(25, 25, 25,0.2)",
                     border: "none",
                     cursor: "pointer",
                     transition: "all 0.3s ease",
@@ -237,7 +155,7 @@ export default function Testimonials() {
 
             <button
               onClick={next}
-              className="btn-ghost px-4 py-3 text-xs"
+              className="font-body text-xs link-underline"
               aria-label="Testimonial următor"
               style={{ minHeight: "44px" }}
             >

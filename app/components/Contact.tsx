@@ -18,12 +18,12 @@ interface FormState {
 
 const inputStyle: React.CSSProperties = {
   width: "100%",
-  padding: "0.75rem 1rem",
-  background: "#f2ede3",
-  border: "1px solid rgba(201,168,76,0.2)",
-  color: "#1a1a1a",
+  padding: "0.85rem 1rem",
+  background: "#ffffff",
+  border: "1px solid #dedad0",
+  color: "#191919",
   fontFamily: "var(--font-inter)",
-  fontSize: "0.875rem",
+  fontSize: "0.9rem",
   outline: "none",
   transition: "border-color 0.2s ease",
 };
@@ -41,21 +41,21 @@ function InfoItem({
     <div className="flex items-start gap-4">
       <div
         style={{
-          width: "36px",
-          height: "36px",
-          border: "1px solid rgba(201,168,76,0.25)",
+          width: "20px",
+          height: "20px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           flexShrink: 0,
-          color: "#c9a84c",
+          color: "#8a7454",
+          marginTop: "0.25rem",
         }}
       >
         {icon}
       </div>
       <div
         className="font-body text-sm leading-relaxed"
-        style={{ color: "rgba(26, 26, 26,0.83)", paddingTop: "0.45rem" }}
+        style={{ color: "rgba(25, 25, 25,0.75)" }}
       >
         {children}
       </div>
@@ -94,7 +94,7 @@ export default function Contact() {
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
     >,
   ) {
-    e.currentTarget.style.borderColor = "rgba(201,168,76,0.6)";
+    e.currentTarget.style.borderColor = "#8a7454";
   }
 
   function applyBlur(
@@ -102,7 +102,7 @@ export default function Contact() {
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
     >,
   ) {
-    e.currentTarget.style.borderColor = "rgba(201,168,76,0.2)";
+    e.currentTarget.style.borderColor = "#dedad0";
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -122,87 +122,21 @@ export default function Contact() {
   }
 
   return (
-    <section
-      id="contact"
-      className="py-20 lg:py-28"
-      style={{ background: "#ffffff" }}
-    >
+    <section id="contact" className="py-24 lg:py-32" style={{ background: "#faf9f6" }}>
       <div className="section-container">
-        {/* ── Header — brand display full-width ── */}
-        <div className="mb-14 reveal">
-          {/* ── HIGHLIFE / SHOWBAND — display tipografic full-lățime ── */}
-          <div
-            className="overflow-hidden"
-            style={{
-              marginLeft: "calc(-50vw + 50%)",
-              width: "100vw",
-              marginBottom: "2rem",
-            }}
+        {/* ── Header ── */}
+        <div className="max-w-2xl mb-16 reveal">
+          <p className="eyebrow mb-5">Să Vorbim</p>
+          <h2
+            className="font-display mb-6"
+            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, lineHeight: 1.15, color: "#191919" }}
           >
-            {/* HIGHLIFE — top faded via mask */}
-            <div
-              style={{
-                maskImage:
-                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 40%, black 65%)",
-                WebkitMaskImage:
-                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 40%, black 65%)",
-                lineHeight: 0.82,
-              }}
-            >
-              <svg
-                width="100%"
-                viewBox="0 0 1000 175"
-                preserveAspectRatio="none"
-                style={{ display: "block" }}
-                aria-hidden="true"
-              >
-                <text
-                  x="0"
-                  y="165"
-                  fontFamily="var(--font-playfair), Georgia, serif"
-                  fontSize="175"
-                  fontWeight="900"
-                  fill="none"
-                  stroke="rgba(26, 26, 26,0.36)"
-                  strokeWidth="2.6"
-                  textLength="1000"
-                  lengthAdjust="spacingAndGlyphs"
-                >
-                  HIGHLIFE
-                </text>
-              </svg>
-            </div>
-
-            {/* SHOWBAND — sub HIGHLIFE, mai mic, auriu */}
-            <svg
-              width="100%"
-              viewBox="0 0 1000 80"
-              preserveAspectRatio="none"
-              style={{ display: "block" }}
-              aria-hidden="true"
-            >
-              <text
-                x="0"
-                y="68"
-                fontFamily="var(--font-playfair), Georgia, serif"
-                fontSize="72"
-                fontWeight="800"
-                fill="rgba(201,168,76,0.4)"
-                stroke="rgba(201,168,76,0.4)"
-                strokeWidth="0.6"
-                textLength="1000"
-                lengthAdjust="spacing"
-              >
-                SHOW BAND
-              </text>
-            </svg>
-          </div>
-
-          {/* Eyebrow + subtext */}
-          <p className="eyebrow mb-4">Să Vorbim</p>
+            Hai să discutăm despre{" "}
+            <em className="text-accent not-italic">evenimentul tău</em>
+          </h2>
           <p
             className="font-body text-base max-w-lg"
-            style={{ color: "rgba(26, 26, 26,0.77)", lineHeight: 1.8 }}
+            style={{ color: "rgba(25, 25, 25,0.62)", lineHeight: 1.75 }}
           >
             Cu Highlife Showband, transformăm orice petrecere într-un show
             memorabil, plin de energie și interacțiune cu invitații. Spune-ne
@@ -213,7 +147,7 @@ export default function Contact() {
         {/* ── Two-column layout ──────────────────────────────────────────── */}
         <div className="lg:grid lg:grid-cols-5 lg:gap-16">
           {/* ── Left: contact info ─────────────────────────────────────── */}
-          <div className="lg:col-span-2 mb-12 lg:mb-0 reveal-left">
+          <div className="lg:col-span-2 mb-14 lg:mb-0 reveal-left">
             <div className="flex flex-col gap-6 mb-8">
               {/* Phone */}
               <InfoItem
@@ -235,16 +169,8 @@ export default function Contact() {
               >
                 <a
                   href="tel:+40754636633"
-                  style={{
-                    color: "rgba(26, 26, 26,0.83)",
-                    textDecoration: "none",
-                  }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = "#c9a84c")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.color = "rgba(26, 26, 26,0.83)")
-                  }
+                  className="link-underline"
+                  style={{ color: "rgba(25, 25, 25,0.85)" }}
                 >
                   0754 636 633
                 </a>
@@ -271,16 +197,8 @@ export default function Contact() {
               >
                 <a
                   href="mailto:contact@highlifeshowband.ro"
-                  style={{
-                    color: "rgba(26, 26, 26,0.83)",
-                    textDecoration: "none",
-                  }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = "#c9a84c")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.color = "rgba(26, 26, 26,0.83)")
-                  }
+                  className="link-underline"
+                  style={{ color: "rgba(25, 25, 25,0.85)" }}
                 >
                   contact@highlifeshowband.ro
                 </a>
@@ -309,43 +227,21 @@ export default function Contact() {
               </InfoItem>
             </div>
 
-            {/* WhatsApp button */}
+            {/* WhatsApp link */}
             <a
               href="https://wa.me/40754636633"
               target="_blank"
               rel="noopener noreferrer"
+              className="link-underline font-body"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.5rem",
-                padding: "0.75rem 1.5rem",
-                background: "rgba(37,211,102,0.1)",
-                border: "1px solid rgba(37,211,102,0.3)",
-                color: "#25d366",
-                fontSize: "0.8rem",
-                fontWeight: 600,
-                textDecoration: "none",
-                letterSpacing: "0.08em",
-                marginTop: "1rem",
-                fontFamily: "var(--font-inter)",
-                transition: "all 0.3s ease",
+                fontSize: "0.9rem",
+                color: "#25a955",
               }}
-              onMouseEnter={(e) =>
-                ((e.currentTarget as HTMLAnchorElement).style.background =
-                  "rgba(37,211,102,0.2)")
-              }
-              onMouseLeave={(e) =>
-                ((e.currentTarget as HTMLAnchorElement).style.background =
-                  "rgba(37,211,102,0.1)")
-              }
             >
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="#25d366"
-                aria-hidden="true"
-              >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#25a955" aria-hidden="true">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                 <path d="M12 0C5.373 0 0 5.373 0 12c0 2.114.553 4.1 1.522 5.831L.054 23.25l5.57-1.44A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.812 9.812 0 01-4.952-1.335l-.356-.211-3.307.855.878-3.228-.23-.375A9.797 9.797 0 012.182 12c0-5.418 4.4-9.818 9.818-9.818 5.417 0 9.818 4.4 9.818 9.818 0 5.417-4.401 9.818-9.818 9.818z" />
               </svg>
@@ -357,28 +253,14 @@ export default function Contact() {
           <div className="lg:col-span-3 reveal-right">
             {submitted ? (
               /* Success state */
-              <div
-                style={{
-                  background: "rgba(201,168,76,0.08)",
-                  border: "1px solid rgba(201,168,76,0.3)",
-                  padding: "2.5rem",
-                  textAlign: "center",
-                }}
-              >
-                <div
-                  className="font-display text-4xl mb-3 gold-text-outline"
-                  style={{ color: "#a8882e" }}
-                  aria-label="Succes"
-                >
+              <div className="py-10 text-center">
+                <div className="font-display text-4xl mb-4" style={{ color: "#8a7454" }} aria-label="Succes">
                   ✓
                 </div>
-                <h3 className="font-display text-2xl text-champagne mb-2">
+                <h3 className="font-display text-2xl mb-2" style={{ color: "#191919", fontWeight: 600 }}>
                   Cererea a fost trimisă!
                 </h3>
-                <p
-                  className="font-body text-sm"
-                  style={{ color: "rgba(26, 26, 26,0.79)" }}
-                >
+                <p className="font-body text-sm" style={{ color: "rgba(25, 25, 25,0.6)" }}>
                   Te contactăm în maxim 24 de ore cu o ofertă personalizată.
                 </p>
               </div>
@@ -399,20 +281,14 @@ export default function Contact() {
                       autoComplete="name"
                       style={{
                         ...inputStyle,
-                        borderColor: errors.name
-                          ? "rgba(239,68,68,0.6)"
-                          : "rgba(201,168,76,0.2)",
+                        borderColor: errors.name ? "rgba(200,60,60,0.6)" : "#dedad0",
                       }}
                       aria-label="Numele tău complet"
                       aria-required="true"
                       aria-describedby={errors.name ? "err-name" : undefined}
                     />
                     {errors.name && (
-                      <p
-                        id="err-name"
-                        className="font-body text-xs mt-1"
-                        style={{ color: "rgba(239,68,68,0.8)" }}
-                      >
+                      <p id="err-name" className="font-body text-xs mt-1" style={{ color: "rgba(190,50,50,0.9)" }}>
                         {errors.name}
                       </p>
                     )}
@@ -432,22 +308,14 @@ export default function Contact() {
                         autoComplete="email"
                         style={{
                           ...inputStyle,
-                          borderColor: errors.email
-                            ? "rgba(239,68,68,0.6)"
-                            : "rgba(201,168,76,0.2)",
+                          borderColor: errors.email ? "rgba(200,60,60,0.6)" : "#dedad0",
                         }}
                         aria-label="Adresă de email"
                         aria-required="true"
-                        aria-describedby={
-                          errors.email ? "err-email" : undefined
-                        }
+                        aria-describedby={errors.email ? "err-email" : undefined}
                       />
                       {errors.email && (
-                        <p
-                          id="err-email"
-                          className="font-body text-xs mt-1"
-                          style={{ color: "rgba(239,68,68,0.8)" }}
-                        >
+                        <p id="err-email" className="font-body text-xs mt-1" style={{ color: "rgba(190,50,50,0.9)" }}>
                           {errors.email}
                         </p>
                       )}
@@ -464,22 +332,14 @@ export default function Contact() {
                         autoComplete="tel"
                         style={{
                           ...inputStyle,
-                          borderColor: errors.phone
-                            ? "rgba(239,68,68,0.6)"
-                            : "rgba(201,168,76,0.2)",
+                          borderColor: errors.phone ? "rgba(200,60,60,0.6)" : "#dedad0",
                         }}
                         aria-label="Număr de telefon"
                         aria-required="true"
-                        aria-describedby={
-                          errors.phone ? "err-phone" : undefined
-                        }
+                        aria-describedby={errors.phone ? "err-phone" : undefined}
                       />
                       {errors.phone && (
-                        <p
-                          id="err-phone"
-                          className="font-body text-xs mt-1"
-                          style={{ color: "rgba(239,68,68,0.8)" }}
-                        >
+                        <p id="err-phone" className="font-body text-xs mt-1" style={{ color: "rgba(190,50,50,0.9)" }}>
                           {errors.phone}
                         </p>
                       )}
@@ -495,9 +355,7 @@ export default function Contact() {
                     onBlur={applyBlur}
                     style={{
                       ...inputStyle,
-                      color: form.eventType
-                        ? "#1a1a1a"
-                        : "rgba(26, 26, 26,0.35)",
+                      color: form.eventType ? "#191919" : "rgba(25, 25, 25,0.4)",
                       cursor: "pointer",
                     }}
                     aria-label="Tipul evenimentului"
@@ -523,10 +381,7 @@ export default function Contact() {
                       onChange={handleChange}
                       onFocus={applyFocus}
                       onBlur={applyBlur}
-                      style={{
-                        ...inputStyle,
-                        colorScheme: "dark",
-                      }}
+                      style={inputStyle}
                       aria-label="Data evenimentului"
                     />
                     <input
@@ -562,13 +417,11 @@ export default function Contact() {
                   {/* Submit button */}
                   <button
                     type="submit"
-                    className="btn-gold w-full justify-center"
+                    className="btn-primary w-full justify-center"
                     disabled={isLoading}
                     style={{ opacity: isLoading ? 0.75 : 1 }}
                   >
-                    <span>
-                      {isLoading ? "Se trimite..." : "Trimite Cererea"}
-                    </span>
+                    <span>{isLoading ? "Se trimite..." : "Trimite Cererea"}</span>
                     {isLoading && (
                       <svg
                         className="animate-spin"
@@ -577,21 +430,9 @@ export default function Contact() {
                         viewBox="0 0 16 16"
                         fill="none"
                         aria-hidden="true"
-                        style={{ position: "relative", zIndex: 1 }}
                       >
-                        <circle
-                          cx="8"
-                          cy="8"
-                          r="6"
-                          stroke="rgba(0,0,0,0.3)"
-                          strokeWidth="2"
-                        />
-                        <path
-                          d="M8 2 A6 6 0 0 1 14 8"
-                          stroke="#0d0d0d"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                        />
+                        <circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
+                        <path d="M8 2 A6 6 0 0 1 14 8" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
                       </svg>
                     )}
                   </button>
@@ -600,15 +441,12 @@ export default function Contact() {
             )}
 
             {/* Privacy note */}
-            <p
-              className="font-body text-xs mt-4 text-center"
-              style={{ color: "rgba(26, 26, 26,0.67)" }}
-            >
+            <p className="font-body text-xs mt-4 text-center" style={{ color: "rgba(25, 25, 25,0.5)" }}>
               🔒 Datele tale sunt protejate și nu vor fi partajate cu terți.{" "}
               <a
                 href="/politica-de-confidentialitate"
-                className="transition-colors duration-200 hover:text-gold"
-                style={{ color: "rgba(26, 26, 26,0.73)", textDecoration: "underline" }}
+                className="link-underline"
+                style={{ color: "rgba(25, 25, 25,0.6)" }}
               >
                 Politica de Confidențialitate
               </a>

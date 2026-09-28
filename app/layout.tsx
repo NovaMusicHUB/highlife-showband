@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { Viewport } from "next";
-import { Playfair_Display, Cormorant_Garamond, Inter } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import Script from "next/script";
 import WhatsAppButton from "./components/WhatsAppButton";
 import "./globals.css";
@@ -10,15 +10,9 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700", "800", "900"],
-});
-
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
 });
+
 
 const inter = Inter({
   variable: "--font-inter",
@@ -189,7 +183,7 @@ export default function RootLayout({
   return (
     <html
       lang="ro"
-      className={`${playfair.variable} ${cormorant.variable} ${inter.variable}`}
+      className={`${playfair.variable} ${inter.variable}`}
       suppressHydrationWarning
     >
       <head>

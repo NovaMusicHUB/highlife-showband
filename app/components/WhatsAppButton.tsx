@@ -26,12 +26,10 @@ export default function WhatsAppButton() {
           : "opacity-0 translate-y-12 pointer-events-none"
       }`}
       style={{
-        width: "56px",
-        height: "56px",
-        background: "linear-gradient(135deg, rgba(37,211,102,0.95), rgba(25,180,80,0.95))",
-        boxShadow: "0 4px 20px rgba(37,211,102,0.4), 0 0 0 1px rgba(37,211,102,0.2)",
-        backdropFilter: "blur(10px)",
-        WebkitBackdropFilter: "blur(10px)",
+        width: "52px",
+        height: "52px",
+        background: "#25a955",
+        boxShadow: "0 4px 16px rgba(25,25,25,0.18)",
       }}
       aria-label="Contactează-ne pe WhatsApp"
       title="Contactează-ne pe WhatsApp"

@@ -1,5 +1,3 @@
-"use client";
-
 // ── Data ─────────────────────────────────────────────────────────────────────
 
 const partners = [
@@ -23,8 +21,8 @@ export default function Partners() {
       className="py-14 lg:py-16"
       style={{
         background: "#ffffff",
-        borderTop: "1px solid rgba(201,168,76,0.06)",
-        borderBottom: "1px solid rgba(201,168,76,0.06)",
+        borderTop: "1px solid #e8e4da",
+        borderBottom: "1px solid #e8e4da",
       }}
     >
       {/* Eyebrow heading */}
@@ -39,37 +37,18 @@ export default function Partners() {
           style={{ width: "max-content" }}
         >
           {scrollPartners.map((partner, index) => (
-            <div
-              key={index}
-              className="shrink-0 group cursor-default"
-              style={{
-                filter: "grayscale(1) opacity(0.35)",
-                transition: "filter 0.3s ease",
-              }}
-              onMouseEnter={(e) =>
-                ((e.currentTarget as HTMLDivElement).style.filter =
-                  "grayscale(0) opacity(0.9)")
-              }
-              onMouseLeave={(e) =>
-                ((e.currentTarget as HTMLDivElement).style.filter =
-                  "grayscale(1) opacity(0.35)")
-              }
-            >
-              <div
+            <div key={index} className="shrink-0">
+              <span
+                className="font-display"
                 style={{
-                  fontFamily: "var(--font-playfair)",
-                  fontSize: "0.9rem",
-                  fontWeight: 600,
-                  letterSpacing: "0.1em",
-                  color: "#1a1a1a",
+                  fontSize: "1rem",
+                  fontWeight: 500,
+                  color: "rgba(25, 25, 25, 0.4)",
                   whiteSpace: "nowrap",
-                  padding: "0 8px",
-                  borderBottom: "1px solid #c9a84c",
-                  paddingBottom: "4px",
                 }}
               >
                 {partner}
-              </div>
+              </span>
             </div>
           ))}
         </div>

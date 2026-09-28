@@ -52,28 +52,27 @@ export default function Navigation() {
       <header
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={{
-          background: isScrolled ? "rgba(255, 255, 255, 0.92)" : "transparent",
-          backdropFilter: isScrolled ? "blur(16px)" : "none",
-          WebkitBackdropFilter: isScrolled ? "blur(16px)" : "none",
+          background: isScrolled ? "rgba(255, 255, 255, 0.94)" : "transparent",
+          backdropFilter: isScrolled ? "blur(12px)" : "none",
+          WebkitBackdropFilter: isScrolled ? "blur(12px)" : "none",
           borderBottom: isScrolled
-            ? "1px solid rgba(201, 168, 76, 0.15)"
+            ? "1px solid #e8e4da"
             : "1px solid transparent",
         }}
       >
         <div className="section-container">
-          <nav className="flex items-center justify-between h-[72px]">
+          <nav className="flex items-center justify-between h-[76px]">
             {/* ── Logo ── */}
             <a
               href="#"
-              className="flex-shrink-0 group"
+              className="flex-shrink-0"
               aria-label="Highlife Showband — Acasă"
             >
               <img
                 src="/images/logo.svg"
                 alt="Highlife Showband"
-                className="transition-transform duration-300 group-hover:scale-105"
                 style={{
-                  height: "68px",
+                  height: "56px",
                   width: "auto",
                   display: "block",
                   filter: "brightness(0)",
@@ -82,23 +81,17 @@ export default function Navigation() {
             </a>
 
             {/* ── Desktop Nav Links ── */}
-            <ul className="hidden lg:flex items-center gap-7 list-none">
+            <ul className="hidden lg:flex items-center gap-8 list-none">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="font-body uppercase transition-colors duration-200"
+                    className="font-body link-underline"
                     style={{
-                      fontSize: "0.7rem",
-                      letterSpacing: "0.15em",
-                      color: "rgba(26, 26, 26,0.83)",
+                      fontSize: "0.8rem",
+                      letterSpacing: "0.02em",
+                      color: "rgba(25, 25, 25, 0.78)",
                     }}
-                    onMouseEnter={(e) =>
-                      (e.currentTarget.style.color = "#c9a84c")
-                    }
-                    onMouseLeave={(e) =>
-                      (e.currentTarget.style.color = "rgba(26, 26, 26,0.83)")
-                    }
                   >
                     {link.label}
                   </a>
@@ -108,23 +101,13 @@ export default function Navigation() {
 
             {/* ── Desktop Right Controls ── */}
             <div className="hidden lg:flex items-center gap-4">
-              {/* CTA */}
-              <a
-                href="#contact"
-                className="btn-gold"
-                style={{
-                  fontSize: "0.7rem",
-                  letterSpacing: "0.12em",
-                  padding: "0.625rem 1.375rem",
-                }}
-              >
+              <a href="#contact" className="btn-primary">
                 <span>Solicită Ofertă</span>
               </a>
             </div>
 
             {/* ── Mobile Controls ── */}
             <div className="flex lg:hidden items-center gap-3">
-              {/* Hamburger */}
               <button
                 onClick={() => setIsMobileOpen(true)}
                 aria-label="Deschide meniu"
@@ -132,16 +115,12 @@ export default function Navigation() {
                 className="flex flex-col justify-center items-center w-11 h-11 gap-[6px]"
               >
                 <span
-                  className="block w-6 h-[1.5px] transition-all duration-300"
-                  style={{ background: "#c9a84c" }}
+                  className="block w-6 h-[1.5px]"
+                  style={{ background: "#191919" }}
                 />
                 <span
-                  className="block w-4 h-[1.5px] transition-all duration-300"
-                  style={{ background: "rgba(26, 26, 26, 0.5)" }}
-                />
-                <span
-                  className="block w-6 h-[1.5px] transition-all duration-300"
-                  style={{ background: "#c9a84c" }}
+                  className="block w-6 h-[1.5px]"
+                  style={{ background: "#191919" }}
                 />
               </button>
             </div>
@@ -153,10 +132,9 @@ export default function Navigation() {
       <div
         className="fixed inset-0 z-40 transition-opacity duration-300 lg:hidden"
         style={{
-          background: "rgba(0,0,0,0.6)",
+          background: "rgba(25,25,25,0.4)",
           opacity: isMobileOpen ? 1 : 0,
           pointerEvents: isMobileOpen ? "auto" : "none",
-          backdropFilter: "blur(4px)",
         }}
         aria-hidden="true"
         onClick={closeMobile}
@@ -171,29 +149,21 @@ export default function Navigation() {
         className="fixed top-0 right-0 bottom-0 z-50 w-[300px] flex flex-col lg:hidden transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
         style={{
           background: "#ffffff",
-          borderLeft: "1px solid rgba(201, 168, 76, 0.2)",
+          borderLeft: "1px solid #e8e4da",
           transform: isMobileOpen ? "translateX(0)" : "translateX(100%)",
-          boxShadow: "-10px 0 40px rgba(0,0,0,0.08)",
         }}
       >
         {/* Drawer header */}
         <div
-          className="flex items-center justify-between px-6 h-[72px] flex-shrink-0"
-          style={{ borderBottom: "1px solid rgba(201, 168, 76, 0.08)" }}
+          className="flex items-center justify-between px-6 h-[76px] flex-shrink-0"
+          style={{ borderBottom: "1px solid #e8e4da" }}
         >
           <span className="eyebrow">Meniu</span>
           <button
             onClick={closeMobile}
             aria-label="Închide meniu"
-            className="flex items-center justify-center w-11 h-11 rounded-full transition-colors duration-200"
-            style={{
-              color: "rgba(26, 26, 26,0.75)",
-              border: "1px solid rgba(201,168,76,0.15)",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "#c9a84c")}
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.color = "rgba(26, 26, 26,0.75)")
-            }
+            className="flex items-center justify-center w-11 h-11"
+            style={{ color: "rgba(25, 25, 25,0.75)" }}
           >
             <svg
               width="16"
@@ -217,13 +187,12 @@ export default function Navigation() {
               key={link.href}
               href={link.href}
               onClick={closeMobile}
-              className="font-body uppercase py-4 transition-colors duration-200 border-b hover:text-gold"
+              className="font-body py-4 border-b"
               style={{
-                fontSize: "0.75rem",
-                letterSpacing: "0.2em",
-                color: "rgba(26, 26, 26,0.81)",
-                borderColor: "rgba(201, 168, 76, 0.07)",
-                transitionDelay: isMobileOpen ? `${i * 50}ms` : "0ms",
+                fontSize: "0.95rem",
+                color: "rgba(25, 25, 25,0.85)",
+                borderColor: "#e8e4da",
+                transitionDelay: isMobileOpen ? `${i * 40}ms` : "0ms",
               }}
             >
               {link.label}
@@ -234,13 +203,15 @@ export default function Navigation() {
         {/* Drawer CTA */}
         <div
           className="px-8 pt-4 flex-shrink-0"
-          style={{ borderTop: "1px solid rgba(201, 168, 76, 0.08)", paddingBottom: "max(2.5rem, env(safe-area-inset-bottom))" }}
+          style={{
+            borderTop: "1px solid #e8e4da",
+            paddingBottom: "max(2.5rem, env(safe-area-inset-bottom))",
+          }}
         >
           <a
             href="#contact"
             onClick={closeMobile}
-            className="btn-gold w-full justify-center"
-            style={{ fontSize: "0.7rem", letterSpacing: "0.15em" }}
+            className="btn-primary w-full justify-center"
           >
             <span>Solicită Ofertă</span>
           </a>

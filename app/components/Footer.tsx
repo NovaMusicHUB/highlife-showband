@@ -16,112 +16,43 @@ const EVENT_TYPES = [
   "Corporate",
   "Petreceri Private",
   "Gale & Premii",
-  "Evenimente Publice",
 ];
-
-// ── Logo SVG ──────────────────────────────────────────────────────────────────
-
-function LogoSVG() {
-  return (
-    <svg
-      width="36"
-      height="36"
-      viewBox="0 0 42 42"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M8 5 L8 37"
-        stroke="#c9a84c"
-        strokeWidth="3.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M8 21 L30 21"
-        stroke="#c9a84c"
-        strokeWidth="3.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M30 5 L30 28"
-        stroke="#c9a84c"
-        strokeWidth="3.5"
-        strokeLinecap="round"
-      />
-      <ellipse
-        cx="27"
-        cy="33"
-        rx="6"
-        ry="4"
-        transform="rotate(-18 27 33)"
-        fill="#c9a84c"
-      />
-      <path
-        d="M33 29 C39 25 39 31 34 33"
-        stroke="#c9a84c"
-        strokeWidth="2"
-        fill="none"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export default function Footer() {
   return (
-    <footer
-      style={{
-        background: "#ffffff",
-        borderTop: "1px solid rgba(201,168,76,0.12)",
-      }}
-    >
+    <footer style={{ background: "#ffffff", borderTop: "1px solid #e8e4da" }}>
       {/* ── Main footer grid ─────────────────────────────────────────────── */}
-      <div className="section-container py-14 lg:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
+      <div className="section-container py-16 lg:py-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* ── Column 1: Brand ──────────────────────────────────────────── */}
           <div>
-            <a
-              href="#"
-              className="inline-block mb-5 group"
-              aria-label="Highlife Showband — Acasă"
-            >
+            <a href="#" className="inline-block mb-5" aria-label="Highlife Showband — Acasă">
               <img
                 src="/images/logo.svg"
                 alt="Highlife Showband"
-                className="transition-transform duration-300 group-hover:scale-105"
-                style={{
-                  height: "64px",
-                  width: "auto",
-                  display: "block",
-                  filter: "brightness(0)",
-                }}
+                style={{ height: "48px", width: "auto", display: "block", filter: "brightness(0)" }}
               />
             </a>
 
-            <p
-              className="font-body text-xs mt-2 leading-relaxed"
-              style={{ color: "rgba(26, 26, 26,0.69)" }}
-            >
+            <p className="font-body text-sm leading-relaxed" style={{ color: "rgba(25, 25, 25,0.55)" }}>
               Muzică live pentru cel mai important eveniment din viața ta.
               Profesionalism, pasiune și energie pe fiecare scenă.
             </p>
-
-            <hr className="gold-rule mt-6 max-w-20" aria-hidden="true" />
           </div>
 
           {/* ── Column 2: Quick links ─────────────────────────────────────── */}
           <div>
-            <p className="eyebrow mb-4">Linkuri Rapide</p>
+            <p className="eyebrow mb-5">Linkuri Rapide</p>
             <nav aria-label="Navigare rapidă footer">
-              <ul className="list-none space-y-0.5">
+              <ul className="list-none space-y-1">
                 {NAV_LINKS.map((link) => (
                   <li key={link.href}>
                     <a
                       href={link.href}
-                      className="font-body text-xs block py-2 transition-colors duration-200 hover:text-gold"
-                      style={{ color: "rgba(26, 26, 26,0.71)" }}
+                      className="font-body text-sm block py-1.5"
+                      style={{ color: "rgba(25, 25, 25,0.6)" }}
                     >
                       {link.label}
                     </a>
@@ -133,14 +64,14 @@ export default function Footer() {
 
           {/* ── Column 3: Event types ─────────────────────────────────────── */}
           <div>
-            <p className="eyebrow mb-4">Evenimente</p>
-            <ul className="list-none space-y-0.5">
+            <p className="eyebrow mb-5">Evenimente</p>
+            <ul className="list-none space-y-1">
               {EVENT_TYPES.map((type) => (
                 <li key={type}>
                   <a
                     href="#evenimente"
-                    className="font-body text-xs block py-2 transition-colors duration-200 hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.71)" }}
+                    className="font-body text-sm block py-1.5"
+                    style={{ color: "rgba(25, 25, 25,0.6)" }}
                   >
                     {type}
                   </a>
@@ -151,193 +82,80 @@ export default function Footer() {
 
           {/* ── Column 4: Social & contact ───────────────────────────────── */}
           <div>
-            <p className="eyebrow mb-4">Urmărește-ne</p>
-            <ul className="list-none space-y-1">
-              {/* Instagram */}
+            <p className="eyebrow mb-5">Urmărește-ne</p>
+            <ul className="list-none space-y-1 mb-6">
               <li>
                 <a
                   href="https://www.instagram.com/highlifeshowband"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 py-3 group"
-                  aria-label="Instagram"
+                  className="font-body text-sm block py-1.5"
+                  style={{ color: "rgba(25, 25, 25,0.6)" }}
                 >
-                  <span
-                    className="transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.71)" }}
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      aria-hidden="true"
-                    >
-                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                      <circle cx="12" cy="12" r="5" />
-                      <circle
-                        cx="17.5"
-                        cy="6.5"
-                        r="1"
-                        fill="currentColor"
-                        stroke="none"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    className="font-body text-xs transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.71)" }}
-                  >
-                    Instagram
-                  </span>
+                  Instagram
                 </a>
               </li>
-              {/* Facebook */}
               <li>
                 <a
                   href="https://www.facebook.com/profile.php?id=61590603836328"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 py-3 group"
-                  aria-label="Facebook"
+                  className="font-body text-sm block py-1.5"
+                  style={{ color: "rgba(25, 25, 25,0.6)" }}
                 >
-                  <span
-                    className="transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.71)" }}
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                    </svg>
-                  </span>
-                  <span
-                    className="font-body text-xs transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.71)" }}
-                  >
-                    Facebook
-                  </span>
+                  Facebook
                 </a>
               </li>
-              {/* YouTube */}
               <li>
                 <a
                   href="https://www.youtube.com/@Highlifeshowband"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 py-3 group"
-                  aria-label="YouTube"
+                  className="font-body text-sm block py-1.5"
+                  style={{ color: "rgba(25, 25, 25,0.6)" }}
                 >
-                  <span
-                    className="transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.71)" }}
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
-                      <polygon
-                        points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"
-                        fill="#ffffff"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    className="font-body text-xs transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.71)" }}
-                  >
-                    YouTube
-                  </span>
+                  YouTube
                 </a>
               </li>
-              {/* TikTok */}
               <li>
                 <a
                   href="https://www.tiktok.com/@highlife.show.band"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 py-3 group"
-                  aria-label="TikTok"
+                  className="font-body text-sm block py-1.5"
+                  style={{ color: "rgba(25, 25, 25,0.6)" }}
                 >
-                  <span
-                    className="transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.71)" }}
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.15a8.16 8.16 0 0 0 4.77 1.52V7.23a4.85 4.85 0 0 1-1-.54z" />
-                    </svg>
-                  </span>
-                  <span
-                    className="font-body text-xs transition-colors duration-200 group-hover:text-gold"
-                    style={{ color: "rgba(26, 26, 26,0.71)" }}
-                  >
-                    TikTok
-                  </span>
+                  TikTok
                 </a>
               </li>
             </ul>
 
             {/* Quick contact */}
-            <div
-              className="mt-6 pt-6"
-              style={{ borderTop: "1px solid rgba(201,168,76,0.08)" }}
-            >
-              <p
-                className="font-body text-xs mb-1"
-                style={{ color: "rgba(26, 26, 26,0.67)" }}
-              >
-                Rezervări &amp; info:
-              </p>
-              <a
-                href="tel:+40754636633"
-                className="font-body text-xs transition-colors duration-200 hover:text-gold gold-text-outline"
-                style={{ color: "#a8882e" }}
-              >
-                0754 636 633
-              </a>
-            </div>
+            <p className="font-body text-xs mb-1" style={{ color: "rgba(25, 25, 25,0.5)" }}>
+              Rezervări &amp; info:
+            </p>
+            <a href="tel:+40754636633" className="font-body text-sm" style={{ color: "#8a7454" }}>
+              0754 636 633
+            </a>
           </div>
         </div>
       </div>
 
       {/* ── Bottom bar ───────────────────────────────────────────────────── */}
-      <div style={{ borderTop: "1px solid rgba(201,168,76,0.08)" }}>
-        <div className="section-container py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p
-            className="font-body text-xs"
-            style={{ color: "rgba(26, 26, 26,0.67)" }}
-          >
-            &copy; {new Date().getFullYear()} Highlife Showband. Toate
-            drepturile rezervate.
+      <div style={{ borderTop: "1px solid #e8e4da" }}>
+        <div className="section-container py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="font-body text-xs" style={{ color: "rgba(25, 25, 25,0.45)" }}>
+            &copy; {new Date().getFullYear()} Highlife Showband. Toate drepturile rezervate.
           </p>
           <div className="flex items-center gap-4">
             <a
               href="/politica-de-confidentialitate"
-              className="font-body text-xs transition-colors duration-200 hover:text-gold"
-              style={{ color: "rgba(26, 26, 26,0.67)" }}
+              className="font-body text-xs"
+              style={{ color: "rgba(25, 25, 25,0.45)" }}
             >
               Politică de Confidențialitate
             </a>
-            <p
-              className="font-body text-xs"
-              style={{ color: "rgba(26, 26, 26,0.67)" }}
-            >
+            <p className="font-body text-xs" style={{ color: "rgba(25, 25, 25,0.45)" }}>
               Site realizat cu ❤️ pentru muzică
             </p>
           </div>

@@ -19,21 +19,19 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <Navigation />
-      <main className="bg-dark py-28 lg:py-36">
-        <div className="section-container max-w-3xl mx-auto">
-          <p className="eyebrow mb-4 text-center">Highlife Showband</p>
+      <main style={{ background: "#ffffff" }} className="py-28 lg:py-36">
+        <div className="section-container max-w-2xl mx-auto">
+          <p className="eyebrow mb-5 text-center">Highlife Showband</p>
           <h1
-            className="font-display text-4xl md:text-5xl font-bold text-champagne text-balance mb-10 text-center"
-            style={{ lineHeight: 1.15 }}
+            className="font-display text-balance mb-12 text-center"
+            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 600, lineHeight: 1.2, color: "#191919" }}
           >
-            Politică de <span className="text-gold-gradient">Confidențialitate</span>
+            Politică de <em className="text-accent not-italic">Confidențialitate</em>
           </h1>
-
-          <hr className="gold-rule mb-12 max-w-xs mx-auto" />
 
           <div
             className="font-body text-base space-y-6"
-            style={{ color: "rgba(26, 26, 26,0.85)", lineHeight: 1.9 }}
+            style={{ color: "rgba(25, 25, 25,0.7)", lineHeight: 1.85 }}
           >
             <p>
               Highlife Show Band respectă confidențialitatea datelor
@@ -52,16 +50,9 @@ export default function PrivacyPolicyPage() {
                 "transmiterea ofertelor și informațiilor solicitate.",
               ].map((item) => (
                 <li key={item} className="flex gap-3">
-                  <span
-                    className="mt-2 flex-shrink-0"
-                    style={{
-                      width: "6px",
-                      height: "6px",
-                      borderRadius: "50%",
-                      background: "#c9a84c",
-                    }}
-                    aria-hidden="true"
-                  />
+                  <span aria-hidden="true" style={{ color: "#8a7454", flexShrink: 0 }}>
+                    —
+                  </span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -78,14 +69,10 @@ export default function PrivacyPolicyPage() {
               (UE) 2016/679 (GDPR).
             </p>
 
-            <p style={{ color: "rgba(26, 26, 26,0.75)" }} className="text-sm pt-6">
+            <p style={{ color: "rgba(25, 25, 25,0.55)" }} className="text-sm pt-6">
               Pentru orice întrebare legată de prelucrarea datelor dumneavoastră
               personale, ne puteți contacta la{" "}
-              <a
-                href="mailto:contact@highlifeshowband.ro"
-                className="transition-colors duration-200 hover:text-gold"
-                style={{ color: "rgba(201,168,76,0.85)" }}
-              >
+              <a href="mailto:contact@highlifeshowband.ro" className="link-underline" style={{ color: "#8a7454" }}>
                 contact@highlifeshowband.ro
               </a>
               .

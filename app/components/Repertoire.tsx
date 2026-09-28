@@ -42,6 +42,8 @@ const SONGS = [
   { title: "Muro Shavo", artist: "Tamango", category: "Balkan" },
 ] as const;
 
+const PREVIEW_COUNT = 8;
+
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export default function Repertoire() {
@@ -71,36 +73,37 @@ export default function Repertoire() {
       ? SONGS
       : SONGS.filter((s) => s.category === activeCategory);
 
+  const preview = filtered.slice(0, PREVIEW_COUNT);
+
   return (
-    <section id="repertoriu" className="bg-dark py-20 lg:py-28">
+    <section id="repertoriu" className="py-24 lg:py-32" style={{ background: "#ffffff" }}>
       <div className="section-container">
         {/* ── Section header ── */}
-        <div className="text-center mb-10 reveal">
-          <p className="eyebrow mb-4">Muzica ta, alegerile tale</p>
+        <div className="max-w-2xl mb-14 reveal">
+          <p className="eyebrow mb-5">Muzica ta, alegerile tale</p>
           <h2
-            className="font-display text-4xl md:text-5xl font-bold text-champagne text-balance mb-6"
-            style={{ lineHeight: 1.1 }}
+            className="font-display mb-6"
+            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, lineHeight: 1.15, color: "#191919" }}
           >
-            Repertoriul <span className="text-gold-gradient">nostru</span>
+            Repertoriul <em className="text-accent not-italic">nostru</em>
           </h2>
           <p
-            className="font-body text-base max-w-2xl mx-auto"
-            style={{ color: "rgba(26, 26, 26,0.77)", lineHeight: 1.8 }}
+            className="font-body text-base"
+            style={{ color: "rgba(25, 25, 25,0.6)", lineHeight: 1.75 }}
           >
             Repertoriul nostru este variat și actual, acoperind hituri
-            internaționale, muzică românească și piese pentru toate vârstele,
-            astfel încât fiecare invitat să se simtă parte din petrecere.
+            internaționale, muzică românească și piese pentru toate vârstele.
+            Mai jos ai o selecție — restul îl găsești în lista completă.
           </p>
-          <hr className="gold-rule mt-8 max-w-xs mx-auto" />
         </div>
 
-        {/* ── Filter pills ── */}
-        <div className="flex flex-wrap justify-center gap-2 mb-10 reveal stagger-1">
+        {/* ── Filter tabs ── */}
+        <div className="flex flex-wrap gap-x-6 gap-y-2 mb-10 reveal stagger-1" style={{ borderBottom: "1px solid #e8e4da" }}>
           {CATEGORIES.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`pill-filter${activeCategory === cat ? " active" : ""}`}
+              className={`tab-filter${activeCategory === cat ? " active" : ""}`}
               aria-pressed={activeCategory === cat}
             >
               {cat}
@@ -108,72 +111,42 @@ export default function Repertoire() {
           ))}
         </div>
 
-        {/* ── Songs grid ── */}
-        <div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px reveal stagger-2"
-          style={{
-            background: "rgba(201,168,76,0.1)",
-            opacity: 1,
-            transition: "opacity 0.3s ease",
-          }}
-        >
-          {filtered.map((song, i) => (
-            <div
-              key={`${song.title}-${i}`}
-              className="bg-dark p-4 lg:p-5 hover:bg-surface transition-colors group"
-            >
-              <div className="font-display text-champagne text-base font-semibold group-hover:text-gold transition-colors">
+        {/* ── Songs preview list ── */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6 reveal stagger-2">
+          {preview.map((song, i) => (
+            <div key={`${song.title}-${i}`} className="pb-4" style={{ borderBottom: "1px solid #e8e4da" }}>
+              <div className="font-display" style={{ fontSize: "1rem", fontWeight: 600, color: "#191919" }}>
                 {song.title}
               </div>
               <div
-                className="font-body text-xs mt-0.5 tracking-wide"
-                style={{ color: "rgba(26, 26, 26,0.71)" }}
+                className="font-body text-xs mt-1"
+                style={{ color: "rgba(25, 25, 25,0.55)" }}
               >
                 {song.artist}
-              </div>
-              <div
-                className="font-body text-[0.6rem] tracking-widest uppercase mt-1 gold-text-outline"
-                style={{ color: "#a8882e" }}
-              >
-                {song.category}
               </div>
             </div>
           ))}
         </div>
 
-        {/* ── Download CTA ── */}
-        <div className="flex justify-center mt-10 reveal stagger-3">
+        {filtered.length > PREVIEW_COUNT && (
+          <p
+            className="font-body text-sm mt-6 reveal stagger-2"
+            style={{ color: "rgba(25, 25, 25,0.45)" }}
+          >
+            + încă {filtered.length - PREVIEW_COUNT} piese în lista completă
+          </p>
+        )}
+
+        {/* ── CTA ── */}
+        <div className="mt-10 reveal stagger-3">
           <button
             onClick={() => setIsModalOpen(true)}
-            className="btn-gold"
+            className="btn-secondary"
             aria-label="Deschide repertoriul complet"
           >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M8 2 L8 11 M4 8 L8 12 L12 8 M2 14 L14 14"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <span>Descarcă Repertoriul Complet PDF</span>
+            <span>Vezi Repertoriul Complet</span>
           </button>
         </div>
-
-        {/* ── Note ── */}
-        <p
-          className="font-body text-xs text-center mt-4"
-          style={{ color: "rgba(26, 26, 26,0.67)" }}
-        >
-          Lista de mai sus reprezintă doar o selecție din repertoriul nostru.
-        </p>
       </div>
 
       {/* ── Repertoire Modal ── */}

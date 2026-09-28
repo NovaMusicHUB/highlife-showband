@@ -48,61 +48,52 @@ export default function FAQ() {
   }
 
   return (
-    <section
-      id="faq"
-      className="py-20 lg:py-28"
-      style={{ background: "#f7f4ee" }}
-    >
+    <section id="faq" className="py-24 lg:py-32" style={{ background: "#ffffff" }}>
       <div className="section-container">
         {/* ── Header ─────────────────────────────────────────────────────── */}
-        <div className="max-w-2xl mx-auto text-center mb-14 reveal">
-          <p className="eyebrow mb-4">Ai Întrebări?</p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-champagne font-bold">
+        <div className="max-w-2xl mx-auto text-center mb-16 reveal">
+          <p className="eyebrow mb-5">Ai Întrebări?</p>
+          <h2
+            className="font-display"
+            style={{ fontSize: "clamp(1.85rem, 3.5vw, 2.75rem)", fontWeight: 600, color: "#191919" }}
+          >
             Răspundem la cele mai frecvente întrebări
           </h2>
         </div>
 
         {/* ── Accordion list ─────────────────────────────────────────────── */}
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           {faqs.map((faq, i) => (
             <div
               key={i}
               className="reveal"
               style={{
-                borderBottom: "1px solid rgba(201,168,76,0.1)",
+                borderBottom: "1px solid #e8e4da",
                 transitionDelay: `${i * 0.05}s`,
               }}
             >
               <button
-                className="w-full flex items-center justify-between py-5 text-left group"
+                className="w-full flex items-center justify-between py-5 text-left"
                 onClick={() => toggle(i)}
                 aria-expanded={openIndex === i}
                 aria-controls={`faq-answer-${i}`}
               >
                 <span
-                  className="font-body font-semibold pr-4 text-sm lg:text-base transition-colors duration-200"
-                  style={{
-                    color: openIndex === i ? "#c9a84c" : "#1a1a1a",
-                  }}
+                  className="font-body font-semibold pr-4 text-sm lg:text-base"
+                  style={{ color: openIndex === i ? "#8a7454" : "#191919" }}
                 >
                   {faq.question}
                 </span>
                 {/* +/× toggle icon */}
                 <span
                   aria-hidden="true"
+                  className="font-display"
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "28px",
-                    height: "28px",
-                    border: "1px solid #c9a84c",
-                    color: "#c9a84c",
-                    flexShrink: 0,
-                    fontSize: "1.1rem",
+                    fontSize: "1.3rem",
                     lineHeight: 1,
-                    transform:
-                      openIndex === i ? "rotate(45deg)" : "rotate(0deg)",
+                    color: "#191919",
+                    flexShrink: 0,
+                    transform: openIndex === i ? "rotate(45deg)" : "rotate(0deg)",
                     transition: "transform 0.3s ease",
                   }}
                 >
@@ -117,8 +108,8 @@ export default function FAQ() {
                 aria-labelledby={`faq-btn-${i}`}
               >
                 <p
-                  className="font-body text-sm leading-relaxed pb-5"
-                  style={{ color: "rgba(26, 26, 26,0.79)" }}
+                  className="font-body text-sm leading-relaxed pb-6"
+                  style={{ color: "rgba(25, 25, 25,0.65)" }}
                 >
                   {faq.answer}
                 </p>
@@ -128,30 +119,12 @@ export default function FAQ() {
         </div>
 
         {/* ── Bottom CTA ─────────────────────────────────────────────────── */}
-        <div className="text-center mt-14 reveal">
-          <p
-            className="font-body text-sm mb-5"
-            style={{ color: "rgba(26, 26, 26,0.73)" }}
-          >
+        <div className="text-center mt-16 reveal">
+          <p className="font-body text-sm mb-5" style={{ color: "rgba(25, 25, 25,0.55)" }}>
             Nu ai găsit răspunsul la întrebarea ta?
           </p>
-          <a href="#contact" className="btn-ghost">
+          <a href="#contact" className="btn-secondary">
             <span>Contactează-ne direct</span>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M3 8H13M9 4L13 8L9 12"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
           </a>
         </div>
       </div>

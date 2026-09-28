@@ -1,6 +1,5 @@
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
-import NewRelease from "./components/NewRelease";
 import EventTypes from "./components/EventTypes";
 import Partners from "./components/Partners";
 import Experience from "./components/Experience";
@@ -9,7 +8,7 @@ import Packages from "./components/Packages";
 import Repertoire from "./components/Repertoire";
 import Gallery from "./components/Gallery";
 import Testimonials from "./components/Testimonials";
-import Guarantee from "./components/Guarantee";
+import NewRelease from "./components/NewRelease";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -21,7 +20,6 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
-        <NewRelease />
         <EventTypes />
         <Partners />
         <Experience />
@@ -30,7 +28,7 @@ export default function Home() {
         <Repertoire />
         <Gallery />
         <Testimonials />
-        <Guarantee />
+        <NewRelease />
         <FAQ />
         <Contact />
       </main>
