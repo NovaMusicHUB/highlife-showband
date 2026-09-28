@@ -16,6 +16,7 @@ const EVENT_TYPES = [
   "Corporate",
   "Petreceri Private",
   "Gale & Premii",
+  "Evenimente Publice",
 ];
 
 // ── Component ─────────────────────────────────────────────────────────────────

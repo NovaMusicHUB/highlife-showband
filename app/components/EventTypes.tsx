@@ -43,6 +43,13 @@ const EVENT_CARDS: EventCard[] = [
     bgPosition: "center 20%",
     description: "Eleganță și spectacol pentru serile de gală.",
   },
+  {
+    title: "Evenimente Publice",
+    image: "/images/kimaro/kimaro-04.jpg",
+    bgPosition: "center 35%",
+    description:
+      "Concerte și festivaluri de amploare — Highlife Showband pe scenele mari ale României.",
+  },
 ];
 
 // ── Component ────────────────────────────────────────────────────────────────
