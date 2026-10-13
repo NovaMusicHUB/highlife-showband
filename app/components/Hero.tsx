@@ -5,7 +5,7 @@ export default function Hero() {
     <section
       id="hero"
       className="relative overflow-hidden flex items-center min-h-screen"
-      style={{ background: "#202024", paddingTop: "76px" }}
+      style={{ background: "#f3f0ea", paddingTop: "76px" }}
     >
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -23,7 +23,7 @@ export default function Hero() {
               style={{
                 fontSize: "clamp(2.5rem, 5vw, 4.25rem)",
                 fontWeight: 600,
-                color: "#f3f0ea",
+                color: "#202024",
                 animationDelay: "0.2s",
                 opacity: 0,
                 animationFillMode: "forwards",
@@ -40,7 +40,7 @@ export default function Hero() {
                 animationDelay: "0.35s",
                 opacity: 0,
                 animationFillMode: "forwards",
-                color: "rgba(243, 240, 234,0.68)",
+                color: "rgba(32, 32, 36,0.68)",
                 lineHeight: 1.7,
               }}
             >

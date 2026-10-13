@@ -102,7 +102,7 @@ export default function Testimonials() {
   const current = testimonials[activeIndex] ?? testimonials[0];
 
   return (
-    <section id="testimoniale" className="py-24 lg:py-32" style={{ background: "#09090b", color: "#f3f0ea" }}>
+    <section id="testimoniale" className="py-24 lg:py-32" style={{ background: "#f3f0ea", color: "#202024" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
@@ -113,7 +113,7 @@ export default function Testimonials() {
           <p className="eyebrow mb-5">Cuvintele Clienților Noștri</p>
           <h2
             className="font-display"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, color: "#f3f0ea" }}
+            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, color: "#202024" }}
           >
             Ce spun despre noi
           </h2>
@@ -134,18 +134,18 @@ export default function Testimonials() {
             {/* Quote text */}
             <blockquote
               className="font-display italic leading-relaxed mb-8"
-              style={{ fontSize: "clamp(1.35rem, 2.6vw, 1.8rem)", fontWeight: 500, color: "#f3f0ea" }}
+              style={{ fontSize: "clamp(1.35rem, 2.6vw, 1.8rem)", fontWeight: 500, color: "#202024" }}
             >
               &ldquo;{current.quote}&rdquo;
             </blockquote>
 
             {/* Author */}
-            <div className="font-body font-semibold text-sm" style={{ color: "#f3f0ea" }}>
+            <div className="font-body font-semibold text-sm" style={{ color: "#202024" }}>
               {current.name}
             </div>
             <div
               className="font-body text-xs tracking-wide mt-1"
-              style={{ color: "#f0524d" }}
+              style={{ color: "rgba(32, 32, 36,0.7)" }}
             >
               {current.event} &middot; {current.date}
             </div>
@@ -175,7 +175,7 @@ export default function Testimonials() {
                     width: i === activeIndex ? "22px" : "6px",
                     height: "6px",
                     borderRadius: "3px",
-                    background: i === activeIndex ? "#f0524d" : "rgba(243, 240, 234,0.25)",
+                    background: i === activeIndex ? "#f0524d" : "rgba(32, 32, 36,0.25)",
                     border: "none",
                     cursor: "pointer",
                     transition: "all 0.3s ease",

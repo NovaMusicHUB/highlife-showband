@@ -26,7 +26,7 @@ function Section({
     <div className="pt-10 first:pt-0">
       <h2
         className="font-display mb-4"
-        style={{ fontSize: "1.3rem", fontWeight: 600, color: "#f3f0ea" }}
+        style={{ fontSize: "1.3rem", fontWeight: 600, color: "#202024" }}
       >
         {title}
       </h2>
@@ -39,25 +39,25 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <Navigation />
-      <main style={{ background: "#202024", color: "#f3f0ea" }} className="py-28 lg:py-36">
+      <main style={{ background: "#f3f0ea", color: "#202024" }} className="py-28 lg:py-36">
         <div className="section-container max-w-2xl mx-auto">
           <p className="eyebrow mb-5 text-center">Highlife Showband</p>
           <h1
             className="font-display text-balance mb-4 text-center"
-            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 600, lineHeight: 1.2, color: "#f3f0ea" }}
+            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 600, lineHeight: 1.2, color: "#202024" }}
           >
             Politică de <em className="text-accent not-italic">Confidențialitate</em>
           </h1>
           <p
             className="font-body text-sm text-center mb-14"
-            style={{ color: "rgba(243, 240, 234,0.55)" }}
+            style={{ color: "rgba(32, 32, 36,0.55)" }}
           >
             Ultima actualizare: 28 septembrie 2026
           </p>
 
           <div
             className="font-body text-base"
-            style={{ color: "rgba(243, 240, 234,0.8)", lineHeight: 1.85 }}
+            style={{ color: "rgba(32, 32, 36,0.8)", lineHeight: 1.85 }}
           >
             <Section title="1. Cine suntem">
               <p>
@@ -69,7 +69,7 @@ export default function PrivacyPolicyPage() {
                 <a
                   href="mailto:contact@highlifeshowband.ro"
                   className="link-underline"
-                  style={{ color: "#f0524d" }}
+                  style={{ color: "#202024" }}
                 >
                   contact@highlifeshowband.ro
                 </a>
@@ -179,7 +179,7 @@ export default function PrivacyPolicyPage() {
                 <a
                   href="mailto:contact@highlifeshowband.ro"
                   className="link-underline"
-                  style={{ color: "#f0524d" }}
+                  style={{ color: "#202024" }}
                 >
                   contact@highlifeshowband.ro
                 </a>
@@ -195,7 +195,7 @@ export default function PrivacyPolicyPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-underline"
-                  style={{ color: "#f0524d" }}
+                  style={{ color: "#202024" }}
                 >
                   www.dataprotection.ro
                 </a>
@@ -210,7 +210,7 @@ export default function PrivacyPolicyPage() {
                 <a
                   href="mailto:contact@highlifeshowband.ro"
                   className="link-underline"
-                  style={{ color: "#f0524d" }}
+                  style={{ color: "#202024" }}
                 >
                   contact@highlifeshowband.ro
                 </a>

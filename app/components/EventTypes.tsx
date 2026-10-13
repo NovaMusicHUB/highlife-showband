@@ -59,7 +59,7 @@ export default function EventTypes() {
     <section
       id="evenimente"
       className="py-24 lg:py-32"
-      style={{ background: "#09090b" }}
+      style={{ background: "#f3f0ea" }}
     >
       <div className="section-container">
         {/* ── Section header ── */}
@@ -72,7 +72,7 @@ export default function EventTypes() {
               fontSize: "clamp(2rem, 4vw, 3.25rem)",
               fontWeight: 600,
               lineHeight: 1.15,
-              color: "#f3f0ea",
+              color: "#202024",
             }}
           >
             Fiecare eveniment,{" "}
@@ -104,13 +104,13 @@ export default function EventTypes() {
               </div>
               <h3
                 className="font-display mb-2"
-                style={{ fontSize: "1.35rem", fontWeight: 600, color: "#f3f0ea" }}
+                style={{ fontSize: "1.35rem", fontWeight: 600, color: "#202024" }}
               >
                 {card.title}
               </h3>
               <p
                 className="font-body text-sm max-w-xs"
-                style={{ color: "rgba(243, 240, 234,0.66)", lineHeight: 1.65 }}
+                style={{ color: "rgba(32, 32, 36,0.66)", lineHeight: 1.65 }}
               >
                 {card.description}
               </p>
@@ -122,7 +122,7 @@ export default function EventTypes() {
         <div className="mt-16 lg:mt-20 reveal">
           <p
             className="font-body text-lg max-w-xl mb-8"
-            style={{ color: "rgba(243, 240, 234,0.7)", lineHeight: 1.7 }}
+            style={{ color: "rgba(32, 32, 36,0.7)", lineHeight: 1.7 }}
           >
             Alege Highlife Showband pentru un eveniment cu adevărat reușit —
             muzică live, energie și interacțiune care ridică atmosfera la

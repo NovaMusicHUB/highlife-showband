@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 function Feature({ text }: { text: string }) {
   return (
-    <li className="flex items-start gap-3 font-body text-sm" style={{ color: "rgba(243, 240, 234,0.85)" }}>
+    <li className="flex items-start gap-3 font-body text-sm" style={{ color: "rgba(32, 32, 36,0.85)" }}>
       <span aria-hidden="true" style={{ color: "#f0524d", flexShrink: 0 }}>
         —
       </span>
@@ -37,14 +37,14 @@ export default function Packages() {
   }, []);
 
   return (
-    <section id="pachete" className="py-24 lg:py-32" style={{ background: "#09090b", color: "#f3f0ea" }}>
+    <section id="pachete" className="py-24 lg:py-32" style={{ background: "#f3f0ea", color: "#202024" }}>
       <div className="section-container">
         {/* ── SECȚIUNEA 1: Ce primiți de la noi? ── */}
         <div className="reveal max-w-3xl mx-auto mb-20 lg:mb-28 text-center">
           <p className="eyebrow mb-5">Show complet. Fără compromisuri.</p>
           <h2
             className="font-display text-balance mb-10"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, lineHeight: 1.15, color: "#f3f0ea" }}
+            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, lineHeight: 1.15, color: "#202024" }}
           >
             Ce primiți <em className="text-accent not-italic">de la noi?</em>
           </h2>
@@ -73,7 +73,7 @@ export default function Packages() {
           <p className="eyebrow mb-5">Ofertă personalizată</p>
           <h2
             className="font-display text-balance mb-6"
-            style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)", fontWeight: 600, lineHeight: 1.2, color: "#f3f0ea" }}
+            style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)", fontWeight: 600, lineHeight: 1.2, color: "#202024" }}
           >
             Cât costă Highlife Showband{" "}
             <em className="text-accent not-italic">pentru evenimentul tău?</em>
@@ -81,7 +81,7 @@ export default function Packages() {
 
           <p
             className="font-body text-base leading-relaxed mb-10 max-w-xl mx-auto"
-            style={{ color: "rgba(243, 240, 234,0.66)" }}
+            style={{ color: "rgba(32, 32, 36,0.66)" }}
           >
             Fiecare eveniment este unic, așa că fiecare ofertă este
             personalizată. Nu lucrăm cu prețuri fixe afișate — lucrăm cu

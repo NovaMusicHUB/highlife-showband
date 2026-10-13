@@ -80,7 +80,7 @@ export default function Repertoire() {
       <div className="section-container">
         {/* ── Section header ── */}
         <div className="max-w-2xl mb-14 reveal">
-          <p className="eyebrow eyebrow-dark mb-5">Muzica ta, alegerile tale</p>
+          <p className="eyebrow mb-5">Muzica ta, alegerile tale</p>
           <h2
             className="font-display mb-6"
             style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, lineHeight: 1.15, color: "#202024" }}

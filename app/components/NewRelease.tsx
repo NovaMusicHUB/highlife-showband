@@ -38,7 +38,7 @@ export default function NewRelease() {
       <div className="section-container">
         {/* ── Header ── */}
         <div className="max-w-2xl mb-12 reveal">
-          <p className="eyebrow eyebrow-dark mb-5">Lansare nouă</p>
+          <p className="eyebrow mb-5">Lansare nouă</p>
 
           <h2
             className="font-display text-balance mb-5"

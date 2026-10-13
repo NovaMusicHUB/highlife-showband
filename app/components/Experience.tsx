@@ -72,7 +72,7 @@ export default function Experience() {
           {/* ── Right: copy ──────────────────────────────────────────────── */}
           <div className="reveal-right lg:col-span-7">
             {/* Eyebrow */}
-            <p className="eyebrow eyebrow-dark mb-5">De ce Highlife?</p>
+            <p className="eyebrow mb-5">De ce Highlife?</p>
 
             {/* Headline */}
             <h2

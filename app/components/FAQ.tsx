@@ -48,14 +48,14 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faq" className="py-24 lg:py-32" style={{ background: "#202024", color: "#f3f0ea" }}>
+    <section id="faq" className="py-24 lg:py-32" style={{ background: "#f3f0ea", color: "#202024" }}>
       <div className="section-container">
         {/* ── Header ─────────────────────────────────────────────────────── */}
         <div className="max-w-2xl mx-auto text-center mb-16 reveal">
           <p className="eyebrow mb-5">Ai Întrebări?</p>
           <h2
             className="font-display"
-            style={{ fontSize: "clamp(1.85rem, 3.5vw, 2.75rem)", fontWeight: 600, color: "#f3f0ea" }}
+            style={{ fontSize: "clamp(1.85rem, 3.5vw, 2.75rem)", fontWeight: 600, color: "#202024" }}
           >
             Răspundem la cele mai frecvente întrebări
           </h2>
@@ -68,7 +68,7 @@ export default function FAQ() {
               key={i}
               className="reveal"
               style={{
-                borderBottom: "1px solid rgba(243,240,234,0.12)",
+                borderBottom: "1px solid rgba(32, 32, 36,0.12)",
                 transitionDelay: `${i * 0.05}s`,
               }}
             >
@@ -80,7 +80,7 @@ export default function FAQ() {
               >
                 <span
                   className="font-body font-semibold pr-4 text-sm lg:text-base"
-                  style={{ color: openIndex === i ? "#f0524d" : "#f3f0ea" }}
+                  style={{ color: "#202024" }}
                 >
                   {faq.question}
                 </span>
@@ -91,7 +91,7 @@ export default function FAQ() {
                   style={{
                     fontSize: "1.3rem",
                     lineHeight: 1,
-                    color: openIndex === i ? "#f0524d" : "#f3f0ea",
+                    color: openIndex === i ? "#f0524d" : "#202024",
                     flexShrink: 0,
                     transform: openIndex === i ? "rotate(45deg)" : "rotate(0deg)",
                     transition: "transform 0.3s ease",
@@ -109,7 +109,7 @@ export default function FAQ() {
               >
                 <p
                   className="font-body text-sm leading-relaxed pb-6"
-                  style={{ color: "rgba(243, 240, 234,0.72)" }}
+                  style={{ color: "rgba(32, 32, 36,0.72)" }}
                 >
                   {faq.answer}
                 </p>
@@ -120,7 +120,7 @@ export default function FAQ() {
 
         {/* ── Bottom CTA ─────────────────────────────────────────────────── */}
         <div className="text-center mt-16 reveal">
-          <p className="font-body text-sm mb-5" style={{ color: "rgba(243, 240, 234,0.62)" }}>
+          <p className="font-body text-sm mb-5" style={{ color: "rgba(32, 32, 36,0.62)" }}>
             Nu ai găsit răspunsul la întrebarea ta?
           </p>
           <a href="#contact" className="btn-secondary">

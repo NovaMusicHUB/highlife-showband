@@ -65,7 +65,7 @@ export default function Reels() {
   }
 
   return (
-    <section id="reels" style={{ background: "#202024", color: "#f3f0ea" }} className="py-24 lg:py-32">
+    <section id="reels" style={{ background: "#f3f0ea", color: "#202024" }} className="py-24 lg:py-32">
       <div className="section-container">
         {/* ── Header ── */}
         <div className="max-w-2xl mx-auto mb-16 text-center reveal">
@@ -76,7 +76,7 @@ export default function Reels() {
               fontSize: "clamp(2rem, 4vw, 3.25rem)",
               fontWeight: 600,
               lineHeight: 1.15,
-              color: "#f3f0ea",
+              color: "#202024",
             }}
           >
             Reeluri &amp; <em className="text-accent not-italic">momente</em>
@@ -158,7 +158,7 @@ export default function Reels() {
                     height: "52px",
                     borderRadius: "50%",
                     background: "rgba(9,9,11,0.45)",
-                    border: "1px solid rgba(243,240,234,0.8)",
+                    border: "1px solid rgba(32, 32, 36,0.8)",
                     backdropFilter: "blur(4px)",
                   }}
                 >

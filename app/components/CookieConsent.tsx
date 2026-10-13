@@ -78,15 +78,15 @@ export default function CookieConsent() {
           aria-label="Consimțământ cookie-uri"
           className="fixed bottom-0 left-0 right-0 z-9999"
           style={{
-            background: "#202024",
-            borderTop: "1px solid rgba(243,240,234,0.1)",
+            background: "#f3f0ea",
+            borderTop: "1px solid rgba(32, 32, 36,0.1)",
             boxShadow: "0 -8px 30px rgba(0,0,0,0.4)",
           }}
         >
           <div className="section-container py-5 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
             <p
               className="font-body text-sm flex-1"
-              style={{ color: "rgba(243, 240, 234,0.8)", lineHeight: 1.6 }}
+              style={{ color: "rgba(32, 32, 36,0.8)", lineHeight: 1.6 }}
             >
               Folosim cookie-uri esențiale pentru funcționarea site-ului și,
               doar cu acordul tău, cookie-uri de marketing (Meta Pixel) pentru
@@ -94,7 +94,7 @@ export default function CookieConsent() {
               <a
                 href="/politica-de-confidentialitate"
                 className="link-underline"
-                style={{ color: "#f0524d" }}
+                style={{ color: "#202024" }}
               >
                 Politica de Confidențialitate
               </a>

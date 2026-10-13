@@ -78,7 +78,7 @@ export default function AvailabilityPopup() {
           className="hl-popup-card relative w-full"
           style={{
             maxWidth: '480px',
-            background: '#202024',
+            background: '#f3f0ea',
             padding: 'clamp(1.75rem, 5vw, 2.75rem)',
             boxShadow: '0 24px 60px rgba(0,0,0,0.5)',
           }}
@@ -100,7 +100,7 @@ export default function AvailabilityPopup() {
               background: 'none',
               border: 'none',
               cursor: 'pointer',
-              color: 'rgba(243, 240, 234,0.7)',
+              color: 'rgba(32, 32, 36,0.7)',
             }}
           >
             <svg width="14" height="14" viewBox="0 0 11 11" fill="none">
@@ -114,7 +114,7 @@ export default function AvailabilityPopup() {
           {/* Title */}
           <h2
             className="font-display mb-4"
-            style={{ fontSize: 'clamp(1.3rem, 4vw, 1.7rem)', fontWeight: 600, lineHeight: 1.2, color: '#f3f0ea' }}
+            style={{ fontSize: 'clamp(1.3rem, 4vw, 1.7rem)', fontWeight: 600, lineHeight: 1.2, color: '#202024' }}
           >
             Ar fi păcat să ratezi{' '}
             <em className="text-accent not-italic">cel mai tare show</em>{' '}
@@ -124,10 +124,10 @@ export default function AvailabilityPopup() {
           {/* Body text */}
           <p
             className="font-body mb-4"
-            style={{ fontSize: '0.92rem', lineHeight: 1.75, color: 'rgba(243, 240, 234,0.75)' }}
+            style={{ fontSize: '0.92rem', lineHeight: 1.75, color: 'rgba(32, 32, 36,0.75)' }}
           >
             Mai avem doar câteva date libere pentru{' '}
-            <strong style={{ color: '#f0524d' }}>septembrie și octombrie</strong>,
+            <strong style={{ color: '#202024' }}>septembrie și octombrie</strong>,
             iar rezervările pentru aceste luni vin cu câteva surprize plăcute
             incluse în pachet.
           </p>
@@ -135,7 +135,7 @@ export default function AvailabilityPopup() {
           {/* Subtext / regret note */}
           <p
             className="font-body italic mb-8"
-            style={{ fontSize: '0.9rem', lineHeight: 1.65, color: 'rgba(243, 240, 234,0.6)' }}
+            style={{ fontSize: '0.9rem', lineHeight: 1.65, color: 'rgba(32, 32, 36,0.6)' }}
           >
             Nu vrei să realizezi abia după nuntă că ringul de dans putea arăta
             altfel.
@@ -166,7 +166,7 @@ export default function AvailabilityPopup() {
           {/* Fine print */}
           <p
             className="font-body mt-5 text-center"
-            style={{ fontSize: '0.7rem', color: 'rgba(243, 240, 234,0.62)' }}
+            style={{ fontSize: '0.7rem', color: 'rgba(32, 32, 36,0.62)' }}
           >
             Poți închide oricând. Nu trimitem spam.
           </p>

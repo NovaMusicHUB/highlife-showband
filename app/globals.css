@@ -74,8 +74,8 @@ html {
 }
 
 body {
-    background-color: #202024;
-    color: #f3f0ea;
+    background-color: #f3f0ea;
+    color: #202024;
     font-family:
         var(--font-inter),
         system-ui,
@@ -93,7 +93,7 @@ body {
     width: 5px;
 }
 ::-webkit-scrollbar-track {
-    background: #09090b;
+    background: #f3f0ea;
 }
 ::-webkit-scrollbar-thumb {
     background: #f0524d;
@@ -103,13 +103,13 @@ body {
 /* Text selection */
 ::selection {
     background: rgba(240, 82, 77, 0.35);
-    color: #f3f0ea;
+    color: #202024;
 }
 
 /* Form placeholders — readable on dark form fields */
 input::placeholder,
 textarea::placeholder {
-    color: rgba(243, 240, 234, 0.45);
+    color: rgba(32, 32, 36, 0.45);
     opacity: 1;
 }
 
@@ -161,7 +161,7 @@ textarea::placeholder {
         font-weight: 600;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: #f3f0ea;
+        color: #202024;
     }
 
     .eyebrow::before {
@@ -171,10 +171,6 @@ textarea::placeholder {
         height: 2px;
         background: #f0524d;
         flex-shrink: 0;
-    }
-
-    .eyebrow-dark {
-        color: #202024;
     }
 
     /* ============================================================
@@ -392,7 +388,7 @@ textarea::placeholder {
     }
 
     .tab-filter.active {
-        color: #f0524d;
+        color: #202024;
         opacity: 1;
         border-bottom-color: #f0524d;
         font-weight: 600;

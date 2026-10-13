@@ -52,11 +52,11 @@ export default function Navigation() {
       <header
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={{
-          background: isScrolled ? "rgba(32, 32, 36, 0.92)" : "transparent",
+          background: isScrolled ? "rgba(243, 240, 234, 0.94)" : "transparent",
           backdropFilter: isScrolled ? "blur(12px)" : "none",
           WebkitBackdropFilter: isScrolled ? "blur(12px)" : "none",
           borderBottom: isScrolled
-            ? "1px solid rgba(243,240,234,0.1)"
+            ? "1px solid rgba(32, 32, 36,0.1)"
             : "1px solid transparent",
         }}
       >
@@ -75,7 +75,7 @@ export default function Navigation() {
                   height: "56px",
                   width: "auto",
                   display: "block",
-                  filter: "brightness(0) invert(1)",
+                  filter: "brightness(0)",
                 }}
               />
             </a>
@@ -90,7 +90,7 @@ export default function Navigation() {
                     style={{
                       fontSize: "0.8rem",
                       letterSpacing: "0.02em",
-                      color: "rgba(243, 240, 234, 0.85)",
+                      color: "rgba(32, 32, 36, 0.85)",
                     }}
                   >
                     {link.label}
@@ -116,11 +116,11 @@ export default function Navigation() {
               >
                 <span
                   className="block w-6 h-[1.5px]"
-                  style={{ background: "#f3f0ea" }}
+                  style={{ background: "#202024" }}
                 />
                 <span
                   className="block w-6 h-[1.5px]"
-                  style={{ background: "#f3f0ea" }}
+                  style={{ background: "#202024" }}
                 />
               </button>
             </div>
@@ -148,22 +148,22 @@ export default function Navigation() {
         aria-modal="true"
         className="fixed top-0 right-0 bottom-0 z-50 w-[300px] flex flex-col lg:hidden transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
         style={{
-          background: "#202024",
-          borderLeft: "1px solid rgba(243,240,234,0.1)",
+          background: "#f3f0ea",
+          borderLeft: "1px solid rgba(32, 32, 36,0.1)",
           transform: isMobileOpen ? "translateX(0)" : "translateX(100%)",
         }}
       >
         {/* Drawer header */}
         <div
           className="flex items-center justify-between px-6 h-[76px] flex-shrink-0"
-          style={{ borderBottom: "1px solid rgba(243,240,234,0.1)" }}
+          style={{ borderBottom: "1px solid rgba(32, 32, 36,0.1)" }}
         >
           <span className="eyebrow">Meniu</span>
           <button
             onClick={closeMobile}
             aria-label="Închide meniu"
             className="flex items-center justify-center w-11 h-11"
-            style={{ color: "rgba(243, 240, 234,0.8)" }}
+            style={{ color: "rgba(32, 32, 36,0.8)" }}
           >
             <svg
               width="16"
@@ -190,8 +190,8 @@ export default function Navigation() {
               className="font-body py-4 border-b"
               style={{
                 fontSize: "0.95rem",
-                color: "rgba(243, 240, 234,0.9)",
-                borderColor: "rgba(243,240,234,0.1)",
+                color: "rgba(32, 32, 36,0.9)",
+                borderColor: "rgba(32, 32, 36,0.1)",
                 transitionDelay: isMobileOpen ? `${i * 40}ms` : "0ms",
               }}
             >
@@ -204,7 +204,7 @@ export default function Navigation() {
         <div
           className="px-8 pt-4 flex-shrink-0"
           style={{
-            borderTop: "1px solid rgba(243,240,234,0.1)",
+            borderTop: "1px solid rgba(32, 32, 36,0.1)",
             paddingBottom: "max(2.5rem, env(safe-area-inset-bottom))",
           }}
         >
