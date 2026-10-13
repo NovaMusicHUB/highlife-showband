@@ -5,62 +5,45 @@ import { useEffect } from "react";
 // ── Data ──────────────────────────────────────────────────────────────────────
 
 const CE_PRIMITI = [
-  "4 seturi de cover (câte 40 de minute);",
-  "2 seturi de folclor (câte 30 de minute);",
-  "Inginer de sunet profesionist;",
-  "Inginer de lumini;",
-  "Tehnicieni specializați;",
-  "Event manager dedicat;",
-  "Setup scenă;",
-  "Sistem audio de înaltă calitate;",
-  "Lumini pentru ringul de dans și scenă;",
-  "Echipamente avansate de scenă (mixere, microfoane, standuri, backline etc.);",
-  "Transport complet pentru trupă și echipa tehnică;",
-  "Recuzită (ochelari LED etc.).",
+  "4 seturi live de cover (câte 40 de minute)",
+  "2 seturi de folclor (câte 30 de minute)",
+  "Saxofon café-concert la primirea invitaților (30 min)",
+  "Saxofon clubbing show (30 min)",
+  "DJ pe toată durata evenimentului",
+  "MC — prezentatorul evenimentului",
+  "Sistem PA & sonorizare, cu inginer de sunet",
+  "Sceno-tehnică completă — lumini, efecte și show vizual, cu inginer de lumini",
+  "Scenă profesională",
+  "Transport pentru trupă și echipa tehnică",
+  "Recuzită show (ochelari LED etc.)",
+  "Event manager dedicat",
 ];
 
 const DE_CE_O_SA_TI_PLACA = [
-  "Un spectacol LIVE spectaculos;",
-  "Varietate muzicală pentru toate gusturile;",
-  "Show complet personalizat după dorințele tale;",
-  "Ambianță sonoră și vizuală impecabilă;",
-  "Invitații se bucură de distracție și energie la maximum;",
-  "O petrecere de care nu te mai saturi;",
-  "Dansăm și cântăm împreună, pe scenă și pe ringul de dans;",
-  "Tu ești în centrul atenției;",
-  "Scapi de toate grijile legate de petrecere;",
-  "Rămâi cu o amintire de neuitat.",
+  "Un spectacol live, energic și spectaculos",
+  "Repertoriu variat, pentru toate gusturile",
+  "Show personalizat după dorințele tale",
+  "Ambianță sonoră și vizuală impecabilă",
+  "Invitații se distrează și se bucură la maximum",
+  "Dansăm și cântăm împreună, pe scenă și pe ringul de dans",
+  "Scapi de grijile organizatorice ale petrecerii",
+  "Rămâi cu o amintire de neuitat",
 ];
 
 // ── Components ────────────────────────────────────────────────────────────────
 
-function CheckIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" style={{ flexShrink: 0, marginTop: "0.15rem" }}>
-      <circle cx="10" cy="10" r="10" fill="#f0524d" />
-      <path d="M5.8 10.4 L8.6 13.1 L14.2 7.2" stroke="#09090b" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
 function FeatureCard({ title, items }: { title: string; items: string[] }) {
   return (
-    <div
-      className="reveal p-8 lg:p-10 h-full"
-      style={{ background: "#f3f0ea", color: "#202024" }}
-    >
+    <div className="reveal p-8 lg:p-10 h-full" style={{ background: "#f3f0ea", color: "#202024" }}>
       <h2
-        className="font-display text-center mb-8"
+        className="font-display mb-6"
         style={{ fontSize: "clamp(1.6rem, 2.6vw, 2.1rem)", fontWeight: 600, lineHeight: 1.2 }}
       >
         {title}
       </h2>
-      <ul className="flex flex-col gap-4">
+      <ul className="list-disc pl-5 flex flex-col gap-3 font-body text-sm lg:text-base" style={{ lineHeight: 1.6 }}>
         {items.map((item) => (
-          <li key={item} className="flex items-start gap-3 font-body text-sm lg:text-base" style={{ lineHeight: 1.55 }}>
-            <CheckIcon />
-            <span>{item}</span>
-          </li>
+          <li key={item}>{item}</li>
         ))}
       </ul>
     </div>
@@ -96,20 +79,8 @@ export default function Packages() {
           <p className="eyebrow mb-5">Show complet. Fără compromisuri.</p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 items-stretch mb-20 lg:mb-28">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto mb-20 lg:mb-28">
           <FeatureCard title="Ce primiți" items={CE_PRIMITI} />
-
-          {/* Photo — real Highlife folder image */}
-          <div className="reveal relative min-h-[360px] lg:min-h-0">
-            <img
-              src="/images/kimaro/kimaro-02.jpg"
-              alt="Highlife Showband — show live pe scenă"
-              loading="lazy"
-              className="absolute inset-0 w-full h-full"
-              style={{ objectFit: "cover", objectPosition: "center" }}
-            />
-          </div>
-
           <FeatureCard title="De ce o să-ți placă" items={DE_CE_O_SA_TI_PLACA} />
         </div>
 
