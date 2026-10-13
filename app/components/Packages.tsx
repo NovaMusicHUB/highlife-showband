@@ -6,7 +6,15 @@ import { useEffect } from "react";
 
 function Feature({ text }: { text: string }) {
   return (
-    <li className="flex items-start gap-3 font-body text-sm" style={{ color: "rgba(243, 240, 234,0.85)" }}>
+    <li
+      className="flex items-start gap-3 font-body text-sm p-5 lg:p-6"
+      style={{
+        color: "rgba(243, 240, 234,0.88)",
+        border: "1px solid rgba(243, 240, 234,0.16)",
+        background: "rgba(243, 240, 234,0.03)",
+        lineHeight: 1.6,
+      }}
+    >
       <span aria-hidden="true" style={{ color: "#f0524d", flexShrink: 0 }}>
         —
       </span>
@@ -49,7 +57,7 @@ export default function Packages() {
             Ce primiți <em className="text-accent not-italic">de la noi?</em>
           </h2>
 
-          <ul className="grid sm:grid-cols-2 gap-x-12 gap-y-4 text-left max-w-2xl mx-auto">
+          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4 text-left max-w-5xl mx-auto">
             <Feature text="4 seturi live de cover (câte 40 de minute)" />
             <Feature text="Sistem PA & sonorizare" />
             <Feature text="2 seturi de folclor (câte 30 de minute)" />
