@@ -2,24 +2,68 @@
 
 import { useEffect } from "react";
 
-// ── Feature row ───────────────────────────────────────────────────────────────
+// ── Data ──────────────────────────────────────────────────────────────────────
 
-function Feature({ text }: { text: string }) {
+const CE_PRIMITI = [
+  "4 seturi de cover (câte 40 de minute);",
+  "2 seturi de folclor (câte 30 de minute);",
+  "Inginer de sunet profesionist;",
+  "Inginer de lumini;",
+  "Tehnicieni specializați;",
+  "Event manager dedicat;",
+  "Setup scenă;",
+  "Sistem audio de înaltă calitate;",
+  "Lumini pentru ringul de dans și scenă;",
+  "Echipamente avansate de scenă (mixere, microfoane, standuri, backline etc.);",
+  "Transport complet pentru trupă și echipa tehnică;",
+  "Recuzită (ochelari LED etc.).",
+];
+
+const DE_CE_O_SA_TI_PLACA = [
+  "Un spectacol LIVE spectaculos;",
+  "Varietate muzicală pentru toate gusturile;",
+  "Show complet personalizat după dorințele tale;",
+  "Ambianță sonoră și vizuală impecabilă;",
+  "Invitații se bucură de distracție și energie la maximum;",
+  "O petrecere de care nu te mai saturi;",
+  "Dansăm și cântăm împreună, pe scenă și pe ringul de dans;",
+  "Tu ești în centrul atenției;",
+  "Scapi de toate grijile legate de petrecere;",
+  "Rămâi cu o amintire de neuitat.",
+];
+
+// ── Components ────────────────────────────────────────────────────────────────
+
+function CheckIcon() {
   return (
-    <li
-      className="flex items-start gap-3 font-body text-sm p-5 lg:p-6"
-      style={{
-        color: "rgba(243, 240, 234,0.88)",
-        border: "1px solid rgba(243, 240, 234,0.16)",
-        background: "rgba(243, 240, 234,0.03)",
-        lineHeight: 1.6,
-      }}
+    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" style={{ flexShrink: 0, marginTop: "0.15rem" }}>
+      <circle cx="10" cy="10" r="10" fill="#f0524d" />
+      <path d="M5.8 10.4 L8.6 13.1 L14.2 7.2" stroke="#09090b" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function FeatureCard({ title, items }: { title: string; items: string[] }) {
+  return (
+    <div
+      className="reveal p-8 lg:p-10 h-full"
+      style={{ background: "#f3f0ea", color: "#202024" }}
     >
-      <span aria-hidden="true" style={{ color: "#f0524d", flexShrink: 0 }}>
-        —
-      </span>
-      <span>{text}</span>
-    </li>
+      <h2
+        className="font-display text-center mb-8"
+        style={{ fontSize: "clamp(1.6rem, 2.6vw, 2.1rem)", fontWeight: 600, lineHeight: 1.2 }}
+      >
+        {title}
+      </h2>
+      <ul className="flex flex-col gap-4">
+        {items.map((item) => (
+          <li key={item} className="flex items-start gap-3 font-body text-sm lg:text-base" style={{ lineHeight: 1.55 }}>
+            <CheckIcon />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
@@ -47,33 +91,26 @@ export default function Packages() {
   return (
     <section id="pachete" className="py-24 lg:py-32 on-dark" style={{ background: "#202024", color: "#f3f0ea" }}>
       <div className="section-container">
-        {/* ── SECȚIUNEA 1: Ce primiți de la noi? ── */}
-        <div className="reveal max-w-3xl mx-auto mb-20 lg:mb-28 text-center">
+        {/* ── SECȚIUNEA 1: Ce primiți / De ce o să-ți placă ── */}
+        <div className="reveal text-center mb-12 lg:mb-16">
           <p className="eyebrow mb-5">Show complet. Fără compromisuri.</p>
-          <h2
-            className="font-display text-balance mb-10"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, lineHeight: 1.15, color: "#f3f0ea" }}
-          >
-            Ce primiți <em className="text-accent not-italic">de la noi?</em>
-          </h2>
+        </div>
 
-          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4 text-left max-w-5xl mx-auto">
-            <Feature text="4 seturi live de cover (câte 40 de minute)" />
-            <Feature text="Sistem PA & sonorizare" />
-            <Feature text="2 seturi de folclor (câte 30 de minute)" />
-            <Feature text="Sceno-tehnică completă — lumini, efecte, show vizual" />
-            <Feature text="Saxofon café-concert la primirea invitaților (30 min)" />
-            <Feature text="Inginer de sunet" />
-            <Feature text="Saxofon clubbing show (30 min)" />
-            <Feature text="Inginer de lumini" />
-            <Feature text="DJ pe toată durata evenimentului" />
-            <Feature text="Transport trupă și echipă tehnică" />
-            <Feature text="MC — prezentator eveniment" />
-            <Feature text="Recuzită show (ochelari LED etc.)" />
-            <Feature text="Event Manager dedicat" />
-            <Feature text="Tot ce ține de un show incendiar — inclus în pachet" />
-            <Feature text="Scenă profesională" />
-          </ul>
+        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 items-stretch mb-20 lg:mb-28">
+          <FeatureCard title="Ce primiți" items={CE_PRIMITI} />
+
+          {/* Photo — real Highlife folder image */}
+          <div className="reveal relative min-h-[360px] lg:min-h-0">
+            <img
+              src="/images/kimaro/kimaro-02.jpg"
+              alt="Highlife Showband — show live pe scenă"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full"
+              style={{ objectFit: "cover", objectPosition: "center" }}
+            />
+          </div>
+
+          <FeatureCard title="De ce o să-ți placă" items={DE_CE_O_SA_TI_PLACA} />
         </div>
 
         {/* ── SECȚIUNEA 2: CTA prețuri ── */}
