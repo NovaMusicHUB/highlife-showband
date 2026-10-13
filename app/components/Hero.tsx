@@ -69,17 +69,16 @@ export default function Hero() {
           <div className="order-1 lg:order-2 pt-10 lg:pt-0">
             <div
               className="relative w-full"
-              style={{ aspectRatio: "4 / 5" }}
+              style={{ aspectRatio: "1916 / 821" }}
             >
               <img
-                src="/images/cover.jpg"
-                alt="Highlife Showband — membrii trupei pe scenă"
+                src="/images/hero-band.webp"
+                alt="Highlife Showband — membrii trupei și DJ booth"
                 className="w-full h-full"
                 loading="eager"
                 fetchPriority="high"
                 style={{
-                  objectFit: "cover",
-                  objectPosition: "center 15%",
+                  objectFit: "contain",
                   display: "block",
                 }}
               />
