@@ -2,18 +2,17 @@
 
 /* ============================================================
    HIGHLIFE SHOWBAND — Design System
-   Editorial, premium, aerisit. Alb predominant + accent discret.
+   Premium, elegant, energic. Graphite / Deep Black / Warm Ivory
+   + accent Electric Coral folosit strategic.
    ============================================================ */
 
-/* Brand Color Tokens */
+/* Brand Color Tokens — paletă strictă */
 @theme {
-    --color-ink: #191919;
-    --color-paper: #ffffff;
-    --color-paper-warm: #faf9f6;
-    --color-champagne: #8a7454;
-    --color-champagne-soft: #cdbfa0;
-    --color-line: #e8e4da;
-    --color-muted: #6b6b6b;
+    --color-graphite: #202024;
+    --color-black: #09090b;
+    --color-ivory: #f3f0ea;
+    --color-coral: #f0524d;
+    --color-coral-dark: #cc4641; /* nuanță hover/interacțiune a Electric Coral */
 }
 
 /* Font Token Mapping (references Next.js font CSS vars) */
@@ -58,7 +57,6 @@
     }
 }
 
-
 /* ============================================================
    GLOBAL BASE STYLES
    ============================================================ */
@@ -76,8 +74,8 @@ html {
 }
 
 body {
-    background-color: #ffffff;
-    color: #191919;
+    background-color: #202024;
+    color: #f3f0ea;
     font-family:
         var(--font-inter),
         system-ui,
@@ -90,27 +88,34 @@ body {
     line-height: 1.7;
 }
 
-/* Custom scrollbar — understated */
+/* Custom scrollbar — coral thumb, discrete */
 ::-webkit-scrollbar {
     width: 5px;
 }
 ::-webkit-scrollbar-track {
-    background: #faf9f6;
+    background: #09090b;
 }
 ::-webkit-scrollbar-thumb {
-    background: #cdbfa0;
+    background: #f0524d;
     border-radius: 3px;
 }
 
 /* Text selection */
 ::selection {
-    background: rgba(138, 116, 84, 0.18);
-    color: #191919;
+    background: rgba(240, 82, 77, 0.35);
+    color: #f3f0ea;
 }
 
-/* Focus rings */
+/* Form placeholders — readable on dark form fields */
+input::placeholder,
+textarea::placeholder {
+    color: rgba(243, 240, 234, 0.45);
+    opacity: 1;
+}
+
+/* Focus rings — Electric Coral, always visible for accessibility */
 :focus-visible {
-    outline: 1.5px solid #8a7454;
+    outline: 2px solid #f0524d;
     outline-offset: 3px;
 }
 
@@ -132,26 +137,44 @@ body {
         text-wrap: balance;
     }
 
-    /* Discrete champagne accent for emphasis within headings — no gradient */
+    /* Electric Coral accent — underline treatment, not full-text fill,
+       so emphasis words keep the surrounding (accessible) text color and
+       only pick up the coral brand accent decoratively. */
     .text-accent {
-        color: #8a7454;
+        color: inherit;
+        background-image: linear-gradient(#f0524d, #f0524d);
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 3px;
+        padding-bottom: 0.06em;
     }
 
-    /* Section label / eyebrow text */
+    /* Section label / eyebrow text — coral tick + label.
+       Default color assumes a dark (graphite/black) background;
+       add .eyebrow-dark when the label sits on an ivory background. */
     .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6em;
         font-family: var(--font-inter), sans-serif;
         font-size: 0.7rem;
         font-weight: 600;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: #8a7454;
+        color: #f3f0ea;
     }
 
-    /* Hairline rule */
-    .hair-rule {
-        border: none;
-        height: 1px;
-        background: #e8e4da;
+    .eyebrow::before {
+        content: "";
+        display: inline-block;
+        width: 18px;
+        height: 2px;
+        background: #f0524d;
+        flex-shrink: 0;
+    }
+
+    .eyebrow-dark {
+        color: #202024;
     }
 
     /* ============================================================
@@ -169,7 +192,6 @@ body {
     .animate-scroll-bounce {
         animation: scrollBounce 1.8s ease-in-out infinite;
     }
-
 
     /* Intersection-observer controlled visibility — subtle, no slide */
     .reveal {
@@ -248,67 +270,73 @@ body {
         }
     }
 
-    /* Primary button — solid ink, no gradient/shadow */
+    /* Primary button — Electric Coral, always immediately visible.
+       Dark text keeps contrast at ~6:1 (WCAG AA) on top of the coral fill. */
     .btn-primary {
         display: inline-flex;
         align-items: center;
         gap: 0.6rem;
         padding: 0.95rem 2rem;
-        background: #191919;
-        color: #ffffff;
+        background: #f0524d;
+        color: #09090b;
         font-family: var(--font-inter), sans-serif;
         font-size: 0.78rem;
-        font-weight: 600;
+        font-weight: 700;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         text-decoration: none;
-        border: 1px solid #191919;
+        border: 1px solid #f0524d;
         cursor: pointer;
         transition:
             background-color 0.25s ease,
-            color 0.25s ease,
             border-color 0.25s ease;
     }
 
     .btn-primary:hover {
-        background: #ffffff;
-        color: #191919;
+        background: #cc4641;
+        border-color: #cc4641;
     }
 
-    /* Secondary / ghost button — hairline border */
+    /* Secondary / ghost button — adapts to ambient text color (ivory on
+       dark sections, graphite on ivory sections) via currentColor, with a
+       coral hover accent. */
     .btn-secondary {
         display: inline-flex;
         align-items: center;
         gap: 0.6rem;
         padding: 0.9rem 1.9rem;
         background: transparent;
-        color: #191919;
+        color: currentColor;
         font-family: var(--font-inter), sans-serif;
         font-size: 0.78rem;
         font-weight: 600;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         text-decoration: none;
-        border: 1px solid rgba(25, 25, 25, 0.25);
+        border: 1px solid currentColor;
+        opacity: 0.85;
         cursor: pointer;
         transition:
             border-color 0.25s ease,
             color 0.25s ease,
-            background-color 0.25s ease;
+            background-color 0.25s ease,
+            opacity 0.25s ease;
     }
 
     .btn-secondary:hover {
-        border-color: #191919;
-        background: #faf9f6;
+        opacity: 1;
+        color: #f0524d;
+        border-color: #f0524d;
+        background: rgba(240, 82, 77, 0.08);
     }
 
-    /* Text link with animated underline */
+    /* Text link with animated coral underline */
     .link-underline {
         position: relative;
         text-decoration: none;
-        color: #191919;
+        color: inherit;
         padding-bottom: 2px;
-        background-image: linear-gradient(#191919, #191919);
+        background-image: linear-gradient(#f0524d, #f0524d);
         background-position: 0 100%;
         background-repeat: no-repeat;
         background-size: 0 1px;
@@ -323,14 +351,14 @@ body {
     .stars {
         display: flex;
         gap: 2px;
-        color: #8a7454;
+        color: #f0524d;
     }
 
     /* Lightbox overlay */
     .lightbox-overlay {
         position: fixed;
         inset: 0;
-        background: rgba(15, 15, 15, 0.95);
+        background: rgba(9, 9, 11, 0.96);
         z-index: 9999;
         display: flex;
         align-items: center;
@@ -338,13 +366,14 @@ body {
         animation: fadeIn 0.2s ease-out;
     }
 
-    /* Filter tab (text-based, minimal) */
+    /* Filter tab (text-based, minimal) — coral indicates the active state */
     .tab-filter {
         min-height: 40px;
         padding: 0.4rem 1rem;
         border: none;
-        border-bottom: 1px solid transparent;
-        color: rgba(25, 25, 25, 0.5);
+        border-bottom: 2px solid transparent;
+        color: currentColor;
+        opacity: 0.72;
         font-family: var(--font-inter), sans-serif;
         font-size: 0.75rem;
         font-weight: 500;
@@ -354,16 +383,18 @@ body {
         background: transparent;
         transition:
             color 0.2s ease,
+            opacity 0.2s ease,
             border-color 0.2s ease;
     }
 
     .tab-filter:hover {
-        color: #191919;
+        opacity: 0.9;
     }
 
     .tab-filter.active {
-        color: #191919;
-        border-bottom-color: #191919;
+        color: #f0524d;
+        opacity: 1;
+        border-bottom-color: #f0524d;
         font-weight: 600;
     }
 

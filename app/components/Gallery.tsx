@@ -235,14 +235,14 @@ export default function Gallery() {
   }, []);
 
   return (
-    <section id="galerie" className="py-24 lg:py-32" style={{ background: "#faf9f6" }}>
+    <section id="galerie" className="py-24 lg:py-32" style={{ background: "#202024", color: "#f3f0ea" }}>
       <div className="section-container">
         {/* ── Section header ── */}
         <div className="max-w-2xl mb-14 reveal">
           <p className="eyebrow mb-5">Momente Prețioase</p>
           <h2
             className="font-display"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, lineHeight: 1.15, color: "#191919" }}
+            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, lineHeight: 1.15, color: "#f3f0ea" }}
           >
             Galeria <em className="text-accent not-italic">Noastră</em>
           </h2>
@@ -251,7 +251,7 @@ export default function Gallery() {
         {/* ── Filter tabs ── */}
         <div
           className="flex flex-wrap gap-x-6 gap-y-2 mb-10 reveal stagger-1"
-          style={{ borderBottom: "1px solid #e8e4da" }}
+          style={{ borderBottom: "1px solid rgba(243,240,234,0.12)" }}
         >
           {FILTERS.map((filter) => (
             <button

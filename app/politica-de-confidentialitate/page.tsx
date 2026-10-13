@@ -26,7 +26,7 @@ function Section({
     <div className="pt-10 first:pt-0">
       <h2
         className="font-display mb-4"
-        style={{ fontSize: "1.3rem", fontWeight: 600, color: "#191919" }}
+        style={{ fontSize: "1.3rem", fontWeight: 600, color: "#f3f0ea" }}
       >
         {title}
       </h2>
@@ -39,25 +39,25 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <Navigation />
-      <main style={{ background: "#ffffff" }} className="py-28 lg:py-36">
+      <main style={{ background: "#202024", color: "#f3f0ea" }} className="py-28 lg:py-36">
         <div className="section-container max-w-2xl mx-auto">
           <p className="eyebrow mb-5 text-center">Highlife Showband</p>
           <h1
             className="font-display text-balance mb-4 text-center"
-            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 600, lineHeight: 1.2, color: "#191919" }}
+            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 600, lineHeight: 1.2, color: "#f3f0ea" }}
           >
             Politică de <em className="text-accent not-italic">Confidențialitate</em>
           </h1>
           <p
             className="font-body text-sm text-center mb-14"
-            style={{ color: "rgba(25, 25, 25,0.5)" }}
+            style={{ color: "rgba(243, 240, 234,0.55)" }}
           >
             Ultima actualizare: 28 septembrie 2026
           </p>
 
           <div
             className="font-body text-base"
-            style={{ color: "rgba(25, 25, 25,0.7)", lineHeight: 1.85 }}
+            style={{ color: "rgba(243, 240, 234,0.8)", lineHeight: 1.85 }}
           >
             <Section title="1. Cine suntem">
               <p>
@@ -69,7 +69,7 @@ export default function PrivacyPolicyPage() {
                 <a
                   href="mailto:contact@highlifeshowband.ro"
                   className="link-underline"
-                  style={{ color: "#8a7454" }}
+                  style={{ color: "#f0524d" }}
                 >
                   contact@highlifeshowband.ro
                 </a>
@@ -93,7 +93,7 @@ export default function PrivacyPolicyPage() {
                   "a pregăti și derula contractul, dacă rezervi serviciile noastre.",
                 ].map((item) => (
                   <li key={item} className="flex gap-3">
-                    <span aria-hidden="true" style={{ color: "#8a7454", flexShrink: 0 }}>
+                    <span aria-hidden="true" style={{ color: "#f0524d", flexShrink: 0 }}>
                       —
                     </span>
                     <span>{item}</span>
@@ -166,7 +166,7 @@ export default function PrivacyPolicyPage() {
                   "retragerea oricând a consimțământului, fără a afecta legalitatea prelucrării anterioare retragerii.",
                 ].map((item) => (
                   <li key={item} className="flex gap-3">
-                    <span aria-hidden="true" style={{ color: "#8a7454", flexShrink: 0 }}>
+                    <span aria-hidden="true" style={{ color: "#f0524d", flexShrink: 0 }}>
                       —
                     </span>
                     <span>{item}</span>
@@ -179,7 +179,7 @@ export default function PrivacyPolicyPage() {
                 <a
                   href="mailto:contact@highlifeshowband.ro"
                   className="link-underline"
-                  style={{ color: "#8a7454" }}
+                  style={{ color: "#f0524d" }}
                 >
                   contact@highlifeshowband.ro
                 </a>
@@ -195,7 +195,7 @@ export default function PrivacyPolicyPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-underline"
-                  style={{ color: "#8a7454" }}
+                  style={{ color: "#f0524d" }}
                 >
                   www.dataprotection.ro
                 </a>
@@ -210,7 +210,7 @@ export default function PrivacyPolicyPage() {
                 <a
                   href="mailto:contact@highlifeshowband.ro"
                   className="link-underline"
-                  style={{ color: "#8a7454" }}
+                  style={{ color: "#f0524d" }}
                 >
                   contact@highlifeshowband.ro
                 </a>

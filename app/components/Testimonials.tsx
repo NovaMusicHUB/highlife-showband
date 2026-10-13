@@ -102,7 +102,7 @@ export default function Testimonials() {
   const current = testimonials[activeIndex] ?? testimonials[0];
 
   return (
-    <section id="testimoniale" className="py-24 lg:py-32" style={{ background: "#ffffff" }}>
+    <section id="testimoniale" className="py-24 lg:py-32" style={{ background: "#09090b", color: "#f3f0ea" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
@@ -113,7 +113,7 @@ export default function Testimonials() {
           <p className="eyebrow mb-5">Cuvintele Clienților Noștri</p>
           <h2
             className="font-display"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, color: "#191919" }}
+            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, color: "#f3f0ea" }}
           >
             Ce spun despre noi
           </h2>
@@ -125,7 +125,7 @@ export default function Testimonials() {
             {/* Stars */}
             <div className="stars mb-6 justify-center" aria-label="5 din 5 stele">
               {[...Array(current.rating)].map((_, i) => (
-                <svg key={i} width="14" height="14" viewBox="0 0 16 16" fill="#8a7454" aria-hidden="true">
+                <svg key={i} width="14" height="14" viewBox="0 0 16 16" fill="#f0524d" aria-hidden="true">
                   <path d="M8 1 L9.8 6H15L10.6 9L12.4 14L8 11L3.6 14L5.4 9L1 6H6.2Z" />
                 </svg>
               ))}
@@ -134,18 +134,18 @@ export default function Testimonials() {
             {/* Quote text */}
             <blockquote
               className="font-display italic leading-relaxed mb-8"
-              style={{ fontSize: "clamp(1.35rem, 2.6vw, 1.8rem)", fontWeight: 500, color: "#191919" }}
+              style={{ fontSize: "clamp(1.35rem, 2.6vw, 1.8rem)", fontWeight: 500, color: "#f3f0ea" }}
             >
               &ldquo;{current.quote}&rdquo;
             </blockquote>
 
             {/* Author */}
-            <div className="font-body font-semibold text-sm" style={{ color: "#191919" }}>
+            <div className="font-body font-semibold text-sm" style={{ color: "#f3f0ea" }}>
               {current.name}
             </div>
             <div
               className="font-body text-xs tracking-wide mt-1"
-              style={{ color: "#8a7454" }}
+              style={{ color: "#f0524d" }}
             >
               {current.event} &middot; {current.date}
             </div>
@@ -175,7 +175,7 @@ export default function Testimonials() {
                     width: i === activeIndex ? "22px" : "6px",
                     height: "6px",
                     borderRadius: "3px",
-                    background: i === activeIndex ? "#191919" : "rgba(25, 25, 25,0.2)",
+                    background: i === activeIndex ? "#f0524d" : "rgba(243, 240, 234,0.25)",
                     border: "none",
                     cursor: "pointer",
                     transition: "all 0.3s ease",

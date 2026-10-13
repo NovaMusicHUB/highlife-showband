@@ -20,13 +20,14 @@ interface FormState {
 const inputStyle: React.CSSProperties = {
   width: "100%",
   padding: "0.85rem 1rem",
-  background: "#ffffff",
-  border: "1px solid #dedad0",
-  color: "#191919",
+  background: "#202024",
+  border: "1px solid rgba(243,240,234,0.18)",
+  color: "#f3f0ea",
   fontFamily: "var(--font-inter)",
   fontSize: "0.9rem",
   outline: "none",
   transition: "border-color 0.2s ease",
+  colorScheme: "dark",
 };
 
 // ── Contact info item ─────────────────────────────────────────────────────────
@@ -48,7 +49,7 @@ function InfoItem({
           alignItems: "center",
           justifyContent: "center",
           flexShrink: 0,
-          color: "#8a7454",
+          color: "#f0524d",
           marginTop: "0.25rem",
         }}
       >
@@ -56,7 +57,7 @@ function InfoItem({
       </div>
       <div
         className="font-body text-sm leading-relaxed"
-        style={{ color: "rgba(25, 25, 25,0.75)" }}
+        style={{ color: "rgba(243, 240, 234,0.8)" }}
       >
         {children}
       </div>
@@ -102,7 +103,7 @@ export default function Contact() {
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
     >,
   ) {
-    e.currentTarget.style.borderColor = "#8a7454";
+    e.currentTarget.style.borderColor = "#f0524d";
   }
 
   function applyBlur(
@@ -110,7 +111,7 @@ export default function Contact() {
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
     >,
   ) {
-    e.currentTarget.style.borderColor = "#dedad0";
+    e.currentTarget.style.borderColor = "rgba(243,240,234,0.18)";
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -150,21 +151,21 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 lg:py-32" style={{ background: "#faf9f6" }}>
+    <section id="contact" className="py-24 lg:py-32" style={{ background: "#09090b", color: "#f3f0ea" }}>
       <div className="section-container">
         {/* ── Header ── */}
         <div className="max-w-2xl mb-16 reveal">
           <p className="eyebrow mb-5">Să Vorbim</p>
           <h2
             className="font-display mb-6"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, lineHeight: 1.15, color: "#191919" }}
+            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, lineHeight: 1.15, color: "#f3f0ea" }}
           >
             Hai să discutăm despre{" "}
             <em className="text-accent not-italic">evenimentul tău</em>
           </h2>
           <p
             className="font-body text-base max-w-lg"
-            style={{ color: "rgba(25, 25, 25,0.62)", lineHeight: 1.75 }}
+            style={{ color: "rgba(243, 240, 234,0.68)", lineHeight: 1.75 }}
           >
             Cu Highlife Showband, transformăm orice petrecere într-un show
             memorabil, plin de energie și interacțiune cu invitații. Spune-ne
@@ -198,7 +199,7 @@ export default function Contact() {
                 <a
                   href="tel:+40754636633"
                   className="link-underline"
-                  style={{ color: "rgba(25, 25, 25,0.85)" }}
+                  style={{ color: "rgba(243, 240, 234,0.9)" }}
                 >
                   0754 636 633
                 </a>
@@ -226,7 +227,7 @@ export default function Contact() {
                 <a
                   href="mailto:contact@highlifeshowband.ro"
                   className="link-underline"
-                  style={{ color: "rgba(25, 25, 25,0.85)" }}
+                  style={{ color: "rgba(243, 240, 234,0.9)" }}
                 >
                   contact@highlifeshowband.ro
                 </a>
@@ -282,13 +283,13 @@ export default function Contact() {
             {submitted ? (
               /* Success state */
               <div className="py-10 text-center">
-                <div className="font-display text-4xl mb-4" style={{ color: "#8a7454" }} aria-label="Succes">
+                <div className="font-display text-4xl mb-4" style={{ color: "#f0524d" }} aria-label="Succes">
                   ✓
                 </div>
-                <h3 className="font-display text-2xl mb-2" style={{ color: "#191919", fontWeight: 600 }}>
+                <h3 className="font-display text-2xl mb-2" style={{ color: "#f3f0ea", fontWeight: 600 }}>
                   Cererea a fost trimisă!
                 </h3>
-                <p className="font-body text-sm" style={{ color: "rgba(25, 25, 25,0.6)" }}>
+                <p className="font-body text-sm" style={{ color: "rgba(243, 240, 234,0.66)" }}>
                   Te contactăm în maxim 24 de ore cu o ofertă personalizată.
                 </p>
               </div>
@@ -309,14 +310,14 @@ export default function Contact() {
                       autoComplete="name"
                       style={{
                         ...inputStyle,
-                        borderColor: errors.name ? "rgba(200,60,60,0.6)" : "#dedad0",
+                        borderColor: errors.name ? "rgba(240,82,77,0.85)" : "rgba(243,240,234,0.18)",
                       }}
                       aria-label="Numele tău complet"
                       aria-required="true"
                       aria-describedby={errors.name ? "err-name" : undefined}
                     />
                     {errors.name && (
-                      <p id="err-name" className="font-body text-xs mt-1" style={{ color: "rgba(190,50,50,0.9)" }}>
+                      <p id="err-name" className="font-body text-xs mt-1" style={{ color: "#f0524d" }}>
                         {errors.name}
                       </p>
                     )}
@@ -336,14 +337,14 @@ export default function Contact() {
                         autoComplete="email"
                         style={{
                           ...inputStyle,
-                          borderColor: errors.email ? "rgba(200,60,60,0.6)" : "#dedad0",
+                          borderColor: errors.email ? "rgba(240,82,77,0.85)" : "rgba(243,240,234,0.18)",
                         }}
                         aria-label="Adresă de email"
                         aria-required="true"
                         aria-describedby={errors.email ? "err-email" : undefined}
                       />
                       {errors.email && (
-                        <p id="err-email" className="font-body text-xs mt-1" style={{ color: "rgba(190,50,50,0.9)" }}>
+                        <p id="err-email" className="font-body text-xs mt-1" style={{ color: "#f0524d" }}>
                           {errors.email}
                         </p>
                       )}
@@ -360,14 +361,14 @@ export default function Contact() {
                         autoComplete="tel"
                         style={{
                           ...inputStyle,
-                          borderColor: errors.phone ? "rgba(200,60,60,0.6)" : "#dedad0",
+                          borderColor: errors.phone ? "rgba(240,82,77,0.85)" : "rgba(243,240,234,0.18)",
                         }}
                         aria-label="Număr de telefon"
                         aria-required="true"
                         aria-describedby={errors.phone ? "err-phone" : undefined}
                       />
                       {errors.phone && (
-                        <p id="err-phone" className="font-body text-xs mt-1" style={{ color: "rgba(190,50,50,0.9)" }}>
+                        <p id="err-phone" className="font-body text-xs mt-1" style={{ color: "#f0524d" }}>
                           {errors.phone}
                         </p>
                       )}
@@ -383,7 +384,7 @@ export default function Contact() {
                     onBlur={applyBlur}
                     style={{
                       ...inputStyle,
-                      color: form.eventType ? "#191919" : "rgba(25, 25, 25,0.4)",
+                      color: form.eventType ? "#f3f0ea" : "rgba(243, 240, 234,0.45)",
                       cursor: "pointer",
                     }}
                     aria-label="Tipul evenimentului"
@@ -457,12 +458,12 @@ export default function Contact() {
                           width: "16px",
                           height: "16px",
                           flexShrink: 0,
-                          accentColor: "#191919",
+                          accentColor: "#f0524d",
                         }}
                       />
                       <span
                         className="font-body text-xs"
-                        style={{ color: "rgba(25, 25, 25,0.65)", lineHeight: 1.6 }}
+                        style={{ color: "rgba(243, 240, 234,0.7)", lineHeight: 1.6 }}
                       >
                         Am citit și sunt de acord cu prelucrarea datelor mele
                         conform{" "}
@@ -471,7 +472,7 @@ export default function Contact() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="link-underline"
-                          style={{ color: "#8a7454" }}
+                          style={{ color: "#f0524d" }}
                         >
                           Politicii de Confidențialitate
                         </a>{" "}
@@ -479,7 +480,7 @@ export default function Contact() {
                       </span>
                     </label>
                     {errors.gdprConsent && (
-                      <p id="err-gdpr" className="font-body text-xs mt-1" style={{ color: "rgba(190,50,50,0.9)" }}>
+                      <p id="err-gdpr" className="font-body text-xs mt-1" style={{ color: "#f0524d" }}>
                         {errors.gdprConsent}
                       </p>
                     )}
@@ -489,7 +490,7 @@ export default function Contact() {
                   {submitError && (
                     <p
                       className="font-body text-sm"
-                      style={{ color: "rgba(190,50,50,0.9)" }}
+                      style={{ color: "#f0524d" }}
                       role="alert"
                     >
                       {submitError} Poți și suna la{" "}
@@ -526,8 +527,8 @@ export default function Contact() {
                         fill="none"
                         aria-hidden="true"
                       >
-                        <circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
-                        <path d="M8 2 A6 6 0 0 1 14 8" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
+                        <circle cx="8" cy="8" r="6" stroke="rgba(9,9,11,0.3)" strokeWidth="2" />
+                        <path d="M8 2 A6 6 0 0 1 14 8" stroke="#09090b" strokeWidth="2" strokeLinecap="round" />
                       </svg>
                     )}
                   </button>
@@ -536,7 +537,7 @@ export default function Contact() {
             )}
 
             {/* Privacy note */}
-            <p className="font-body text-xs mt-4 text-center" style={{ color: "rgba(25, 25, 25,0.5)" }}>
+            <p className="font-body text-xs mt-4 text-center" style={{ color: "rgba(243, 240, 234,0.5)" }}>
               🔒 Datele tale sunt protejate și nu vor fi partajate cu terți.
             </p>
           </div>

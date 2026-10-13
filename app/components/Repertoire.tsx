@@ -76,20 +76,20 @@ export default function Repertoire() {
   const preview = filtered.slice(0, PREVIEW_COUNT);
 
   return (
-    <section id="repertoriu" className="py-24 lg:py-32" style={{ background: "#ffffff" }}>
+    <section id="repertoriu" className="py-24 lg:py-32" style={{ background: "#f3f0ea", color: "#202024" }}>
       <div className="section-container">
         {/* ── Section header ── */}
         <div className="max-w-2xl mb-14 reveal">
-          <p className="eyebrow mb-5">Muzica ta, alegerile tale</p>
+          <p className="eyebrow eyebrow-dark mb-5">Muzica ta, alegerile tale</p>
           <h2
             className="font-display mb-6"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, lineHeight: 1.15, color: "#191919" }}
+            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, lineHeight: 1.15, color: "#202024" }}
           >
             Repertoriul <em className="text-accent not-italic">nostru</em>
           </h2>
           <p
             className="font-body text-base"
-            style={{ color: "rgba(25, 25, 25,0.6)", lineHeight: 1.75 }}
+            style={{ color: "rgba(32, 32, 36,0.75)", lineHeight: 1.75 }}
           >
             Repertoriul nostru este variat și actual, acoperind hituri
             internaționale, muzică românească și piese pentru toate vârstele.
@@ -98,7 +98,7 @@ export default function Repertoire() {
         </div>
 
         {/* ── Filter tabs ── */}
-        <div className="flex flex-wrap gap-x-6 gap-y-2 mb-10 reveal stagger-1" style={{ borderBottom: "1px solid #e8e4da" }}>
+        <div className="flex flex-wrap gap-x-6 gap-y-2 mb-10 reveal stagger-1" style={{ borderBottom: "1px solid rgba(32,32,36,0.12)" }}>
           {CATEGORIES.map((cat) => (
             <button
               key={cat}
@@ -114,13 +114,13 @@ export default function Repertoire() {
         {/* ── Songs preview list ── */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6 reveal stagger-2">
           {preview.map((song, i) => (
-            <div key={`${song.title}-${i}`} className="pb-4" style={{ borderBottom: "1px solid #e8e4da" }}>
-              <div className="font-display" style={{ fontSize: "1rem", fontWeight: 600, color: "#191919" }}>
+            <div key={`${song.title}-${i}`} className="pb-4" style={{ borderBottom: "1px solid rgba(32,32,36,0.12)" }}>
+              <div className="font-display" style={{ fontSize: "1rem", fontWeight: 600, color: "#202024" }}>
                 {song.title}
               </div>
               <div
                 className="font-body text-xs mt-1"
-                style={{ color: "rgba(25, 25, 25,0.55)" }}
+                style={{ color: "rgba(32, 32, 36,0.65)" }}
               >
                 {song.artist}
               </div>
@@ -131,7 +131,7 @@ export default function Repertoire() {
         {filtered.length > PREVIEW_COUNT && (
           <p
             className="font-body text-sm mt-6 reveal stagger-2"
-            style={{ color: "rgba(25, 25, 25,0.45)" }}
+            style={{ color: "rgba(32, 32, 36,0.72)" }}
           >
             + încă {filtered.length - PREVIEW_COUNT} piese în lista completă
           </p>

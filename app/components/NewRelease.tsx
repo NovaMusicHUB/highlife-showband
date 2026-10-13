@@ -34,20 +34,20 @@ export default function NewRelease() {
   }, []);
 
   return (
-    <section id="lansare-noua" className="py-24 lg:py-32" style={{ background: "#faf9f6" }}>
+    <section id="lansare-noua" className="py-24 lg:py-32" style={{ background: "#f3f0ea", color: "#202024" }}>
       <div className="section-container">
         {/* ── Header ── */}
         <div className="max-w-2xl mb-12 reveal">
-          <p className="eyebrow mb-5">Lansare nouă</p>
+          <p className="eyebrow eyebrow-dark mb-5">Lansare nouă</p>
 
           <h2
             className="font-display text-balance mb-5"
-            style={{ fontSize: "clamp(1.85rem, 3.5vw, 2.75rem)", fontWeight: 600, lineHeight: 1.2, color: "#191919" }}
+            style={{ fontSize: "clamp(1.85rem, 3.5vw, 2.75rem)", fontWeight: 600, lineHeight: 1.2, color: "#202024" }}
           >
             Am lansat piesa <em className="text-accent not-italic">&bdquo;Sade&rdquo;</em>
           </h2>
 
-          <p className="font-body" style={{ fontSize: "1.05rem", color: "rgba(25, 25, 25,0.62)", lineHeight: 1.7 }}>
+          <p className="font-body" style={{ fontSize: "1.05rem", color: "rgba(32, 32, 36,0.75)", lineHeight: 1.7 }}>
             Cea mai nouă piesă Highlife Showband este live pe YouTube —
             ascult-o și spune-ne ce părere ai!
           </p>
@@ -81,7 +81,7 @@ export default function NewRelease() {
                 {/* Subtle scrim for the play button */}
                 <div
                   className="absolute inset-0"
-                  style={{ background: "rgba(0,0,0,0.2)" }}
+                  style={{ background: "rgba(9,9,11,0.2)" }}
                   aria-hidden="true"
                 />
 
@@ -93,12 +93,12 @@ export default function NewRelease() {
                     style={{
                       width: "64px",
                       height: "64px",
-                      background: "rgba(255,255,255,0.9)",
+                      background: "#f0524d",
                     }}
                     aria-label="Redă piesa Sade"
                   >
                     <svg width="22" height="22" viewBox="0 0 28 28" fill="none" aria-hidden="true" style={{ transform: "translateX(2px)" }}>
-                      <path d="M10 7 L22 14 L10 21 Z" fill="#191919" />
+                      <path d="M10 7 L22 14 L10 21 Z" fill="#09090b" />
                     </svg>
                   </button>
                 </div>

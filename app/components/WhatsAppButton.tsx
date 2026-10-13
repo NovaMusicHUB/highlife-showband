@@ -29,7 +29,7 @@ export default function WhatsAppButton() {
         width: "52px",
         height: "52px",
         background: "#25a955",
-        boxShadow: "0 4px 16px rgba(25,25,25,0.18)",
+        boxShadow: "0 4px 16px rgba(0,0,0,0.35)",
       }}
       aria-label="Contactează-ne pe WhatsApp"
       title="Contactează-ne pe WhatsApp"

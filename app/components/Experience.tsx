@@ -39,7 +39,7 @@ export default function Experience() {
     <section
       id="experienta"
       className="py-24 lg:py-32"
-      style={{ background: "#faf9f6" }}
+      style={{ background: "#f3f0ea", color: "#202024" }}
     >
       <div className="section-container">
         <div className="lg:grid lg:grid-cols-12 lg:gap-20 items-center">
@@ -62,7 +62,7 @@ export default function Experience() {
               style={{
                 fontSize: "0.8rem",
                 letterSpacing: "0.04em",
-                color: "rgba(25, 25, 25,0.5)",
+                color: "rgba(32, 32, 36,0.7)",
               }}
             >
               12+ ani pe scenă
@@ -72,7 +72,7 @@ export default function Experience() {
           {/* ── Right: copy ──────────────────────────────────────────────── */}
           <div className="reveal-right lg:col-span-7">
             {/* Eyebrow */}
-            <p className="eyebrow mb-5">De ce Highlife?</p>
+            <p className="eyebrow eyebrow-dark mb-5">De ce Highlife?</p>
 
             {/* Headline */}
             <h2
@@ -80,7 +80,7 @@ export default function Experience() {
               style={{
                 fontSize: "clamp(1.85rem, 3.5vw, 2.75rem)",
                 fontWeight: 600,
-                color: "#191919",
+                color: "#202024",
               }}
             >
               Mai mult decât o trupă —{" "}
@@ -90,14 +90,14 @@ export default function Experience() {
             {/* Body text */}
             <p
               className="font-body max-w-lg mb-5"
-              style={{ fontSize: "1.05rem", lineHeight: 1.75, color: "rgba(25, 25, 25,0.65)" }}
+              style={{ fontSize: "1.05rem", lineHeight: 1.75, color: "rgba(32, 32, 36,0.8)" }}
             >
               Cu Highlife Showband, transformăm orice petrecere într-un show
               memorabil, plin de energie și interacțiune cu invitații.
             </p>
             <p
               className="font-body max-w-lg mb-10"
-              style={{ fontSize: "1.05rem", lineHeight: 1.75, color: "rgba(25, 25, 25,0.65)" }}
+              style={{ fontSize: "1.05rem", lineHeight: 1.75, color: "rgba(32, 32, 36,0.8)" }}
             >
               Oferim soluții muzicale personalizate, adaptate complet stilului
               evenimentului tău și preferințelor muzicale ale invitaților. De
@@ -113,7 +113,7 @@ export default function Experience() {
                   <span
                     aria-hidden="true"
                     style={{
-                      color: "#8a7454",
+                      color: "#f0524d",
                       fontSize: "0.9rem",
                       lineHeight: 1.6,
                       flexShrink: 0,
@@ -123,7 +123,7 @@ export default function Experience() {
                   </span>
                   <span
                     className="font-body text-sm leading-relaxed"
-                    style={{ color: "rgba(25, 25, 25,0.75)" }}
+                    style={{ color: "rgba(32, 32, 36,0.85)" }}
                   >
                     {feature}
                   </span>

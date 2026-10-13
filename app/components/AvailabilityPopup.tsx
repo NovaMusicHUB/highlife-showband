@@ -67,7 +67,7 @@ export default function AvailabilityPopup() {
       {/* ── Overlay ─────────────────────────────────────────────────────── */}
       <div
         className="hl-popup-overlay fixed inset-0 z-9999 flex items-center justify-center px-4 py-8"
-        style={{ background: 'rgba(25,25,25,0.5)' }}
+        style={{ background: 'rgba(9,9,11,0.75)' }}
         onClick={dismiss}
         role="dialog"
         aria-modal="true"
@@ -78,9 +78,9 @@ export default function AvailabilityPopup() {
           className="hl-popup-card relative w-full"
           style={{
             maxWidth: '480px',
-            background: '#ffffff',
+            background: '#202024',
             padding: 'clamp(1.75rem, 5vw, 2.75rem)',
-            boxShadow: '0 24px 60px rgba(25,25,25,0.15)',
+            boxShadow: '0 24px 60px rgba(0,0,0,0.5)',
           }}
           onClick={(e) => e.stopPropagation()}
         >
@@ -100,7 +100,7 @@ export default function AvailabilityPopup() {
               background: 'none',
               border: 'none',
               cursor: 'pointer',
-              color: 'rgba(25, 25, 25,0.6)',
+              color: 'rgba(243, 240, 234,0.7)',
             }}
           >
             <svg width="14" height="14" viewBox="0 0 11 11" fill="none">
@@ -114,7 +114,7 @@ export default function AvailabilityPopup() {
           {/* Title */}
           <h2
             className="font-display mb-4"
-            style={{ fontSize: 'clamp(1.3rem, 4vw, 1.7rem)', fontWeight: 600, lineHeight: 1.2, color: '#191919' }}
+            style={{ fontSize: 'clamp(1.3rem, 4vw, 1.7rem)', fontWeight: 600, lineHeight: 1.2, color: '#f3f0ea' }}
           >
             Ar fi păcat să ratezi{' '}
             <em className="text-accent not-italic">cel mai tare show</em>{' '}
@@ -124,10 +124,10 @@ export default function AvailabilityPopup() {
           {/* Body text */}
           <p
             className="font-body mb-4"
-            style={{ fontSize: '0.92rem', lineHeight: 1.75, color: 'rgba(25, 25, 25,0.65)' }}
+            style={{ fontSize: '0.92rem', lineHeight: 1.75, color: 'rgba(243, 240, 234,0.75)' }}
           >
             Mai avem doar câteva date libere pentru{' '}
-            <strong style={{ color: '#8a7454' }}>septembrie și octombrie</strong>,
+            <strong style={{ color: '#f0524d' }}>septembrie și octombrie</strong>,
             iar rezervările pentru aceste luni vin cu câteva surprize plăcute
             incluse în pachet.
           </p>
@@ -135,7 +135,7 @@ export default function AvailabilityPopup() {
           {/* Subtext / regret note */}
           <p
             className="font-body italic mb-8"
-            style={{ fontSize: '0.9rem', lineHeight: 1.65, color: 'rgba(25, 25, 25,0.5)' }}
+            style={{ fontSize: '0.9rem', lineHeight: 1.65, color: 'rgba(243, 240, 234,0.6)' }}
           >
             Nu vrei să realizezi abia după nuntă că ringul de dans putea arăta
             altfel.
@@ -166,7 +166,7 @@ export default function AvailabilityPopup() {
           {/* Fine print */}
           <p
             className="font-body mt-5 text-center"
-            style={{ fontSize: '0.7rem', color: 'rgba(25, 25, 25,0.4)' }}
+            style={{ fontSize: '0.7rem', color: 'rgba(243, 240, 234,0.62)' }}
           >
             Poți închide oricând. Nu trimitem spam.
           </p>

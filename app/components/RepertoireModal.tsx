@@ -35,15 +35,15 @@ export default function RepertoireModal({ isOpen, onClose }: RepertoireModalProp
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
         <div
           className="relative w-full max-w-6xl h-[95vh] overflow-hidden flex flex-col"
-          style={{ background: "#ffffff" }}
+          style={{ background: "#202024" }}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header */}
           <div
             className="flex items-center justify-between p-4 sm:p-6 border-b"
-            style={{ borderColor: "#e8e4da" }}
+            style={{ borderColor: "rgba(243,240,234,0.1)" }}
           >
-            <h2 className="font-display text-xl sm:text-2xl" style={{ color: "#191919", fontWeight: 600 }}>
+            <h2 className="font-display text-xl sm:text-2xl" style={{ color: "#f3f0ea", fontWeight: 600 }}>
               Repertoriul Complet
             </h2>
             <button
@@ -56,7 +56,7 @@ export default function RepertoireModal({ isOpen, onClose }: RepertoireModalProp
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#191919"
+                stroke="#f3f0ea"
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -79,7 +79,7 @@ export default function RepertoireModal({ isOpen, onClose }: RepertoireModalProp
           {/* Footer with Download Button */}
           <div
             className="flex items-center justify-end p-4 sm:p-6 border-t"
-            style={{ borderColor: "#e8e4da" }}
+            style={{ borderColor: "rgba(243,240,234,0.1)" }}
           >
             <a
               href="/Repertoriu_HIGHLIFE_SHOWBAND.pdf"
