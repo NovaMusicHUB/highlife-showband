@@ -66,16 +66,12 @@ export default function NewRelease() {
               />
             ) : (
               <>
-                {/* Thumbnail */}
+                {/* Poster — photo from the Highlife folders */}
                 <img
-                  src={`https://img.youtube.com/vi/${YOUTUBE_ID}/maxresdefault.jpg`}
+                  src="/images/kimaro/kimaro-07.jpg"
                   alt="Highlife Showband — Sade (piesă nouă)"
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"
-                  onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src =
-                      `https://img.youtube.com/vi/${YOUTUBE_ID}/hqdefault.jpg`;
-                  }}
                 />
 
                 {/* Subtle scrim for the play button */}

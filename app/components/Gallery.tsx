@@ -19,11 +19,6 @@ const IMAGES = [
     alt: "Nuntă elegantă cu muzică live",
   },
   {
-    src: "/images/nunti/nunta-03.jpg",
-    category: "Nunți",
-    alt: "Highlife Showband la nuntă",
-  },
-  {
     src: "/images/nunti/nunta-04.jpg",
     category: "Nunți",
     alt: "Moment special la nuntă",
@@ -101,16 +96,6 @@ const IMAGES = [
     alt: "Botez elegant — Highlife Showband",
   },
   {
-    src: "/images/botez/botez-02.jpg",
-    category: "Botezuri",
-    alt: "Muzică live la botez",
-  },
-  {
-    src: "/images/botez/botez-03.jpg",
-    category: "Botezuri",
-    alt: "Dans la botez cu Highlife Showband",
-  },
-  {
     src: "/images/botez/botez-04.jpg",
     category: "Botezuri",
     alt: "Atmosferă botez — Highlife Showband",
@@ -149,11 +134,6 @@ const IMAGES = [
     src: "/images/botez/botez-11.jpg",
     category: "Botezuri",
     alt: "Dans tradițional la botez",
-  },
-  {
-    src: "/images/botez/botez-12.jpg",
-    category: "Botezuri",
-    alt: "Finalul spectacolului — botez",
   },
 ] as const;
 
