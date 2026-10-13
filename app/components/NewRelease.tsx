@@ -34,7 +34,7 @@ export default function NewRelease() {
   }, []);
 
   return (
-    <section id="lansare-noua" className="py-24 lg:py-32" style={{ background: "#f3f0ea", color: "#202024" }}>
+    <section id="lansare-noua" className="py-24 lg:py-32 on-dark" style={{ background: "#202024", color: "#f3f0ea" }}>
       <div className="section-container">
         {/* ── Header ── */}
         <div className="max-w-2xl mb-12 reveal">
@@ -42,12 +42,12 @@ export default function NewRelease() {
 
           <h2
             className="font-display text-balance mb-5"
-            style={{ fontSize: "clamp(1.85rem, 3.5vw, 2.75rem)", fontWeight: 600, lineHeight: 1.2, color: "#202024" }}
+            style={{ fontSize: "clamp(1.85rem, 3.5vw, 2.75rem)", fontWeight: 600, lineHeight: 1.2, color: "#f3f0ea" }}
           >
             Am lansat piesa <em className="text-accent not-italic">&bdquo;Sade&rdquo;</em>
           </h2>
 
-          <p className="font-body" style={{ fontSize: "1.05rem", color: "rgba(32, 32, 36,0.75)", lineHeight: 1.7 }}>
+          <p className="font-body" style={{ fontSize: "1.05rem", color: "rgba(243, 240, 234,0.75)", lineHeight: 1.7 }}>
             Cea mai nouă piesă Highlife Showband este live pe YouTube —
             ascult-o și spune-ne ce părere ai!
           </p>

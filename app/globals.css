@@ -164,6 +164,10 @@ textarea::placeholder {
         color: #202024;
     }
 
+    .on-dark .eyebrow {
+        color: #f3f0ea;
+    }
+
     .eyebrow::before {
         content: "";
         display: inline-block;
@@ -388,7 +392,7 @@ textarea::placeholder {
     }
 
     .tab-filter.active {
-        color: #202024;
+        color: inherit;
         opacity: 1;
         border-bottom-color: #f0524d;
         font-weight: 600;

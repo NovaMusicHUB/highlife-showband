@@ -57,7 +57,7 @@ function InfoItem({
       </div>
       <div
         className="font-body text-sm leading-relaxed"
-        style={{ color: "rgba(32, 32, 36,0.8)" }}
+        style={{ color: "rgba(243, 240, 234,0.85)" }}
       >
         {children}
       </div>
@@ -151,21 +151,21 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 lg:py-32" style={{ background: "#f3f0ea", color: "#202024" }}>
+    <section id="contact" className="py-24 lg:py-32 on-dark" style={{ background: "#202024", color: "#f3f0ea" }}>
       <div className="section-container">
         {/* ── Header ── */}
         <div className="max-w-2xl mb-16 reveal">
           <p className="eyebrow mb-5">Să Vorbim</p>
           <h2
             className="font-display mb-6"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, lineHeight: 1.15, color: "#202024" }}
+            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 600, lineHeight: 1.15, color: "#f3f0ea" }}
           >
             Hai să discutăm despre{" "}
             <em className="text-accent not-italic">evenimentul tău</em>
           </h2>
           <p
             className="font-body text-base max-w-lg"
-            style={{ color: "rgba(32, 32, 36,0.68)", lineHeight: 1.75 }}
+            style={{ color: "rgba(243, 240, 234,0.72)", lineHeight: 1.75 }}
           >
             Cu Highlife Showband, transformăm orice petrecere într-un show
             memorabil, plin de energie și interacțiune cu invitații. Spune-ne
@@ -199,7 +199,7 @@ export default function Contact() {
                 <a
                   href="tel:+40754636633"
                   className="link-underline"
-                  style={{ color: "rgba(32, 32, 36,0.9)" }}
+                  style={{ color: "rgba(243, 240, 234,0.92)" }}
                 >
                   0754 636 633
                 </a>
@@ -227,7 +227,7 @@ export default function Contact() {
                 <a
                   href="mailto:contact@highlifeshowband.ro"
                   className="link-underline"
-                  style={{ color: "rgba(32, 32, 36,0.9)" }}
+                  style={{ color: "rgba(243, 240, 234,0.92)" }}
                 >
                   contact@highlifeshowband.ro
                 </a>
@@ -286,10 +286,10 @@ export default function Contact() {
                 <div className="font-display text-4xl mb-4" style={{ color: "#f0524d" }} aria-label="Succes">
                   ✓
                 </div>
-                <h3 className="font-display text-2xl mb-2" style={{ color: "#202024", fontWeight: 600 }}>
+                <h3 className="font-display text-2xl mb-2" style={{ color: "#f3f0ea", fontWeight: 600 }}>
                   Cererea a fost trimisă!
                 </h3>
-                <p className="font-body text-sm" style={{ color: "rgba(32, 32, 36,0.66)" }}>
+                <p className="font-body text-sm" style={{ color: "rgba(243, 240, 234,0.72)" }}>
                   Te contactăm în maxim 24 de ore cu o ofertă personalizată.
                 </p>
               </div>
@@ -317,7 +317,7 @@ export default function Contact() {
                       aria-describedby={errors.name ? "err-name" : undefined}
                     />
                     {errors.name && (
-                      <p id="err-name" className="font-body text-xs mt-1" style={{ color: "#202024" }}>
+                      <p id="err-name" className="font-body text-xs mt-1" style={{ color: "#f0524d" }}>
                         {errors.name}
                       </p>
                     )}
@@ -344,7 +344,7 @@ export default function Contact() {
                         aria-describedby={errors.email ? "err-email" : undefined}
                       />
                       {errors.email && (
-                        <p id="err-email" className="font-body text-xs mt-1" style={{ color: "#202024" }}>
+                        <p id="err-email" className="font-body text-xs mt-1" style={{ color: "#f0524d" }}>
                           {errors.email}
                         </p>
                       )}
@@ -368,7 +368,7 @@ export default function Contact() {
                         aria-describedby={errors.phone ? "err-phone" : undefined}
                       />
                       {errors.phone && (
-                        <p id="err-phone" className="font-body text-xs mt-1" style={{ color: "#202024" }}>
+                        <p id="err-phone" className="font-body text-xs mt-1" style={{ color: "#f0524d" }}>
                           {errors.phone}
                         </p>
                       )}
@@ -463,7 +463,7 @@ export default function Contact() {
                       />
                       <span
                         className="font-body text-xs"
-                        style={{ color: "rgba(32, 32, 36,0.7)", lineHeight: 1.6 }}
+                        style={{ color: "rgba(243, 240, 234,0.8)", lineHeight: 1.6 }}
                       >
                         Am citit și sunt de acord cu prelucrarea datelor mele
                         conform{" "}
@@ -472,7 +472,7 @@ export default function Contact() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="link-underline"
-                          style={{ color: "#202024" }}
+                          style={{ color: "#f3f0ea" }}
                         >
                           Politicii de Confidențialitate
                         </a>{" "}
@@ -480,7 +480,7 @@ export default function Contact() {
                       </span>
                     </label>
                     {errors.gdprConsent && (
-                      <p id="err-gdpr" className="font-body text-xs mt-1" style={{ color: "#202024" }}>
+                      <p id="err-gdpr" className="font-body text-xs mt-1" style={{ color: "#f0524d" }}>
                         {errors.gdprConsent}
                       </p>
                     )}
@@ -490,7 +490,7 @@ export default function Contact() {
                   {submitError && (
                     <p
                       className="font-body text-sm"
-                      style={{ color: "#202024" }}
+                      style={{ color: "#f0524d" }}
                       role="alert"
                     >
                       {submitError} Poți și suna la{" "}
@@ -537,7 +537,7 @@ export default function Contact() {
             )}
 
             {/* Privacy note */}
-            <p className="font-body text-xs mt-4 text-center" style={{ color: "rgba(32, 32, 36,0.5)" }}>
+            <p className="font-body text-xs mt-4 text-center" style={{ color: "rgba(243, 240, 234,0.6)" }}>
               🔒 Datele tale sunt protejate și nu vor fi partajate cu terți.
             </p>
           </div>

@@ -12,16 +12,8 @@ const NAV_LINKS = [
 ];
 
 export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const drawerRef = useRef<HTMLDivElement>(null);
-
-  // Scroll listener
-  useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 80);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   // Close drawer on outside click
   useEffect(() => {
@@ -52,12 +44,10 @@ export default function Navigation() {
       <header
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={{
-          background: isScrolled ? "rgba(243, 240, 234, 0.94)" : "transparent",
-          backdropFilter: isScrolled ? "blur(12px)" : "none",
-          WebkitBackdropFilter: isScrolled ? "blur(12px)" : "none",
-          borderBottom: isScrolled
-            ? "1px solid rgba(32, 32, 36,0.1)"
-            : "1px solid transparent",
+          background: "rgba(243, 240, 234, 0.96)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+          borderBottom: "1px solid rgba(32, 32, 36,0.1)",
         }}
       >
         <div className="section-container">
