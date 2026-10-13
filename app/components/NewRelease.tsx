@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 // ── Config ───────────────────────────────────────────────────────────────────
 
-const YOUTUBE_ID = "xgwdTYVUulU";
+const YOUTUBE_ID = "y4kYhDv1T6Q";
 const YOUTUBE_WATCH_URL = `https://www.youtube.com/watch?v=${YOUTUBE_ID}`;
 
 // ── Component ────────────────────────────────────────────────────────────────
